@@ -231,7 +231,7 @@ p + .btn_wr {
   font-weight: 700;
   font-size: 55px;
   line-height: 62px;
-  color: #5ab7de;
+  color: #AD1D24;
   vertical-align: bottom;
 }
 .brand_slogan {
@@ -239,6 +239,7 @@ p + .btn_wr {
   padding-left: 10px;
   padding-bottom: 5px;
   font-size: 24px;
+  color: #DBAC1F;
   vertical-align: bottom;
 }
 .brand a:hover {
