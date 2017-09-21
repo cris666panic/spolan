@@ -811,17 +811,17 @@ table tr:nth-child(even) {
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
-  border-right: 1px solid #56585a;
+  border-right: 1px solid #AD1D24 ;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   color: #fff;
   background: #DBAC1F;
-  border-right: 1px solid #4bb0db;
+  border-right: 1px solid #AD1D24;
 }
 .sf-menu > li.active > a {
   color: #fff;
-  background: #5ab7de;
-  border-right: 1px solid #4bb0db;
+  background: #DBAC1F ;
+  border-right: 1px solid #DBAC1F ;
 }
 
 .sf-menu ul {
