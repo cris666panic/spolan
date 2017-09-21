@@ -326,8 +326,8 @@ p + .btn_wr {
   line-height: 70px;
   font-size: 34px;
   text-align: center;
-  color: #62bfe6;
-  background: #4a4c4d;
+  color: white;
+  background: transparent;
 }
 .icon2:before {
   position: absolute;
@@ -665,7 +665,7 @@ blockquote p + cite {
 
 /*==================  Contact List  =====================*/
 .contact-list {
-  color: #888a8c;
+  color: white;
   font-size: 16px;
 }
 .contact-list .box {
@@ -1307,8 +1307,8 @@ a[href^="callto:"]:hover {
 					 FOOTER  Styles
 =========================================================*/
 footer {
-  color: #888a8c;
-  background: #434547;
+  color: white;
+  background: #AD1D24;
 }
 footer section + section .container {
   border-top: 1px solid #888a8c;
