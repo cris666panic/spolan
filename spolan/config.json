@@ -1,0 +1,11 @@
+{
+	"express": {
+		"port"     : 3000
+	},
+	"postgres": {
+		"db"       : "integradora",
+		"user"     : "postgres",
+		"password" : "andy1212",
+		"host"     : "localhost"
+	}
+}
