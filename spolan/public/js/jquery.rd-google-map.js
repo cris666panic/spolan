@@ -23,6 +23,8 @@
             styles: []
         },
 
+        
+        
         defaults = {
             map: {
                 x: -73.9924068,

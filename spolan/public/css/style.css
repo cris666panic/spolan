@@ -256,7 +256,7 @@ p + .btn_wr {
 }
 .bg-primary .icon {
   color: #62bfe6;
-  background: #fff;
+  background: yellow;
 }
 .bg-primary .product-list li .box:hover .icon {
   background: #fff;
@@ -306,7 +306,7 @@ p + .btn_wr {
   font-size: 52px;
   text-align: center;
   color: #fff;
-  background: #62bfe6;
+  background: #AD1D24;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
@@ -318,6 +318,8 @@ p + .btn_wr {
   right: 0;
   bottom: 0;
   left: 0;
+  background: #AD1D24;
+
 }
 
 .icon2 {
