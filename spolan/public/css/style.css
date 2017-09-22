@@ -359,16 +359,16 @@ p + .btn_wr {
 }
 .btn:hover,
 .btn2:hover {
-  background: #4ab5e2;
+  background: #DBAC1F ;
 }
 .btn:active,
 .btn2:active {
-  background: #22a1d7;
+  background: #DBAC1F;
 }
 
 .btn {
   color: #fff;
-  background: #62bfe6;
+  background: #AD1D24 ;
 }
 
 .btn2 {
@@ -743,7 +743,7 @@ table tr:nth-child(even) {
   margin-top: 7px;
   padding: 30px 30px 25px;
   color: #fff;
-  background: #57aacd;
+  background: #AD1D24 ;
 }
 .info-box dt,
 .info-box dd {

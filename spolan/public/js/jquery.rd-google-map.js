@@ -1,6 +1,5 @@
 /*
- *  RD-Google Map - v0.1
- *  Easy as hell Google Map Api Jquery plugin.
+ *  RD-Google Map - v0.1  *  Easy as hell Google Map Api Jquery plugin.
  *
  *  Made by Evgeniy Gusarov (Stmechanus || Diversant)
  *
@@ -27,12 +26,11 @@
         
         defaults = {
             map: {
-                x: -73.9924068,
-                y: 40.646197,
-                zoom: 14
+                x: -78.658224,
+                y: -1.664623,
+                zoom:18
             },
-            locations: []
-        };
+            locations: [] };
 
 
     var getLocations = function ($map, settings) {
