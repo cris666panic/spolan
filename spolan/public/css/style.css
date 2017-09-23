@@ -359,7 +359,7 @@ p + .btn_wr {
 }
 .btn:hover,
 .btn2:hover {
-  background: #DBAC1F ;
+  background: #DBAC1F  ;
 }
 .btn:active,
 .btn2:active {
@@ -412,6 +412,7 @@ p + .btn_wr {
 }
 .box_aside {
   float: left;
+
 }
 .box_cnt__no-flow {
   overflow: hidden;
@@ -594,7 +595,7 @@ blockquote q:before {
   left: 0;
   padding-right: 7px;
   content: "\f10d";
-  color: #62bfe6;
+  color:#AD1D24 ;
   font-family: "FontAwesome";
   font-size: 34px;
   line-height: 28px;
@@ -649,7 +650,7 @@ blockquote p + cite {
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
-  color: #62bfe6;
+  color: #0f0f0f;
 }
 .marked-list li a:before {
   content: "\f00c";
@@ -743,7 +744,7 @@ table tr:nth-child(even) {
   margin-top: 7px;
   padding: 30px 30px 25px;
   color: #fff;
-  background: #AD1D24 ;
+  background: #AD1D24;
 }
 .info-box dt,
 .info-box dd {
