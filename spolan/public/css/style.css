@@ -282,7 +282,7 @@ p + .btn_wr {
 }
 
 .bg-secondary {
-  background: #434547;
+  background: #AD1D24;
 }
 
 .bg-secondary2 {
@@ -605,7 +605,7 @@ blockquote q:before {
 blockquote cite {
   display: block;
   font-size: 16px;
-  color: #62bfe6;
+  color: #AD1D24;
 }
 blockquote cite a:hover {
   text-decoration: underline;
@@ -1199,7 +1199,7 @@ header a[href^="callto:"]:before {
   top: -4px;
   left: -44px;
   font-size: 34px;
-  color: #6bc7ed;
+  color: #AD1D24;
 }
 header a[href^="callto:"]:hover {
   color: map;
