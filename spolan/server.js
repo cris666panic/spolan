@@ -20,24 +20,9 @@ var pg					= require ("pg");
 
 var  cors = require('cors')
 
-
-
-
-
-
-
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 var path = require('path');
-
-
-
-
-
-
-
-
-
 
 app.use(multipartMiddleware);
 
@@ -63,3 +48,8 @@ app.use(serveStatic('./public'));
 
 
 app.listen(config.express.port);
+
+//creacion servicio
+var usuario = require('./routes/usuario');
+//api
+app.use('/usuario', usuario);

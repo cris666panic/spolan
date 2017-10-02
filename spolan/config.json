@@ -3,9 +3,9 @@
 		"port"     : 3000
 	},
 	"postgres": {
-		"db"       : "integradora",
+		"db"       : "spolan",
 		"user"     : "postgres",
-		"password" : "andy1212",
+		"password" : "duke94",
 		"host"     : "localhost"
 	}
 }
