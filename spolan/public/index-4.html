@@ -16,6 +16,10 @@
     </html>
     <script src="js/html5shiv.js"></script><![endif]-->
     <script src="js/device.min.js"></script>
+/// para angular
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/msg.js"></script>
   </head>
   <body>
     <div class="page">
@@ -119,26 +123,30 @@
             </ul>
           </div>
         </section>
-        <section class="well1" id="suscribite">
-          <div class="container">
+        <section class="well1" id="suscribite" ng-app="myAppMsg">
+          <div class="container"  >
             <h2>Suscribete</h2>
-            <form method="post" action="bat/rd-mailform.php" class="mailform off2">
+            <form method="post" action="bat/rd-mailform.php" class="mailform off2" ng-controller="msg">
               <input type="hidden" name="form-type" value="contact">
               <fieldset class="row">
                 <label class="grid_4">
-                  <input type="text" name="name" placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty">
+                  <input type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
                 </label>
                 <label class="grid_4">
-                  <input type="text" name="phone" placeholder="Teléfono o Celular :" data-constraints="@Phone">
+                  <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
                 </label>
                 <label class="grid_4">
-                  <input type="text" name="email" placeholder="Email:" data-constraints="@Email @NotEmpty">
+                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
+                </label>
+
+                <label class="grid_4">
+                                  <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
                 </label>
                 <label class="grid_12">
-                  <textarea name="message" placeholder="Mensaje:" data-constraints="@NotEmpty"></textarea>
+                  <textarea  placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
                 </label>
-                <div class="mfControls grid_12">
-                  <button type="submit" class="btn">Enviar</button>
+                <div class="grid_12">
+                  <button  class="btn" ng-click="enviar()">Enviar</button>
                 </div>
               </fieldset>
             </form>

@@ -51,5 +51,9 @@ app.listen(config.express.port);
 
 //creacion servicio
 var usuario = require('./routes/usuario');
+var info = require('./routes/info');
+var msg = require('./routes/msg');
 //api
-app.use('/usuario', usuario);
+app.use('/web', usuario);
+app.use('/web', info);
+app.use('/web', msg);
