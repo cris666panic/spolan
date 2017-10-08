@@ -16,10 +16,29 @@
     </html>
     <script src="js/html5shiv.js"></script><![endif]-->
     <script src="js/device.min.js"></script>
-/// para angular
+
     <script src="js/angular.js"></script>
     <script src="js/jquery.js"></script>
-    <script src="js/msg.js"></script>
+
+
+
+
+
+
+
+    <script src="js/calendario.js"></script>
+    <script src="js/modal.js"></script>
+
+    <script src="admin/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" href="admin/plugins/datepicker/datepicker3.css">
+    <script src="admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <link rel="stylesheet" href="admin/plugins/timepicker/bootstrap-timepicker.min.css">
+
+    <link rel="stylesheet" href="admin/bootstrap/css/bootstrap.css">
+
+
+
+
   </head>
   <body>
     <div class="page">
@@ -65,68 +84,15 @@
       ========================================================
       -->
       <main>
-        <section class="map">
-          <div id="google-map" class="map_model"></div>
-          <ul class="map_locations">
-            <li data-x="-78.658224" data-y="-1.664623">
-              <p> Carlos Zambrano y Primera Constituyente </p>
-            </li>
-          </ul>
-        </section>
-        <section class="well3 bg-secondary">
-          <div class="container">
-            <ul class="row contact-list">
-              <li class="grid_4">
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-map-marker"></div>
-                  </div>
-                  <div class="box_cnt__no-flow">
-                    <address>Carlos Zambrano y Primera Constituyente </address>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-envelope"></div>
-                  </div>
-                  <div class="box_cnt__no-flow"><a href="mailto:#">spolaningles@gmail.com</a></div>
-                </div>
-              </li>
-              <li class="grid_4">
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-phone"></div>
-                  </div>
-                  <div class="box_cnt__no-flow"><a href="callto:#">(03)2962505 </a></div>
-                </div>
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-fax"></div>
-                  </div>
-                  <div class="box_cnt__no-flow"><a href="callto:#">0996617500</a></div>
-                </div>
-              </li>
-              <li class="grid_4">
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-facebook"></div>
-                  </div>
-                  <div class="box_cnt__no-flow"><a href="https://www.facebook.com/spolanidiomas/">Follow on facebook</a></div>
-                </div>
-                <div class="box">
-                  <div class="box_aside">
-                    <div class="icon2 fa-twitter"></div>
-                  </div>
-                  <div class="box_cnt__no-flow"><a href="#">Follow on Twitter</a></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="well1" id="suscribite" ng-app="myAppMsg">
+
+
+
+
+
+        <section class="well1" id="suscribite" ng-app="myAppCalendario">
           <div class="container"  >
-            <h2>Suscribete</h2>
-            <form  class="mailform off2" ng-controller="msg">
+            <h2>Agenda tu Examen</h2>
+            <form  class="mailform off2" ng-controller="calendario">
               <input type="hidden" name="form-type" value="contact">
               <fieldset class="row">
                 <label class="grid_4">
@@ -142,12 +108,54 @@
                 <label class="grid_4">
                                   <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
                 </label>
-                <label class="grid_12">
-                  <textarea  placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
+
+
+                <label class="grid_4">
+                  <div class="form-group">
+                    <label>Fecha:</label>
+
+                    <div class="input-group date">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control pull-right" id="datepicker">
+                    </div>
+                    <!-- /.input group -->
+                  </div>
+
                 </label>
+
+
+                <label class="grid_4">
+
+
+
+
+                    <div class="bootstrap-timepicker">
+                      <div class="form-group">
+
+                        <label>Hora:</label>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control timepicker" id="timepicker">
+
+                          <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                          </div>
+                        </div>
+                        <!-- /.input group -->
+                      </div>
+                      <!-- /.form group -->
+                    </div>
+
+                </label>
+
+
+
                 <div class="grid_12">
                   <button  class="btn" ng-click="enviar()">Enviar</button>
                 </div>
+
               </fieldset>
             </form>
           </div>

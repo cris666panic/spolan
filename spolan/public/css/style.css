@@ -98,7 +98,7 @@ strong {
 }
 
 .page {
-  overflow: hidden;
+  overflow-y:hidden;
   min-height: 500px;
 }
 .lt-ie9 .page {

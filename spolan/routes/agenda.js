@@ -9,22 +9,67 @@ var pg = require("pg");
 
 var conString =  "postgres://postgres:"+config.postgres.password+"@"+config.postgres.host+"/"+config.postgres.db;
 
-var anbicanto = "SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.geom)::json As geometry, row_to_json((id_acto, nombre, descripcion, c_descripcion, ficha, id_tipo_ambito,id_canton, id_tipo, lat, lon,imagen)) As properties FROM acto As lg where lg.id_canton=$2 and lg.id_tipo_ambito=$1) As f) As fc ";
-
-var casa1 = "SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.geom)::json As geometry, row_to_json((id,imagen,nombrelugar,categoria,descripcioncorta,lat,lon)) As properties FROM persona As lg) As f) As fc ";
-
-var parroquias = "SELECT row_to_json(fc) FROM ( SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features FROM (SELECT 'Feature' As type, ST_AsGeoJSON(lg.geometry)::json As geometry, row_to_json((pk,dpa_descan)) As properties FROM chimborazo As lg ) As f) As fc ";
+module.exports = router;
 
 
 
-/* GET home page. */
-router.get('/', function (req, res) {
-  res.render('index', {
-    title: 'Express'
-  });
+
+router.post('/registrarCalendario', function (req, res) {
+
+  console.log(req);
+
+  var p = {
+    title:req.body.title,
+    evento:req.body.evento,
+    start:req.body.start,
+    end:req.body.end,
+    backgroundColor:req.body.backgroundColor,
+    borderColor:req.body.borderColor,
+    estado: req.body.estado,
+    id_informacion:req.body.id_informacion
+  };
+
+
+
+
+
+  var client = new pg.Client(conString);
+  client.connect();
+
+  const results = [];
+
+  var query = client.query('INSERT INTO agenda(estado, start, "backgroundColor", id_informacion,"end", "borderColor", evento,title) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *',
+      [p.estado, p.start, p.backgroundColor, p.id_informacion, p.end, p.borderColor, p.evento,p.title]);
+
+
+  query.on('row', (row) => {
+    results.push(row);
 });
 
-module.exports = router;
+  query.on('end', () => {
+    client.end();
+  return res.json(results);
+});
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,6 +537,12 @@ client.end();
     return res.json(results);
   });
 });
+
+
+
+
+
+
 
 
 router.post('/registrarlugar', function (req, res) {
