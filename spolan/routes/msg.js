@@ -61,6 +61,53 @@ router.get('/allobtenermsg', function (req, res) {
 
 });
 
+///////////////////////////////////////obtenert pendientes
+
+router.get('/allobtenermsgpendiente', function (req, res) {
+
+var client = new pg.Client(conString);
+client.connect();
+
+const results = [];
+
+var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 ', ['pendiente']);
+
+query.on('row', (row) => {
+  results.push(row);
+});
+
+query.on('end', () => {
+  client.end();
+return res.json(results);
+});
+
+});
+
+
+
+
+
+///////////////////////////////////////// notificados
+
+router.get('/allobtenermsgnotificado', function (req, res) {
+
+var client = new pg.Client(conString);
+client.connect();
+
+const results = [];
+
+var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 ', ['notificado']);
+
+query.on('row', (row) => {
+  results.push(row);
+});
+
+query.on('end', () => {
+  client.end();
+return res.json(results);
+});
+
+});
 
 ///////////////////////////// ingresar
 
@@ -130,6 +177,8 @@ router.put('/actulizarmsg/:id', function (req, res) {
   return res.json(results);
 });
 });
+/////actulizar pendiente 
+
 
 
 

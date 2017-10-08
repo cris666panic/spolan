@@ -27,7 +27,6 @@ tareasModule.factory('datosmsg', function ($http,$q) {
 
 
 
-
     datosmsg.actualizar = function (datomsg) {
 
         console.log(datomsg);
@@ -48,287 +47,16 @@ tareasModule.factory('datosmsg', function ($http,$q) {
 
     };
 
+    ////pendientetodo
 
-/*
-
-    datosmsg.getAllFojas = function (id) {
-        return $http.post('/punto/obtenerFojas',id)
-            .success(function (data) {
-                angular.copy(data, datosmsg.tareas);
-console.log(data);
-                return datosmsg.tareas;
-            })
-    };
-
-
-
-
-
- datosmsg.getAllImagenes = function (tarea) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/obtenerImagenes', tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-
- datosmsg.getAllImagenesFoja = function (tarea) {
-
-console.log(tarea);
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/obtenerImagenesFoja', tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-
-datosmsg.getCategorias = function () {
-
-        return $http.get('/punto/obtenercategoria')
-            .success(function (data) {
-                angular.copy(data, datosmsg.categorias);
-console.log(data);
-                return datosmsg.categorias;
-            })
-    };
-
-
-    datosmsg.getCantones = function () {
-
-        return $http.get('/punto/obtenercantones')
-            .success(function (data) {
-                angular.copy(data, datosmsg.cantones);
-console.log(data);
-                return datosmsg.cantones;
-            })
-    };
-
-
-
-    datosmsg.getTipos = function () {
-
-        return $http.get('/punto/obtenertipos')
-            .success(function (data) {
-                angular.copy(data, comun.tipos);
-console.log(data);
-                return comun.tipos;
-            })
-    };
-
-
-    datosmsg.add = function (tarea) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/registrarlugar', tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
- datosmsg.addImagenGaleria = function (tarea) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/registrarImagen', tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
- datosmsg.addFoja = function (tarea) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/registrarFoja', tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-datosmsg.actualizar = function (tarea) {
-
-
-console.log(tarea);
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.put('/punto/modificarlugar/' + tarea.id_acto, tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-    
-
-datosmsg.actualizarImagenes = function (tarea) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.put('/punto/modificarImagenes/' + tarea.id_imagenes, tarea)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-    datosmsg.addImagenes = function (imagen) {
-
-    var defered = $q.defer();
-        var promise = defered.promise;
-
-        $http.post('/punto/imagenes', imagen)
-            .success(function (data) {
-
-
-                defered.resolve(data);
-
-            })
-            .error(function (err) {
-                defered.reject(err)
-            });
-
-        return promise;
-
-    };
-
-
-  
-
-    datosmsg.delet = function (tarea) {
-        return $http.delete('/punto/eliminarlugar/' + tarea.id_acto)
-            .success(function () {
-
-                var indice = comun.tareas.indexOf(tarea);
-                comun.tareas.splice(indice, 1);
-
-            })
-
-    };
-
-
-    datosmsg.deletFoja = function (tarea) {
-        return $http.delete('/punto/eliminarFoja/' + tarea.id_foja)
-            .success(function () {
-
-                var indice = comun.tareas.indexOf(tarea);
-                comun.tareas.splice(indice, 1);
-
-            })
-
-    };
-
-
-
-datosmsg.deletImagen = function (tarea) {
-        return $http.delete('/punto/eliminarImagen/' + tarea.id_imagenes)
-            .success(function () {
-
-
-            })
-
-    };
-
-    
-datosmsg.deletImagenFoja = function (tarea) {
-        return $http.delete('/punto/eliminarImagenFoja/' + tarea.id_imagen)
-            .success(function () {
-
-
-            })
-
-    };
-
-    datosmsg.addImagen = function (imagen) {
-
+    datosmsg.getAllmsgPendiente = function (){
 
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.post('/api/profile/editPhoto', imagen)
+        $http.get('/web/allobtenermsgpendiente')
             .success(function (data) {
 
-                console.log("rango edades "+data);
 
                 defered.resolve(data);
 
@@ -338,9 +66,415 @@ datosmsg.deletImagenFoja = function (tarea) {
             });
 
         return promise;
+
     };
 
-*/
+    ///mostrar notificado
+
+    datosmsg.getAllmsgNotificado = function (){
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.get('/web/allobtenermsgnotificado')
+            .success(function (data) {
+
+
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+    //todos los usuairios
+
+    datosmsg.getusuarios = function (){
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.get('/web/obtenerinformacion')
+            .success(function (data) {
+
+
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+    //actulizar usuario
+
+    datosmsg.actualizarusuario = function (datomsg) {
+
+        console.log(datomsg);
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.put('/web/actulizarinfo/' + datomsg.id_informacion, datomsg)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+    //todos los usuairios pendientes
+
+    datosmsg.getusuariospendiente = function (){
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.get('/web/obtenerpendienteinfo')
+            .success(function (data) {
+
+
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+
+
+    //todos los usuairios notificadis
+
+    datosmsg.getusuariosnotificado= function (){
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.get('/web/obtenernotificadoinfo')
+            .success(function (data) {
+
+
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+
+
+    /*
+
+        datosmsg.getAllFojas = function (id) {
+            return $http.post('/punto/obtenerFojas',id)
+                .success(function (data) {
+                    angular.copy(data, datosmsg.tareas);
+    console.log(data);
+                    return datosmsg.tareas;
+                })
+        };
+
+
+
+
+
+     datosmsg.getAllImagenes = function (tarea) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/obtenerImagenes', tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+
+     datosmsg.getAllImagenesFoja = function (tarea) {
+
+    console.log(tarea);
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/obtenerImagenesFoja', tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+
+    datosmsg.getCategorias = function () {
+
+            return $http.get('/punto/obtenercategoria')
+                .success(function (data) {
+                    angular.copy(data, datosmsg.categorias);
+    console.log(data);
+                    return datosmsg.categorias;
+                })
+        };
+
+
+        datosmsg.getCantones = function () {
+
+            return $http.get('/punto/obtenercantones')
+                .success(function (data) {
+                    angular.copy(data, datosmsg.cantones);
+    console.log(data);
+                    return datosmsg.cantones;
+                })
+        };
+
+
+
+        datosmsg.getTipos = function () {
+
+            return $http.get('/punto/obtenertipos')
+                .success(function (data) {
+                    angular.copy(data, comun.tipos);
+    console.log(data);
+                    return comun.tipos;
+                })
+        };
+
+
+        datosmsg.add = function (tarea) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/registrarlugar', tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+     datosmsg.addImagenGaleria = function (tarea) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/registrarImagen', tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+     datosmsg.addFoja = function (tarea) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/registrarFoja', tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+    datosmsg.actualizar = function (tarea) {
+
+
+    console.log(tarea);
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.put('/punto/modificarlugar/' + tarea.id_acto, tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+
+
+    datosmsg.actualizarImagenes = function (tarea) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.put('/punto/modificarImagenes/' + tarea.id_imagenes, tarea)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+        datosmsg.addImagenes = function (imagen) {
+
+        var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/punto/imagenes', imagen)
+                .success(function (data) {
+
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+
+        };
+
+
+
+
+        datosmsg.delet = function (tarea) {
+            return $http.delete('/punto/eliminarlugar/' + tarea.id_acto)
+                .success(function () {
+
+                    var indice = comun.tareas.indexOf(tarea);
+                    comun.tareas.splice(indice, 1);
+
+                })
+
+        };
+
+
+        datosmsg.deletFoja = function (tarea) {
+            return $http.delete('/punto/eliminarFoja/' + tarea.id_foja)
+                .success(function () {
+
+                    var indice = comun.tareas.indexOf(tarea);
+                    comun.tareas.splice(indice, 1);
+
+                })
+
+        };
+
+
+
+    datosmsg.deletImagen = function (tarea) {
+            return $http.delete('/punto/eliminarImagen/' + tarea.id_imagenes)
+                .success(function () {
+
+
+                })
+
+        };
+
+
+    datosmsg.deletImagenFoja = function (tarea) {
+            return $http.delete('/punto/eliminarImagenFoja/' + tarea.id_imagen)
+                .success(function () {
+
+
+                })
+
+        };
+
+        datosmsg.addImagen = function (imagen) {
+
+
+            var defered = $q.defer();
+            var promise = defered.promise;
+
+            $http.post('/api/profile/editPhoto', imagen)
+                .success(function (data) {
+
+                    console.log("rango edades "+data);
+
+                    defered.resolve(data);
+
+                })
+                .error(function (err) {
+                    defered.reject(err)
+                });
+
+            return promise;
+        };
+
+    */
 
     return datosmsg;
 
@@ -403,6 +537,12 @@ var objeto ={
 
     };
 
+    // llamar dato modal
+    $scope.pasarmsg = function (objeto) {
+        $scope.msg = objeto;
+        
+    } 
+
 
 
     /*
@@ -423,6 +563,364 @@ console.log(tarea);
 */
 
 });
+
+
+
+tareasModule.controller('mostrarpendiente', function ($scope, $location, datosmsg,$timeout) {
+    console.log("si");
+
+    datosmsg.getAllmsgPendiente().then(function (data) {
+
+        $scope.listamsg=data;
+
+    }).catch(function (err) {
+        console.log("error");
+    });
+
+
+    $timeout(function(){
+
+        console.log( $scope.listamsg);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+    $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
+
+////actulizarpendiente 
+    
+
+    $scope.actulizar = function (consulta) {
+
+        console.log(consulta);
+
+        var objeto ={
+            id_msg: consulta.id_msg,
+            estado: consulta.estado_msg,
+            id_informacion: consulta.id_informacion,
+            msg: consulta.msg
+        }
+        datosmsg.actualizar(objeto ).then(function (data) {
+
+
+
+        }).catch(function (err) {
+            console.log("error");
+        });
+      $scope.listamsg.splice(consulta,1);
+
+    };
+
+    
+
+
+
+    /*
+     $scope.eliminar = function (tarea) {
+     comun.delet(tarea);
+     console.log(tarea);
+     };
+
+
+
+     $scope.procesarObjeto = function (tarea) {
+     comun.tarea = tarea;
+     console.log(tarea);
+     $location.path('/editarSitio');
+
+     };
+
+     */
+
+});
+
+
+tareasModule.controller('mostrarnotificado', function ($scope, $location, datosmsg,$timeout) {
+    console.log("si");
+
+    datosmsg.getAllmsgNotificado().then(function (data) {
+
+        $scope.listamsg=data;
+
+    }).catch(function (err) {
+        console.log("error");
+    });
+
+
+    $timeout(function(){
+
+        console.log( $scope.listamsg);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+    $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
+
+////actulizar
+
+
+    $scope.actulizar = function (consulta) {
+
+        console.log(consulta);
+
+        var objeto ={
+            id_msg: consulta.id_msg,
+            estado: consulta.estado_msg,
+            id_informacion: consulta.id_informacion,
+            msg: consulta.msg
+        }
+        datosmsg.actualizar(objeto ).then(function (data) {
+
+
+
+        }).catch(function (err) {
+            console.log("error");
+        });
+        $scope.listamsg.splice(consulta,1);
+
+    };
+
+
+
+
+
+    /*
+     $scope.eliminar = function (tarea) {
+     comun.delet(tarea);
+     console.log(tarea);
+     };
+
+
+
+     $scope.procesarObjeto = function (tarea) {
+     comun.tarea = tarea;
+     console.log(tarea);
+     $location.path('/editarSitio');
+
+     };
+
+     */
+
+});
+
+
+tareasModule.controller('mostrarsuscriptores', function ($scope, $location, datosmsg,$timeout) {
+    console.log("si");
+
+    datosmsg.getusuarios().then(function (data) {
+
+        $scope.listamsg=data;
+
+    }).catch(function (err) {
+        console.log("error");
+    });
+
+
+    $timeout(function(){
+
+        console.log( $scope.listamsg);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+    $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
+
+///actulizar
+
+
+    $scope.actulizar = function (consulta) {
+
+        console.log(consulta);
+
+
+        datosmsg.actualizarusuario(consulta ).then(function (data) {
+
+
+        }).catch(function (err) {
+            console.log("error");
+        });
+        $scope.listamsg.splice(consulta,1);
+
+    };
+
+
+
+
+
+    /*
+     $scope.eliminar = function (tarea) {
+     comun.delet(tarea);
+     console.log(tarea);
+     };
+
+
+
+     $scope.procesarObjeto = function (tarea) {
+     comun.tarea = tarea;
+     console.log(tarea);
+     $location.path('/editarSitio');
+
+     };
+
+     */
+
+});
+
+tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $location, datosmsg,$timeout) {
+    console.log("si");
+
+    datosmsg.getusuariospendiente().then(function (data) {
+
+        $scope.listamsg=data;
+
+    }).catch(function (err) {
+        console.log("error");
+    });
+
+
+    $timeout(function(){
+
+        console.log( $scope.listamsg);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+    $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
+
+///actulizar
+
+
+    $scope.actulizar = function (consulta) {
+
+        console.log(consulta);
+
+
+        datosmsg.actualizarusuario(consulta ).then(function (data) {
+
+
+        }).catch(function (err) {
+            console.log("error");
+        });
+        $scope.listamsg.splice(consulta,1);
+
+    };
+
+
+
+
+
+    /*
+     $scope.eliminar = function (tarea) {
+     comun.delet(tarea);
+     console.log(tarea);
+     };
+
+
+
+     $scope.procesarObjeto = function (tarea) {
+     comun.tarea = tarea;
+     console.log(tarea);
+     $location.path('/editarSitio');
+
+     };
+
+     */
+
+});
+
+
+tareasModule.controller('mostrarnotificadosuscriptores', function ($scope, $location, datosmsg,$timeout) {
+    console.log("si");
+
+    datosmsg.getusuariosnotificado().then(function (data) {
+
+        $scope.listamsg=data;
+
+    }).catch(function (err) {
+        console.log("error");
+    });
+
+
+    $timeout(function(){
+
+        console.log( $scope.listamsg);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+    $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
+
+///actulizar
+
+
+    $scope.actulizar = function (consulta) {
+
+        console.log(consulta);
+
+
+        datosmsg.actualizarusuario(consulta ).then(function (data) {
+
+
+        }).catch(function (err) {
+            console.log("error");
+        });
+        $scope.listamsg.splice(consulta,1);
+
+    };
+
+
+
+
+
+    /*
+     $scope.eliminar = function (tarea) {
+     comun.delet(tarea);
+     console.log(tarea);
+     };
+
+
+
+     $scope.procesarObjeto = function (tarea) {
+     comun.tarea = tarea;
+     console.log(tarea);
+     $location.path('/editarSitio');
+
+     };
+
+     */
+
+});
+
+
+
+
+
+
 
 
 

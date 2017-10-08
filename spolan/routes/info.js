@@ -38,6 +38,55 @@ router.get('/obtenerinformacion', function (req, res) {
 });
 
 });
+///////////////////pendiente
+
+
+router.get('/obtenerpendienteinfo', function (req, res) {
+
+  var client = new pg.Client(conString);
+  client.connect();
+
+  const results = [];
+
+  var query = client.query('SELECT * from informacion where  estado = $1 ', ['pendiente']);
+
+
+  query.on('row', (row) => {
+    results.push(row);
+});
+
+  query.on('end', () => {
+    client.end();
+  return res.json(results);
+});
+
+});
+
+/////////notificado
+
+router.get('/obtenernotificadoinfo', function (req, res) {
+
+  var client = new pg.Client(conString);
+  client.connect();
+
+  const results = [];
+
+  var query = client.query('SELECT * from informacion where  estado = $1 ', ['notificado']);
+
+
+  query.on('row', (row) => {
+    results.push(row);
+});
+
+  query.on('end', () => {
+    client.end();
+  return res.json(results);
+});
+
+});
+
+
+
 
 ///////////////////////////// ingresar
 

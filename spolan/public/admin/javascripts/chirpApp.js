@@ -34,7 +34,14 @@ app.config(function($routeProvider){
 		})
 		        
           .when('/msg', { templateUrl: 'paginas/msg.html',controller: 'mostrarmsg' })
-          
+		.when('/pendiente', { templateUrl: 'paginas/pendiente.html',controller: 'mostrarpendiente' })
+		.when('/notificado', { templateUrl: 'paginas/notificado.html',controller: 'mostrarnotificado' })
+		
+		.when('/suscriptores', { templateUrl: 'paginas/suscriptores.html',controller: 'mostrarsuscriptores' })
+				.when('/notificadosuscriptores', { templateUrl: 'paginas/notificadosuscriptoress.html',controller: 'mostrarnotificadosuscriptores' })
+		.when('/pendientesuscriptores', { templateUrl: 'paginas/pendientesuscriptoress.html',controller: 'mostrarpendientesuscriptores' })
+		
+
           .when('/Creditos', { templateUrl: 'paginas/Creditos.html'})
 
 		.when('/editarSitio', { templateUrl:'paginas/editarSitio.html',controller: 'ctrlEditar' })
