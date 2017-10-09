@@ -54,8 +54,10 @@ var usuario = require('./routes/usuario');
 var info = require('./routes/info');
 var msg = require('./routes/msg');
 var agenda = require('./routes/agenda');
+
 //api
 app.use('/web', usuario);
 app.use('/web', info);
 app.use('/web', msg);
 app.use('/web', agenda);
+app.use('/web', require('./routes/correo'));

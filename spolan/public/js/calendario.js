@@ -94,6 +94,8 @@ console.log("calendario");
 
 		}).then(function successCallback(response) {
 			console.log(response.data);
+			
+			correo(response.data[0]);
 
 			$http({
 				method: 'post',
@@ -174,76 +176,32 @@ console.log("calendario");
 
 	}
 
-		/*
-		var objeto = {
-			nombre: $scope.formulario.email,
-			contrasenia: "spolan" + $scope.formulario.nombre,
-			idtipo: 2,
-		}
+
+
+
+
+	function correo(objeto) {
+
+		console.log(objeto);
+
 		$http({
-			method: 'post',
-			url: 'http://localhost:3000/web/registrarusaurio',
+			method: 'POST',
+			url: '/web/SendMail',
 			headers: {
-				// 'Content-Type': 'application/json',
+				'Content-Type': 'application/json',
 				//'Authorization': token
+			},
+			data: {
+				"mail": objeto.nombre,
+				"usuario": objeto.nombre,
+				"contrasenia": objeto.contrasena
+
 			}
-			,data:objeto
+
+
 
 		}).then(function successCallback(response) {
 			console.log(response.data);
-
-			$http({
-				method: 'post',
-				url: 'http://localhost:3000/web/registrarinfo',
-				headers: {
-					// 'Content-Type': 'application/json',
-					//'Authorization': token
-				}
-				,data:{
-
-					nombre: $scope.formulario.nombre,
-					apellido: $scope.formulario.apellido,
-					correo: $scope.formulario.email,
-					telefono: $scope.formulario.telefono,
-					id_usuario: response.data[0].id_usuario,
-					estado: "pendiente"
-				}
-
-			}).then(function successCallback(response) {
-				console.log(response.data);
-
-
-				$http({
-					method: 'post',
-					url: 'http://localhost:3000/web/registmsg',
-					headers: {
-						// 'Content-Type': 'application/json',
-						//'Authorization': token
-					},data:{
-						id_informacion: response.data[0].id_informacion,
-						msg: $scope.formulario.msg,
-						estado: "pendiente"
-
-				}
-
-				}).then(function successCallback(respnse) {
-					console.log(response.data);
-
-				
-
-				}, function errorCallback(response) {
-
-					alert('error al realizar Ingreso');
-
-				});
-
-
-
-			}, function errorCallback(response) {
-
-				alert('error al realizar Ingreso');
-
-			});
 
 		}, function errorCallback(response) {
 
@@ -251,15 +209,8 @@ console.log("calendario");
 
 		});
 
-
-
-
-
-
 	}
 
-
-*/
 
 
 	});

@@ -16,7 +16,7 @@ module.exports = router;
 
 router.post('/registrarCalendario', function (req, res) {
 
-  console.log(req);
+ 
 
   var p = {
     title:req.body.title,
