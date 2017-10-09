@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CONTACTOS</title>
+    <title> Agenda</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/google-map.css">
@@ -50,7 +50,8 @@
       
       -->
       <header>
-        <div class="container">
+
+        <div class="container" >
           <div class="brand">
             <IMG src="images/sin.png" WIDTH=130 HEIGHT=130 >
             <h1 class="brand_name"><a href="./">SPOLAN</a></h1>
@@ -62,21 +63,27 @@
           <div class="container">
             <nav class="nav">
               <ul data-type="navbar" class="sf-menu">
-                <li><a href="./">Inicio</a>
+                <li class="active" ><a href="./">Inicio</a>
                 </li>
-                <li ><a href="index-1.html">Spolan</a>
-
+                <li><a href="index-1.html">Spolan</a>
                 </li>
                 <li><a href="index-2.html">Certificaciones</a>
                 </li>
-                <li><a href="index-3.html">FAQS</a>
+                <li  ><a href="index-3.html">Blog</a>
                 </li>
-                <li class="active" ><a href="index-4.html">Contacos</a>
+                <li><a href="index-4.html">Contactos</a>
+                </li>
+                </li>
+                <li><a href="index-4.html">Aula Virtual</a>
+                </li>
+                </li>
+                <li><a href="logging/logging.html">Administrar</a>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
+
       </header>
       <!--
       ========================================================
@@ -84,17 +91,14 @@
       ========================================================
       -->
       <main>
-
-
-
-
-
         <section class="well1" id="suscribite" ng-app="myAppCalendario">
           <div class="container"  >
             <h2>Agenda tu Examen</h2>
-            <form  class="mailform off2" ng-controller="calendario">
+
+            <form  class="mailform off2" ng-controller="calendario" style=" text-align: center " >
               <input type="hidden" name="form-type" value="contact">
               <fieldset class="row">
+
                 <label class="grid_4">
                   <input type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
                 </label>
@@ -102,13 +106,11 @@
                   <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
                 </label>
                 <label class="grid_4">
-                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
+                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone @NotEmpty " ng-model="formulario.telefono"  >
                 </label>
-
                 <label class="grid_4">
                                   <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
                 </label>
-
 
                 <label class="grid_4">
                   <div class="form-group">
@@ -118,7 +120,7 @@
                       <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                       </div>
-                      <input type="text" class="form-control pull-right" id="datepicker">
+                      <input  style="height: 10%" type="text" class="form-control pull-right" id="datepicker"  data-constraints="@DATE @NotEmpty" >
                     </div>
                     <!-- /.input group -->
                   </div>
@@ -127,17 +129,13 @@
 
 
                 <label class="grid_4">
-
-
-
-
                     <div class="bootstrap-timepicker">
                       <div class="form-group">
 
                         <label>Hora:</label>
 
                         <div class="input-group">
-                          <input type="text" class="form-control timepicker" id="timepicker">
+                          <input style="height: 10%" type="text" class="form-control timepicker" id="timepicker">
 
                           <div class="input-group-addon">
                             <i class="fa fa-clock-o"></i>
@@ -152,12 +150,14 @@
 
 
 
-                <div class="grid_12">
+                <div class="grid_12" align="center ">
                   <button  class="btn" ng-click="enviar()">Enviar</button>
                 </div>
 
               </fieldset>
             </form>
+
+
           </div>
         </section>
       </main>
@@ -170,6 +170,10 @@
         <section>
           <div class="container">
             <div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>
+           </br>
+              </br>
+              </br>
+              </br>
             </div>
           </div>
         </section>
