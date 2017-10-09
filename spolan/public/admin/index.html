@@ -38,6 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="../angular-1.4.6/angular-local-storage.js"></script>
         <script src="../angular-1.4.6/angular-local-storage.js"></script>
         <script src="javascripts/msg.js"></script>
+        <script src="javascripts/calendario.js"></script>
         <script src="javascripts/chirpApp.js"></script>
         <script src="javascripts/CargasController.js"></script>
         <script src="../angular-1.4.6/build/multiple-select.min.js"></script>
@@ -56,6 +57,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     color: #444;
     border-top: 5px solid #d2d6de;
   }</style>
+
+
+
+        <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+        <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+        <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+
+
     </head>
     <!--
 BODY TAG OPTIONS:
@@ -215,7 +228,7 @@ desired effect
                             </ul>
                         </li>
                         <li>
-                            <a href="" ng-click="showCargarArchivos('/agregarFoja')"><i class="fa fa-calendar"></i><span>AGENDA DE PRUEBAS</span></a>
+                            <a href="" ng-click="showCargarArchivos('/calendario')"><i class="fa fa-calendar"></i><span>AGENDA DE PRUEBAS</span></a>
                         </li>
                         <li>
                             <a href="" ng-click="showCargarArchivos('/fojas')"><i class="glyphicon glyphicon-search"></i> <span>ver  Fojas</span></a>
@@ -337,5 +350,11 @@ desired effect
      fixed layout. -->
         <script src="plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+
+        <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+
+        <script src="plugins/moment.min.js"></script>
+
     </body>
 </html>

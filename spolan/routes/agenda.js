@@ -59,6 +59,29 @@ router.post('/registrarCalendario', function (req, res) {
 
 
 
+router.get('/obtenerCalendario', function (req, res) {
+
+
+  var client = new pg.Client(conString);
+  client.connect();
+
+  const results = [];
+
+  var query = client.query('SELECT * from agenda');
+
+
+  query.on('row', (row) => {
+    results.push(row);
+});
+
+  query.on('end', () => {
+    client.end();
+  return res.json(results);
+});
+
+});
+
+
 
 
 

@@ -1,0 +1,248 @@
+<div class="container-fluid">
+
+
+
+
+
+
+  <div class="col-md-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Agenda </h2>
+
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+
+
+    <div class="col-md-12">
+
+
+
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Listar por</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+
+
+
+        <div class="row">
+          <div class="col-md-3 col-xs-4">
+
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-model="a.pendientes" ng-change="filtroPendiente()">
+                Pendientes
+              </label>
+            </div>
+          </div>
+
+            <div class="col-md-3 col-xs-4">
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-model="a.ocupados" ng-change="filtroOcupado()">
+                Aprobados
+              </label>
+            </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-xs-4">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-model="a.cancelados" ng-change="filtroCancelado()">
+                Cancelados
+              </label>
+            </div>
+            </div>
+
+
+          <!-- /.col -->
+          <div class="col-md-10 col-xs-10">
+
+
+            <div id='calendar1'></div>
+
+            <!-- /. box -->
+          </div>
+          <!-- /.col -->
+        </div>
+
+
+
+
+
+        <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
+              </div>
+              <div class="modal-body">
+                <div id="testmodal" style="padding: 5px 20px;">
+                  <form id="antoform" class="form-horizontal calender" role="form">
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Title</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="title" name="title">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Description</label>
+                      <div class="col-sm-9">
+                                    <textarea class="form-control" style="height:55px;" id="descr"
+                                              name="descr"></textarea>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Datos del Suscriptor </h4>
+              </div>
+              <div class="modal-body">
+
+                <div id="testmodal2" style="padding: 5px 20px;">
+                  <form id="antoform2" class="form-horizontal calender" role="form">
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Motivo</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="title2" id="title2"
+                               ng-disabled="true">
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Nombre</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nombre" ng-disabled="true">
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Apellido</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="apellido" ng-disabled="true">
+
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">telefono</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="telefono" ng-disabled="true">
+                      </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">estado</label>
+                      <div class="col-sm-9">
+                        <select id="estado" class="form-control">
+
+                          <option value="pendiente">pendiente</option>
+                          <option value="ocupado">aprobado</option>
+                          <option value="cancelado">cancelado</option>
+
+                        </select>
+
+                      </div>
+                    </div>
+
+
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">cerrar</button>
+                <button type="button" class="btn btn-primary antosubmit2" data-dismiss="modal">Guardar Cambios
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+        <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+</div>

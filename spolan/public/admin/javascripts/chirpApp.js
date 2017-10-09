@@ -1,4 +1,4 @@
-var app = angular.module('chirpApp', ['ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage']).run(function($http, $rootScope,$localStorage) {
+var app = angular.module('chirpApp', ['calendario','ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage']).run(function($http, $rootScope,$localStorage) {
   
   // $rootScope.usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
    
@@ -40,7 +40,15 @@ app.config(function($routeProvider){
 		.when('/suscriptores', { templateUrl: 'paginas/suscriptores.html',controller: 'mostrarsuscriptores' })
 				.when('/notificadosuscriptores', { templateUrl: 'paginas/notificadosuscriptoress.html',controller: 'mostrarnotificadosuscriptores' })
 		.when('/pendientesuscriptores', { templateUrl: 'paginas/pendientesuscriptoress.html',controller: 'mostrarpendientesuscriptores' })
+
+
+		.when('/calendario', { templateUrl: 'paginas/calendario.html',controller: ('ctrlCalendario' )})
 		
+
+		
+
+
+
 
           .when('/Creditos', { templateUrl: 'paginas/Creditos.html'})
 
@@ -53,7 +61,7 @@ app.config(function($routeProvider){
 
 
 
-		.when('/agregarFoja', { templateUrl: 'paginas/agregarFoja.html',controller: ('ctrlAgregarFoja' )})
+	
 
 .when('/fojas', { templateUrl: 'paginas/fojas.html',controller: ('ctrlFojas' )})
 
