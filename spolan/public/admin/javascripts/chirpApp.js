@@ -53,12 +53,12 @@ app.directive('ckEditor', function () {
 app.config(function($routeProvider){
 	$routeProvider
 		//the timeline display
-		.when('/', {
-			templateUrl: 'paginas/inicio.html'
-		
-		})
-		        
-          .when('/msg', { templateUrl: 'paginas/msg.html',controller: 'mostrarmsg' })
+
+
+		.when('/', { templateUrl: 'paginas/suscriptores.html',controller: 'mostrarsuscriptores' })
+
+
+		.when('/msg', { templateUrl: 'paginas/msg.html',controller: 'mostrarmsg' })
 		.when('/pendiente', { templateUrl: 'paginas/pendiente.html',controller: 'mostrarpendiente' })
 		.when('/notificado', { templateUrl: 'paginas/notificado.html',controller: 'mostrarnotificado' })
 		
