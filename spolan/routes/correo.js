@@ -60,5 +60,51 @@ router.post('/sendMail',function(req,res) {
 
 
 
+router.post('/sendMail1',function(req,res) {
+
+
+    console.log(req.body);
+
+
+
+
+
+
+// create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // secure:true for port 465, secure:false for port 587
+        auth: {
+            user: mail,
+            pass: password
+        }
+    });
+
+// setup email data with unicode symbols
+    let mailOptions = {
+        from: '"SPOLAN" <' + mail + '>', // sender address
+        to: req.body.mail, // list of receivers
+        subject: req.body.asunto, // Subject line
+        text: req.body.asunto, // plain text body
+        html: req.body.contenido // html body
+    };
+
+// send mail with defined transport object
+
+    //   console.log(mailOptions);
+    transporter.sendMail(mailOptions, function(err, doc) {
+        if(err) return next(err);
+        // res.json(doc);
+
+
+        res.send('enviado');
+    });
+
+
+
+
+});
+
 
 module.exports=router;

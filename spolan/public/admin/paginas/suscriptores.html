@@ -11,6 +11,10 @@
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">SUSCRIPTORES</h3>
+                    <br>
+                    <button type="button" class="glyphicon glyphicon-envelope" ng-click="showCargarArchivos('/correo')" alt="Eliminar datos" title="Eliminar datos">
+Enviar Correos
+                    </button>
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
@@ -49,7 +53,7 @@
 
                                             </td>
                                             <td>
-                                            
+
                                                 <select style="cursor:default;  background-color: rgba(255, 255, 255, .4);" class="form-control "  ng-model="consulta.estado" ng-options="item.nombre as item.nombre for item in estados" ng-change="actulizar(consulta)"  ></select>
 
                                             </td>
@@ -71,12 +75,9 @@
 
 
                                             <td>
-                                                <button type="button" ng-click="eliminar(consulta)" class="glyphicon glyphicon-envelope" alt="Eliminar datos" title="Eliminar datos">
+                                                <button type="button" class="glyphicon glyphicon-envelope" alt="Eliminar datos" title="Eliminar datos">
 
-
-                    </button>
-
-                    </button>
+                                                </button>
                                             </td>
 
 

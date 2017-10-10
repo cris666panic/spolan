@@ -3,6 +3,7 @@ angular.module('myAppMsg', [])
 .controller('msg', function($scope, $http, $rootScope, $location){
 
 console.log("dc");
+
 	$scope.enviar = function () {
 		
 		console.log($scope.formulario);
@@ -23,6 +24,8 @@ console.log("dc");
 
 		}).then(function successCallback(response) {
 			console.log(response.data);
+
+			correo(response.data[0]);
 
 			$http({
 				method: 'post',
@@ -91,10 +94,42 @@ console.log("dc");
 	}
 
 
+	function correo(objeto) {
+
+		console.log(objeto);
+
+		$http({
+			method: 'POST',
+			url: '/web/SendMail',
+			headers: {
+				'Content-Type': 'application/json',
+				//'Authorization': token
+			},
+			data: {
+				"mail": objeto.nombre,
+				"usuario": objeto.nombre,
+				"contrasenia": objeto.contrasena
+
+			}
 
 
 
-	})
+		}).then(function successCallback(response) {
+			console.log(response.data);
+
+		}, function errorCallback(response) {
+
+			alert('error al realizar Ingreso');
+
+		});
+
+	}
+
+
+
+
+
+})
 
 .controller('suscri', function($scope, $http, $rootScope, $location){
 
@@ -119,6 +154,7 @@ console.log("dc");
 
 		}).then(function successCallback(response) {
 			console.log(response.data);
+			correo(response.data[0]);
 
 			$http({
 				method: 'post',
@@ -157,6 +193,38 @@ console.log("dc");
 
 
 
+
+	}
+
+
+	function correo(objeto) {
+
+		console.log(objeto);
+
+		$http({
+			method: 'POST',
+			url: '/web/SendMail',
+			headers: {
+				'Content-Type': 'application/json',
+				//'Authorization': token
+			},
+			data: {
+				"mail": objeto.nombre,
+				"usuario": objeto.nombre,
+				"contrasenia": objeto.contrasena
+
+			}
+
+
+
+		}).then(function successCallback(response) {
+			console.log(response.data);
+
+		}, function errorCallback(response) {
+
+			alert('error al realizar Ingreso');
+
+		});
 
 	}
 
