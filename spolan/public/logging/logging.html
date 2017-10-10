@@ -155,10 +155,8 @@ a:hover, a:focus {
             if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
             else $('head > link').filter(':first').replaceWith(defaultCSS); 
         }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
-        });
+
+
     </script>
 </head>
 <body class="main">
@@ -180,7 +178,7 @@ a:hover, a:focus {
                             <h3 style="backface-visibility: hidden;" >Ingreso</h3>
 </center>
 
-                          <form class="login-form" style="backface-visibility: hidden;">
+                          <form class="login-form" style="backface-visibility: hidden;" action="../admin/index.html ">
                               <div class="form-group" style="backface-visibility: hidden;">
                                   <div class="input-group" style="backface-visibility: hidden;">
                                       <input class="form-control" placeholder="Usuario" style="backface-visibility: hidden;" type="date">
