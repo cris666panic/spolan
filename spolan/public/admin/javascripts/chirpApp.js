@@ -13,7 +13,7 @@ var app = angular.module('chirpApp', ['ngCkeditor','correo','calendario','ngSani
      //  localStorage.removeItem('usuario');
 	   //localStorage.removeItem('authenticated');
 	 $http.get('/auth/signout');
-       window.location = '../INICIO.html';
+       window.location = '../index.html';
 	
 
   };
