@@ -18,6 +18,60 @@ module.exports = router;
 
 
 
+
+router.post('/login', function (req, res) {
+
+    var data1 = {
+        nombre: req.body.usuario,
+        contrasenia: req.body.contrasenia
+
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    const results = [];
+
+    var query = client.query('SELECT * FROM usuario INNER JOIN informacion ON usuario.id_usuario = informacion.id_usuario WHERE usuario.nombre=$1 and usuario.contrasena=$2',
+        [data1.nombre, data1.contrasenia]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results[0]);
+});
+
+});
+
+
+
+router.post('/usuarioExiste', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * from usuario INNER JOIN informacion ON usuario.id_usuario = informacion.id_usuario where usuario.nombre=$1',[req.body.usuario]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
 router.get('/obtenerusuarios', function (req, res) {
 
   var client = new pg.Client(conString);

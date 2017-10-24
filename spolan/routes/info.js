@@ -25,7 +25,7 @@ router.get('/obtenerinformacion', function (req, res) {
 
   const results = [];
 
-  var query = client.query('SELECT * from informacion');
+  var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2');
 
 
   query.on('row', (row) => {
@@ -48,7 +48,7 @@ router.get('/obtenerpendienteinfo', function (req, res) {
 
   const results = [];
 
-  var query = client.query('SELECT * from informacion where  estado = $1 ', ['pendiente']);
+  var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 ', ['pendiente']);
 
 
   query.on('row', (row) => {
@@ -71,7 +71,7 @@ router.get('/obtenernotificadoinfo', function (req, res) {
 
   const results = [];
 
-  var query = client.query('SELECT * from informacion where  estado = $1 ', ['notificado']);
+  var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 ', ['notificado']);
 
 
   query.on('row', (row) => {

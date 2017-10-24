@@ -6,8 +6,25 @@
 
     <title>Logging</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="zD9xl_data/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link href="admin/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+    <script src="angular-1.4.6/angular.js"></script>
+    <script src="angular-1.4.6/angular-route.js"></script>
+    <script src="angular-1.4.6/angular-resource.js"></script>
+    <script src="angular-1.4.6/ngStorage.min.js"></script>
+    <script src="angular-1.4.6/angular-local-storage.min.js"></script>
+    <script src="angular-1.4.6/angular-local-storage.js"></script>
+
+
+    <script src="js/login.js"></script>
+
+
+
+
     <style type="text/css">
+
+
     @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
@@ -146,24 +163,13 @@ a:hover, a:focus {
     margin: 20px 0;
 }
     </style>
-    <script src="jquery-1.js"></script>
-    <script src="zD9xl_data/bootstrap.js"></script>
-    <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
-        }
 
-
-    </script>
 </head>
-<body class="main">
+<body class="main" ng-app="myApp">
 	
 
 <div class="login-screen"></div>
-    <div class="login-center">
+    <div class="login-center" ng-controller="LoginController">
         <div class="container min-height" style="margin-top: 20px;">
         	<div class="row">
                 <div class="col-xs-4 col-md-offset-8">
@@ -178,10 +184,10 @@ a:hover, a:focus {
                             <h3 style="backface-visibility: hidden;" >Ingreso</h3>
 </center>
 
-                          <form class="login-form" style="backface-visibility: hidden;" action="../admin/index.html ">
+                          <form class="login-form" style="backface-visibility: hidden;" >
                               <div class="form-group" style="backface-visibility: hidden;">
                                   <div class="input-group" style="backface-visibility: hidden;">
-                                      <input class="form-control" placeholder="Usuario" style="backface-visibility: hidden;" type="text">
+                                      <input class="form-control" placeholder="Correo" style="backface-visibility: hidden;" type="text" ng-model="usuario.usuario">
                                       <span class="input-group-addon" style="backface-visibility: hidden;">
                                           <i class="fa fa-user" style="backface-visibility: hidden;"></i>
                                       </span>
@@ -189,7 +195,7 @@ a:hover, a:focus {
                               </div>
                               <div class="form-group" style="backface-visibility: hidden;">
                                   <div class="input-group" style="backface-visibility: hidden;">
-                                      <input class="form-control" placeholder="Contraseña" style="backface-visibility: hidden;" type="password">
+                                      <input class="form-control" placeholder="Contraseña" style="backface-visibility: hidden;" type="password" ng-model="usuario.contrasenia">
                                       <span class="input-group-addon" style="backface-visibility: hidden;">
                                           <i class="fa fa-lock" style="backface-visibility: hidden;"></i>
                                       </span>
@@ -200,8 +206,10 @@ a:hover, a:focus {
                               </div>
 <center>
                               <div class="form-group sign-btn" style="backface-visibility: hidden;">
-                                  <input class="btn" value="Entrar" style="backface-visibility: hidden;" type="submit">
+                                  <input class="btn" value="Entrar" style="backface-visibility: hidden;" type="submit" ng-click="login()">
                                                                </div>
+
+    <label>{{mensaje}}</label>
 </center>
                           </form>
                         </div>
@@ -253,40 +261,10 @@ a:hover, a:focus {
             </div>
         </div>
     </div>
-    <script src="zD9xl_data/jquery.js"></script>
+
     
     
-	<script type="text/javascript">
-	
-$().ready(function() {
-	$("#card").flip({
-	  trigger: 'manual'
-	});
-});
 
-
-$(".signup_link").click(function() {
-
-	$(".signin_form").css('opacity', '0');
-	$(".signup_form").css('opacity', '100');
-	
-	
-	$("#card").flip(true);
-	
-	return false;
-});
-
-$("#unflip-btn").click(function(){
-  
-	$(".signin_form").css('opacity', '100');
-	$(".signup_form").css('opacity', '0');
-	
-  	$("#card").flip(false);
-	
-	return false;
-	
-});
-	</script>
 
 
 </body></html>

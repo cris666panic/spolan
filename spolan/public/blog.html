@@ -155,7 +155,8 @@
             <nav role='navigation' class="push-right">
               <ul>
                 <li><a href="#" ng-click="blog.selectTab('blog')">See All Posts</a></li> //
-                <li><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>
+                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>
+                <li><a href="#" ng-click="signout()" >Cerrar Session</a></li>
               </ul>
             </nav>
           </div>
@@ -173,8 +174,8 @@
           <ul class="post-grid" ng-show="blog.isSelected('blog')">
             <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)" >
               <h3>{{post.title}}</h3>
-              <p>{{post.body[0] | limitTo:70}}...</p>
-              <p class="fa fa-comment push-left"> {{post.comments.length}}
+              <p>{{post.body.body[0] | limitTo:70}}...</p>
+              <p class="fa fa-comment push-left"> {{post.comments.comments.length}}
               </p>
               <p class="fa fa-heart push-right"> {{post.likes}}
               </p>
@@ -187,7 +188,7 @@
               <img src="{{post.image}}"/>
               <cite>by {{post.author}} on {{post.createdOn | date}}</cite>
               <div class="post-body">
-                <p ng-repeat="paragraph in post.body">
+                <p ng-repeat="paragraph in post.body.body">
                   {{paragraph}}
                 </p>
               </div>
@@ -196,7 +197,7 @@
                 <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
                 <h3>Comments</h3>
                 <ul>
-                  <li ng-repeat="comment in post.comments">
+                  <li ng-repeat="comment in post.comments.comments">
                     "{{comment.body}}"
                     <cite>- <b>{{comment.author}}</b></cite>
                   </li>
@@ -214,7 +215,8 @@
               </div>
             </div>
           </div>
-          <div class="post" ng-show="blog.isSelected('new')">
+
+          <div class="post" ng-show="blog.isSelected('new')" >
             <h2>Add New Post</h2>
 
             <form name="postForm" ng-submit=" blog.addPost()" novalidate>
@@ -227,7 +229,7 @@
               <label for="">by:</label>
               <input type="text" ng-model="blog.post.author" placeholder="Author Name" required/>
 
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Crear Nuevo Post" />
               </select></form>
 
           </div>

@@ -1,10 +1,10 @@
 var app = angular.module('chirpApp', ['ngCkeditor','correo','calendario','ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage']).run(function($http, $rootScope,$localStorage) {
   
-  // $rootScope.usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
+   $rootScope.usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
    
-  //$rootScope.authenticated =  JSON.parse(localStorage.getItem("authenticated"));
+  $rootScope.authenticated =  JSON.parse(localStorage.getItem("authenticated"));
   
-  //$rootScope.current_user = $rootScope.usuarioLog.username;
+  $rootScope.current_user = $rootScope.usuarioLog.nombre;
    $rootScope.notificacion = 0;
 
   $rootScope.signout = function(){
