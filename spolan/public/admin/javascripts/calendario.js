@@ -15,6 +15,30 @@ citasModule.factory('calendario', function ($http,$q) {
 
 citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$http) {
 
+
+    $scope.nuevaFecha=false;
+
+    $scope.changeFecha=function () {
+
+      console.log("cambio de fecha");
+
+        console.log($scope.valor);
+
+        if ($scope.valor=="cambio"){
+
+            $scope.nuevaFecha=true;
+
+
+        }else {
+            $scope.nuevaFecha=false;
+        }
+
+
+
+
+    };
+
+
     $timeout(function () {
 
         $(".timepicker").timepicker({
@@ -66,43 +90,10 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
     });
 
-    var listado1 = [];
 
 
-    $http({
-
-        method: 'GET',
-        url: '/web/obtenerCalendario', //ocupado va un slect
 
 
-        headers: {
-            'Content-Type': 'application/json'
-        }
-
-    }).then(function successCallback(response) {
-
-
-        console.log(response.data);
-
-        var n = response.data.length;
-
-        for (var i = 0; i < n; i++) {
-
-            response.data[i].title = "ocupado";
-            listado1.push(response.data[i]);
-
-        }
-
-
-    }, function errorCallback(response) {
-        console.log('entra');
-
-
-    });
-
-    $scope.horario = {};
-
-    // formato de ingreso "2017-07-12T14:00:00-05:00"
 
 
     var date = new Date(),
@@ -159,6 +150,16 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
                     if (aux == "ocupado") {
                         color = "#88f200";
+                    }
+
+
+                    if (aux == "cambio") {
+                        color = "#ff9250";
+
+
+
+
+
                     }
 
 
@@ -236,6 +237,91 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
         if (aux == "ocupado") {
             color = "#88f200";
         }
+
+        if (aux == "cambio") {
+            color = "#ff9250";
+
+
+
+            var aux = document.getElementById('datepicker').value.toString();
+            var vec = aux.split("T");
+
+
+            console.log(vec[0]);
+
+            var aux1 = document.getElementById('timepicker').value.toString();
+            var vec1 = aux1.split(":");
+
+            console.log(vec1);
+            var vec3 = vec[0].split("/");
+
+            console.log(vec3);
+            var vec2 = vec1[1].split(" ");
+
+            console.log(vec2);
+
+
+            var hora;
+
+            if (vec2[1] == "PM") {
+                hora = ( parseInt(vec1[0]) + 12).toString();
+
+
+            } else {
+                hora = vec1[0];
+
+            }
+
+
+            var fecha1 = "" + vec3[2] + "-" + vec3[1] + "-" + vec3[0] + "T" + hora + ":" + vec2[0] + ":00";
+
+
+            // formato de ingreso "2017-07-12T14:00:00-05:00"
+
+            console.log(fecha1);
+
+
+            $http({
+                method: 'POST',
+                url: '/web/registrarCalendario',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                    title: "examen",
+                    evento: obj.evento,
+                    start: fecha1,
+                    end: fecha1,
+                    backgroundColor: "#00c0ef",
+                    borderColor: "#00c0ef",
+                    estado: "pendiente",
+                    id_informacion:obj.id_informacion
+
+                }
+
+
+            }).then(function successCallback(response) {
+                console.log("nuevo ingresado de cambio ",response.data);
+
+                $('#calendar1').fullCalendar('destroy');
+
+                listado.push(response.data[0]);
+                Calendario(listado);
+
+
+            }, function errorCallback(response) {
+
+            });
+
+
+
+
+
+
+
+        }
+
+
 
 
         $http({
@@ -411,13 +497,13 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
             var pendientes = [];
             var aprobados = [];
             var total = [];
-            $.getJSON('/api/eventos?estado=pendiente', function (data) {
+            $.getJSON('/web/obtenerCalendarioPendientes', function (data) {
                 console.log(data);
                 pendientes = data;
 
             });
 
-            $.getJSON('/api/eventos?estado=ocupado', function (data) {
+            $.getJSON('/web/obtenerCalendarioOcupados', function (data) {
                 console.log(data);
                 aprobados = data;
 
@@ -438,7 +524,7 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
                 $('#calendar1').fullCalendar('destroy');
 
-                $.getJSON('/api/eventos?estado=pendiente', function (data) {
+                $.getJSON('/web/obtenerCalendarioPendientes', function (data) {
                     console.log(data);
                     Calendario(data);
 
@@ -470,13 +556,13 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
             var pendientes = [];
             var aprobados = [];
             var total = [];
-            $.getJSON('/api/eventos?estado=pendiente', function (data) {
+            $.getJSON('/web/obtenerCalendarioPendientes', function (data) {
                 console.log(data);
                 pendientes = data;
 
             });
 
-            $.getJSON('/api/eventos?estado=ocupado', function (data) {
+            $.getJSON('/web/obtenerCalendarioOcupados', function (data) {
                 console.log(data);
                 aprobados = data;
 
@@ -498,7 +584,7 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
                 $('#calendar1').fullCalendar('destroy');
 
-                $.getJSON('/api/eventos?estado=ocupado', function (data) {
+                $.getJSON('/web/obtenerCalendarioOcupados', function (data) {
                     console.log(data);
                     Calendario(data);
 
@@ -524,17 +610,32 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
         if (true == $scope.a.cancelados) {
 
+            $('#calendar1').fullCalendar('destroy');
+
+            var cancelados = [];
+            var cambios = [];
+            var total = [];
+            $.getJSON('/web/obtenerCalendarioCancelado', function (data) {
+                console.log(data);
+                cancelados = data;
+
+            });
+
+            $.getJSON('/web/obtenerCalendarioCambio', function (data) {
+                console.log(data);
+                cambios = data;
+
+            });
+
+            $timeout(function () {
+                total = cancelados.concat(cambios);
+                Calendario(total);
+            }, 100, false);
+
 
             console.log($scope.a.cancelados);
 
 
-            $('#calendar1').fullCalendar('destroy');
-
-            $.getJSON('/api/eventos?estado=cancelado', function (data) {
-                console.log(data);
-                Calendario(data);
-
-            });
 
 
         } else {

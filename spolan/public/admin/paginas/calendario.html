@@ -56,7 +56,7 @@
 
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Listar por</h3>
+          <h3 class="box-title">Filtrar por :</h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -70,6 +70,26 @@
           <!-- /.col -->
           <div class="col-md-10 col-xs-10">
 
+            <div  class="col-md-3 col-xs-3">
+              <label>
+                <input type="checkbox" ng-model="a.pendientes" ng-change="filtroPendiente()">
+                Pendientes
+              </label>
+            </div>
+
+            <div  class="col-md-3 col-xs-3">
+              <label>
+                <input type="checkbox" ng-model="a.ocupados" ng-change="filtroOcupado()">
+                Confirmados
+              </label>
+            </div>
+
+            <div  class="col-md-3 col-xs-3">
+              <label>
+                <input type="checkbox" ng-model="a.cancelados" ng-change="filtroCancelado()">
+                Cancelados
+              </label>
+            </div>
 
             <div id='calendar1'></div>
 
@@ -170,15 +190,63 @@
                     <div class="form-group">
                       <label class="col-sm-3 control-label">estado</label>
                       <div class="col-sm-9">
-                        <select id="estado" class="form-control">
+                        <select id="estado" class="form-control" ng-change=" changeFecha()" ng-model="valor">
 
-                          <option value="pendiente">pendiente</option>
-                          <option value="ocupado">asistio</option>
-                          <option value="cancelado">no asistio</option>
+                          <option value="pendiente">Pendiente</option>
+                          <option value="ocupado">Confirmado</option>
+                          <option value="cancelado">Cancelado</option>
+                          <option value="cambio">Cambio de fecha</option>
 
                         </select>
 
                       </div>
+
+                      <div  ng-show="nuevaFecha" class="col-sm-5">
+
+
+
+                          <div class="form-group">
+                            <label>Fecha:</label>
+
+                            <div class="input-group date">
+                              <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                              </div>
+                              <input  type="text" class="form-control pull-right" id="datepicker"   >
+                            </div>
+                            <!-- /.input group -->
+                          </div>
+
+
+</div>
+                        <div  ng-show="nuevaFecha" class="col-sm-5">
+
+
+                          <div class="bootstrap-timepicker">
+                            <div class="form-group">
+
+                              <label>Hora:</label>
+
+                              <div class="input-group">
+                                <input  type="text" class="form-control timepicker" id="timepicker">
+
+                                <div class="input-group-addon">
+                                  <i class="fa fa-clock-o"></i>
+                                </div>
+                              </div>
+                              <!-- /.input group -->
+                            </div>
+                            <!-- /.form group -->
+                          </div>
+
+
+
+
+                      </div>
+
+
+
+
                     </div>
 
 
