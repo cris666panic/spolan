@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FAQS</title>
+    <title>BLOG</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mailform.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script><!--[if lt IE 9]>
     <html class="lt-ie9">
@@ -64,8 +65,32 @@
       ========================================================
       -->
       <main>
-        <section class="well1">
-          <div class="container">
+        <section class="well1" id="suscribite" ng-app="myAppCalendario">
+          <div class="container"  >
+            <h2>Accede al blog</h2>
+
+            <form  class="mailform off2" ng-controller="calendario" style=" text-align: center " >
+              <input type="hidden" name="form-type" value="contact">
+              <fieldset class="row">
+
+                <label class="grid_3">
+                  <input type="text"  placeholder="CORREO:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
+                </label>
+                <label class="grid_3">
+                  <input type="text"  placeholder="CONTRASEÑA:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
+                </label>
+
+
+<CENTER>
+                <div class="grid_11">
+                  </BR>
+                  <button  class="btn" ng-click="enviar()"  STYLE="width: 190px; padding:  10px;">Enviar</button>
+                </div>
+</CENTER>
+              </fieldset>
+            </form>
+
+
 
           </div>
         </section>
@@ -77,15 +102,28 @@
                                   FOOTER
       ========================================================
       -->
+    <div>
       <footer>
         <section>
           <div class="container">
-            <div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>
+            <div >
+              <div class="info-box">
+                <hr>
+                <h4 align="justify"   style="align-content: center;  color: #FCFFFD;text-transform: capitalize;">Suscríbete para tener más información de promociones, costos y acceso a nuestro blog privado.  </h4>
+                <dl>
+
+                    <a alingh href="index-8.html" class="btn" STYLE="background: #DBAC1F; padding: 40px 550px;"><h2> Suscríbete</h2> </a>
+
+                </dl>
+              </div>
             </div>
-          </div>
         </section>
+      </BR>
+        </BR>
       </footer>
     </div>
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>

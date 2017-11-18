@@ -7,8 +7,8 @@ var router= express.Router();
 var nodemailer = require('nodemailer');
 
 
-var mail='dennyscoroneldc94@gmail.com';
-var password='duke94jenny';
+var mail='spolaningles@gmail.com';
+var password='soycomprador2017';
 
 router.post('/sendMail',function(req,res) {
 

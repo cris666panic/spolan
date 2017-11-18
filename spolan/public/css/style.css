@@ -293,6 +293,13 @@ p + .btn_wr {
   background: url(../images/a.jpg) center no-repeat;
   background-size: cover;
 }
+.bg-image2 {
+  background: url(../images/tres.jpg) center no-repeat;
+  background-size: cover;
+}
+
+
+
 .bg-image p {
   font-size: 16px;
 }
@@ -421,7 +428,7 @@ p + .btn_wr {
 /*==================     Banner    ======================*/
 .banner_wr {
   position: relative;
-  min-height: 308px;
+  min-height: 300px;
 }
 
 .banner {
@@ -815,11 +822,11 @@ table tr:nth-child(even) {
 }
 
 .sf-menu > li > a {
-  padding: 22px 30px;
+  padding: 20px 27px;
   color: #fff;
   font-size: 16px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
   border-right: 1px solid #AD1D24 ;
 }
@@ -1126,7 +1133,7 @@ table tr:nth-child(even) {
 }
 /*==================  Stuck menu  ======================*/
 .stuck_container {
-  margin-top: 22px;
+  margin-top: 30px;
   background: #AD1D24;
 }
 
