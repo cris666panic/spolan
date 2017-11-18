@@ -488,7 +488,7 @@ tareasModule.factory('datosmsg', function ($http,$q) {
 
 
 
-tareasModule.controller('mostrarmsg', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarmsg', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getAllmsg().then(function (data) {
@@ -541,8 +541,15 @@ var objeto ={
     $scope.pasarmsg = function (objeto) {
         $scope.msg = objeto;
         
-    } 
+    }
 
+
+
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
 
 
     /*
@@ -566,7 +573,7 @@ console.log(tarea);
 
 
 
-tareasModule.controller('mostrarpendiente', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarpendiente', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getAllmsgPendiente().then(function (data) {
@@ -616,8 +623,12 @@ tareasModule.controller('mostrarpendiente', function ($scope, $location, datosms
 
     };
 
-    
 
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
 
 
     /*
@@ -640,7 +651,7 @@ tareasModule.controller('mostrarpendiente', function ($scope, $location, datosms
 });
 
 
-tareasModule.controller('mostrarnotificado', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarnotificado', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getAllmsgNotificado().then(function (data) {
@@ -691,6 +702,11 @@ tareasModule.controller('mostrarnotificado', function ($scope, $location, datosm
     };
 
 
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
 
 
 
@@ -714,7 +730,7 @@ tareasModule.controller('mostrarnotificado', function ($scope, $location, datosm
 });
 
 
-tareasModule.controller('mostrarsuscriptores', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarsuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getusuarios().then(function (data) {
@@ -760,6 +776,12 @@ tareasModule.controller('mostrarsuscriptores', function ($scope, $location, dato
 
 
 
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
+
 
 
     /*
@@ -770,10 +792,7 @@ tareasModule.controller('mostrarsuscriptores', function ($scope, $location, dato
 
 
 
-     $scope.procesarObjeto = function (tarea) {
-     comun.tarea = tarea;
-     console.log(tarea);
-     $location.path('/editarSitio');
+
 
      };
 
@@ -781,7 +800,7 @@ tareasModule.controller('mostrarsuscriptores', function ($scope, $location, dato
 
 });
 
-tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getusuariospendiente().then(function (data) {
@@ -826,7 +845,11 @@ tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $locat
     };
 
 
-
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
 
 
     /*
@@ -849,7 +872,7 @@ tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $locat
 });
 
 
-tareasModule.controller('mostrarnotificadosuscriptores', function ($scope, $location, datosmsg,$timeout) {
+tareasModule.controller('mostrarnotificadosuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
     datosmsg.getusuariosnotificado().then(function (data) {
@@ -913,6 +936,13 @@ tareasModule.controller('mostrarnotificadosuscriptores', function ($scope, $loca
      };
 
      */
+
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
+
 
 });
 

@@ -83,7 +83,40 @@ router.get('/obtenerCalendario', function (req, res) {
 
 
 
+router.put('/actulizarCalendario/:id', function (req, res) {
+    var id = req.params.id;
 
+    console.log(req.body);
+
+    var p = {
+
+        backgroundColor:req.body.backgroundColor,
+        borderColor:req.body.borderColor,
+        estado: req.body.estado
+
+    };
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query(' UPDATE agenda  SET estado=$1, "backgroundColor"=$2,"borderColor"=$3 WHERE id_agenda=$4 RETURNING *',
+        [p.estado, p.backgroundColor, p.borderColor, id]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
 

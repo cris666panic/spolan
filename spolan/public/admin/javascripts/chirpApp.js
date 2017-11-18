@@ -74,23 +74,8 @@ app.config(function($routeProvider){
 
 		.when('/correo', { templateUrl: 'paginas/correo.html',controller: ('ctrlCorreo' )})
 
+        .when('/correo1', { templateUrl: 'paginas/correo1.html',controller: ('ctrlCorreo1' )})
 
-          .when('/Creditos', { templateUrl: 'paginas/Creditos.html'})
-
-		.when('/editarSitio', { templateUrl:'paginas/editarSitio.html',controller: 'ctrlEditar' })
-
-		
-		.when('/agregarSitio', { templateUrl: 'paginas/agregarSitio.html',controller: ('ctrlImagen' )})
-
-.when('/galeria', { templateUrl: 'paginas/galeria.html',controller: ('ctrlGaleria' )})
-
-
-
-	
-
-.when('/fojas', { templateUrl: 'paginas/fojas.html',controller: ('ctrlFojas' )})
-
-.when('/imagenes', { templateUrl: 'paginas/imagenes.html',controller: ('ctrlImagenes' )})
 
 
 		.otherwise({ redirectTo: '/' });

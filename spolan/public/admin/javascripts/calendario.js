@@ -240,7 +240,7 @@ citasModule.controller('ctrlCalendario', function ($scope, $location,$timeout,$h
 
         $http({
             method: 'PUT',
-            url: '/api/eventos' + '/' + obj._id,
+            url: '/web/actulizarCalendario' + '/' + obj.id_agenda,
             headers: {
                 'Content-Type': 'application/json'
             },
