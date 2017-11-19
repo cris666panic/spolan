@@ -8,8 +8,21 @@ angular.module('blogApp', [])
     $rootScope.authenticated =  JSON.parse(localStorage.getItem("authenticated"));
 
 
+
+
     console.log( $rootScope.usuarioLog, $rootScope.authenticated);
 
+
+    $rootScope.author= $rootScope.usuarioLog.nombre+" "+$rootScope.usuarioLog.apellido;
+
+
+
+    $scope.postEditar=function () {
+
+       $scope.Editar=true;
+        $scope.post1=false;
+
+    }
 
     $rootScope.signout = function(){
 
@@ -41,6 +54,7 @@ angular.module('blogApp', [])
 
     blog.posts = {};
 
+
     $http.get('/web/obtenerBlog').success(function(data){
 
 
@@ -57,8 +71,39 @@ angular.module('blogApp', [])
         console.log(blog.tab);
         console.log(blog.posts);
 
+        $scope.btnEdicion=false;
+
         blog.tab = setTab;
 
+        $scope.post1=true;
+
+
+        if (setTab.author==$rootScope.author){
+
+console.log("actiar bonoes de edicion");
+
+$scope.btnEdicion=true;
+            $scope.Editar=false;
+
+        }
+
+
+
+        if (setTab=="miBlog"){
+
+            $scope.searchText= $rootScope.author;
+            blog.tab =  "blog";
+
+
+        }
+
+        if (setTab=="blog"){
+
+            $scope.searchText= "";
+
+
+
+        }
 
 
 
@@ -69,9 +114,10 @@ angular.module('blogApp', [])
         return blog.tab === checkTab;
     };
 
-    var usuario =  JSON.parse(localStorage.getItem("usuario"));
 
 
+
+    $rootScope.usuario =  JSON.parse(localStorage.getItem("usuario"));
 
 
     this.comment = {};
@@ -79,7 +125,7 @@ angular.module('blogApp', [])
 
 
     blog.post = {};
-    blog.post.author=usuario.nombre+" "+usuario.apellido;
+    blog.post.author=$rootScope.usuario.nombre+" "+$rootScope.usuario.apellido;
 
 
     blog.addPost = function(){
@@ -102,6 +148,7 @@ angular.module('blogApp', [])
 
         }).then(function successCallback(response) {
             console.log(response.data);
+            location.reload();
 
         }, function errorCallback(response) {
 
@@ -111,15 +158,8 @@ angular.module('blogApp', [])
 
 
 
+        blog.post.author=$rootScope.usuario.nombre+" "+$rootScope.usuario.apellido;
 
-
-
-        blog.post.createdOn = Date.now();
-        blog.post.comments = [];
-        blog.post.likes = 0;
-        blog.posts.unshift(this.post);
-        blog.tab = 0;
-        blog.post ={};
 
 
     };
@@ -196,6 +236,7 @@ angular.module('blogApp', [])
 
             this.comment = {};
 
+            this.comment.author=usuario.nombre+" "+usuario.apellido;
         }
 
 

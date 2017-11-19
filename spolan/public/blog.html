@@ -155,7 +155,8 @@
             <nav role='navigation' class="push-right">
               <ul>
                 <li><a href="#" ng-click="blog.selectTab('blog')">See All Posts</a></li> //
-                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>
+                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>//
+                <li><a href="#" ng-click="blog.selectTab('miBlog')" >Mis posts</a></li> //
                 <li><a href="#" ng-click="signout()" >Cerrar Session</a></li>
               </ul>
             </nav>
@@ -172,19 +173,24 @@
       <div class="container">
         <div class="row">
           <ul class="post-grid" ng-show="blog.isSelected('blog')">
-            <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)" >
+            <li ng-repeat="post in blog.posts | filter:searchText"  class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab(post)" >
               <h3>{{post.title}}</h3>
               <p>{{post.body.body[0] | limitTo:70}}...</p>
+              <img src="{{post.image}}">
               <p class="fa fa-comment push-left"> {{post.comments.comments.length}}
               </p>
               <p class="fa fa-heart push-right"> {{post.likes}}
               </p>
             </li>
           </ul>
-          <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
-            <div>
+          <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected(post)">
 
-              <h2>{{post.title}}</h2>
+
+
+            <div ng-show="post1">
+
+
+              <h2>{{post.title}} </h2>
               <img src="{{post.image}}"/>
               <cite>by {{post.author}} on {{post.createdOn | date}}</cite>
               <div class="post-body">
@@ -214,6 +220,42 @@
                 </form>
               </div>
             </div>
+
+
+            <div ng-show="btnEdicion">
+
+              <h2>botones</h2>
+
+              <button ng-click="postEditar()">Editar</button>
+
+              <button>Eliminar</button>
+
+
+              <div ng-show="Editar">
+                <h4>Title</h4>
+
+                {{post.title}}
+
+                <input type="text" ng-model="post.title"/>
+                <h4>Body</h4>
+                <textarea ng-model="post.body.body" ng-list="/\n/" rows="10"></textarea>
+                <label for="">Featured Image URL</label>
+                <input type="text" ng-model="post.image" placeholder="http://placekitten.com/g/2000/600" />
+                <label for="">by:</label>
+                <input type="text" ng-model="post.author" placeholder="Author Name" ng-disabled="true"/>
+
+                <input type="submit" value="Crear Nuevo Post" />
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
           </div>
 
           <div class="post" ng-show="blog.isSelected('new')" >
@@ -227,7 +269,7 @@
               <label for="">Featured Image URL</label>
               <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
               <label for="">by:</label>
-              <input type="text" ng-model="blog.post.author" placeholder="Author Name" required/>
+              <input type="text" ng-model="blog.post.author" placeholder="Author Name" ng-disabled="true"/>
 
               <input type="submit" value="Crear Nuevo Post" />
               </select></form>
