@@ -1,4 +1,30 @@
-angular.module('blogApp', [])
+angular.module('blogApp', ['ngCkeditor','ngSanitize'])
+
+
+.directive('ckEditor', function () {
+    return {
+        require: '?ngModel',
+        link: function (scope, elm, attr, ngModel) {
+            var ck = CKEDITOR.replace(elm[0]);
+            if (!ngModel) return;
+            ck.on('instanceReady', function () {
+                ck.setData(ngModel.$viewValue);
+            });
+            function updateModel() {
+                scope.$apply(function () {
+                    ngModel.$setViewValue(ck.getData());
+                });
+            }
+            ck.on('change', updateModel);
+            ck.on('key', updateModel);
+            ck.on('dataReady', updateModel);
+
+            ngModel.$render = function (value) {
+                ck.setData(ngModel.$viewValue);
+            };
+        }
+    };
+})
 
 .controller('BlogController', function($scope, $http, $rootScope, $location,$timeout){
 
@@ -21,6 +47,70 @@ angular.module('blogApp', [])
 
        $scope.Editar=true;
         $scope.post1=false;
+
+    }
+    
+    $scope.actualizar=function (objeto) {
+
+        console.log(objeto);
+
+        $http({
+
+            method: 'PUT',
+            url: '/web/updateBlog/'+objeto.id,
+
+            headers: {
+                // 'Content-Type': 'application/json',
+                //'Authorization': token
+            },
+            data: objeto
+
+
+        }).then(function successCallback(response) {
+
+            console.log(response.data);
+            location.reload();
+
+
+        }, function errorCallback(response) {
+
+            alert('error al realizar Ingreso');
+
+        });
+
+
+
+    }
+
+    $scope.eliminar=function (objeto) {
+
+
+        console.log(objeto);
+
+
+
+
+        $http({
+
+            method: 'DELETE',
+            url: '/web/eliminarBlog/'+objeto.id,
+
+            headers: {
+                // 'Content-Type': 'application/json',
+                //'Authorization': token
+            }
+        }).then(function successCallback(response) {
+
+            console.log(response.data);
+            location.reload();
+
+
+        }, function errorCallback(response) {
+
+            alert('error al realizar Ingreso');
+
+        });
+
 
     }
 
@@ -156,7 +246,12 @@ $scope.btnEdicion=true;
 
         });
 
-
+        blog.post.createdOn = Date.now();
+        blog.post.comments = [];
+        blog.post.likes = 0;
+        blog.posts.unshift(this.post);
+        blog.tab = 0;
+        blog.post ={};
 
         blog.post.author=$rootScope.usuario.nombre+" "+$rootScope.usuario.apellido;
 
