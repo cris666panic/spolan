@@ -30,7 +30,12 @@
     <script src="js/blog.js"></script>
 
 
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <script src="https://s3-ap-southeast-1.amazonaws.com/naveensingh/posts_data/ckeditor_example/ng-ckeditor.min.js"></script>
 
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script>
 
 
     <style class="cp-pen-styles">* {
@@ -179,8 +184,7 @@
               <img src="{{post.image}}">
               <p class="fa fa-comment push-left"> {{post.comments.comments.length}}
               </p>
-              <p class="fa fa-heart push-right"> {{post.likes}}
-              </p>
+
             </li>
           </ul>
           <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected(post)">
@@ -197,10 +201,18 @@
                 <p ng-repeat="paragraph in post.body.body">
                   {{paragraph}}
                 </p>
+
+
+                <div ng-bind-html="post.body.contenido[0]">
+
+                </div>
+
+
+
               </div>
 
               <div class="comments" ng-controller="CommentController as commentCtrl">
-                <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
+
                 <h3>Comments</h3>
                 <ul>
                   <li ng-repeat="comment in post.comments.comments">
@@ -213,8 +225,8 @@
 
                   <h4>Add Comment</h4>
                   <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
-                  <label for="">by:</label>
-                  <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name"/>
+
+                  <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name" ng-show="false"/>
 
                   <input type="submit" value="Submit" />
                 </form>
@@ -241,10 +253,14 @@
                 <textarea ng-model="post.body.body" ng-list="/\n/" rows="10"></textarea>
                 <label for="">Featured Image URL</label>
                 <input type="text" ng-model="post.image" placeholder="http://placekitten.com/g/2000/600" />
-                <label for="">by:</label>
-                <input type="text" ng-model="post.author" placeholder="Author Name" ng-disabled="true"/>
+
+                <textarea ng-model="post.body.contenido" data-ck-editor ng-list="/\n/" rows="10"></textarea>
+
+                <input type="text" ng-model="post.author" placeholder="Author Name" ng-disabled="true" ng-show="false"/>
 
                <button ng-click="actualizar(post)">Actulizar</button>
+
+
 
 
 
@@ -265,14 +281,20 @@
               <h4>Title</h4>
               <input type="text" ng-model="blog.post.title"/>
               <h4>Body</h4>
-              <textarea ng-model="blog.post.body" ng-list="/\n/" rows="10"></textarea>
+              <textarea ng-model="blog.post.body"  ng-list="/\n/" rows="10"></textarea>
               <label for="">Featured Image URL</label>
               <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
-              <label for="">by:</label>
-              <input type="text" ng-model="blog.post.author" placeholder="Author Name" ng-disabled="true"/>
+
+              <input type="text" ng-model="blog.post.author" placeholder="Author Name" ng-disabled="true" ng-show="false"/>
+
+              <textarea ng-model="blog.post.contenido" data-ck-editor ng-list="/\n/" rows="10"></textarea>
+
 
               <input type="submit" value="Crear Nuevo Post" />
               </select></form>
+
+
+
 
           </div>
 

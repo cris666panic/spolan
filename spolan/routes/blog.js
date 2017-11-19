@@ -48,12 +48,14 @@ router.post('/addBlog', function (req, res) {
   var p = {
 
       author: req.body.author,
- body:{   body: req.body.body},
+ body:{  contenido:req.body.contenido,
+          body: req.body.body},
       comments: { comments: req.body.comments},
       createdOn:req.body.createdOn,
       image:req.body.image,
       likes:req.body.likes,
       title:req.body.title
+
     };
 
 
