@@ -258,7 +258,7 @@ console.log("calendario");
 
                         }).then(function successCallback(response) {
                             console.log(response.data);
-                            $scope.mensaje="se a enviado al correo electronico las credenciales para acceso al blog y pronto se contactaran para confirmar su examen";
+                            $scope.mensaje=" Gracia por suscrirte.";
 
                         }, function errorCallback(response) {
 
@@ -324,6 +324,7 @@ console.log("calendario");
 
 		}).then(function successCallback(response) {
 			console.log(response.data);
+            window.location.assign("./msgcale.html");
 
 		}, function errorCallback(response) {
 

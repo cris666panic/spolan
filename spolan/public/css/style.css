@@ -701,7 +701,7 @@ blockquote p + cite {
   }
 }
 .contact-list a:hover {
-  color: #62bfe6;
+  color: #dbac1f;
 }
 
 .contact-list2 {
@@ -822,7 +822,7 @@ table tr:nth-child(even) {
 }
 
 .sf-menu > li > a {
-  padding: 20px 27px;
+  padding: 20px 23.5px;
   color: #fff;
   font-size: 16px;
   line-height: 1;
@@ -1140,7 +1140,7 @@ table tr:nth-child(even) {
 .isStuck {
   margin-top: 0;
   z-index: 9999;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #dbac1f;
 }
 
 @media only screen and (max-width: 979px) {
@@ -1155,7 +1155,7 @@ table tr:nth-child(even) {
   font-size: 24px;
   line-height: 40px;
   color: #fff;
-  background: #888;
+  background: #dbac1f;
   position: fixed;
   right: 66px;
   bottom: 180px;
@@ -1167,7 +1167,7 @@ table tr:nth-child(even) {
 }
 .toTop:hover {
   color: #fff;
-  background: #62bfe6;
+  background: #AD1D24;
   text-decoration: none;
 }
 
@@ -1177,7 +1177,7 @@ table tr:nth-child(even) {
   }
 }
 .primary {
-  color: #62bfe6;
+  color: #AD1D24;
 }
 
 /*========================================================
@@ -1252,14 +1252,14 @@ main p + a[href^="mailto:"] {
   display: inline-block;
   margin-top: 10px;
   font-size: 16px;
-  color: #62bfe6;
+  color: #dbac1f;
 }
 main p + a[href^="mailto:"]:hover {
   text-decoration: underline;
 }
 
 a[href^="callto:"]:hover {
-  color: #62bfe6;
+  color: #dbac1f;
 }
 
 .video {
@@ -1324,7 +1324,7 @@ footer {
   background: #AD1D24;
 }
 footer section + section .container {
-  border-top: 1px solid #888a8c;
+  border-top: 1px solid #dbac1f;
 }
 footer .copyright {
   padding-top: 21px;

@@ -57,6 +57,7 @@ console.log("dc");
                     $scope.mensaje="pronto se contactaran para responder sus dudas";
 
 
+
                 }, function errorCallback(response) {
 
                     alert('error al realizar Ingreso');
@@ -130,6 +131,7 @@ console.log("dc");
 
                         }).then(function successCallback(respnse) {
                             console.log(response.data);
+
 
 
 
@@ -211,6 +213,7 @@ console.log("dc");
 		}).then(function successCallback(response) {
 			console.log(response.data);
             $scope.mensaje="se a enviado al correo electronico las credenciales para acceso al blog";
+            window.location.assign("./msgcale.html");
 
 		}, function errorCallback(response) {
 
@@ -378,8 +381,9 @@ console.log("dc");
 
         }).then(function successCallback(response) {
             console.log(response.data);
+            window.location.assign("./msgsus.html");
 
-            $scope.mensaje="se a enviado al correo electronico las credenciales paraacceso al blog";
+
 
         }, function errorCallback(response) {
 
