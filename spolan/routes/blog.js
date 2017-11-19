@@ -120,7 +120,61 @@ router.put('/actulizarBlog/:id', function (req, res) {
 /////////eliminar
 
 
-router.delete('/eliminarusuario/:id', function (req, res) {
+
+
+
+
+router.put('/updateBlog/:id', function (req, res) {
+    var id = req.params.id;
+
+    console.log(req.body);
+
+    var p = {
+        author: req.body.author,
+        body:req.body.body,
+        comments: req.body.comments,
+        createdOn:req.body.createdOn,
+        image:req.body.image,
+        likes:req.body.likes,
+        title:req.body.title
+
+    };
+
+//conection
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+
+    var query = client.query('update blog set author=$1, "createdOn"=$2, image=$3, likes=$4, title=$5, body=$6,comments=$7 where id=$8 RETURNING *',
+        [p.author,p.createdOn,p.image,p.likes,p.title,p.body,p.comments, id]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.delete('/eliminarBlog/:id', function (req, res) {
   var id = req.params.id;
 
   console.log(req.body);
@@ -133,7 +187,7 @@ router.delete('/eliminarusuario/:id', function (req, res) {
   const results = [];
 
 
-  var query = client.query('delete from usuario  where id_usuario=$1 RETURNING *',
+  var query = client.query('delete from blog  where id=$1 RETURNING *',
       [id]);
 
 

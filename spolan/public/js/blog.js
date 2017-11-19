@@ -23,6 +23,70 @@ angular.module('blogApp', [])
         $scope.post1=false;
 
     }
+    
+    $scope.actualizar=function (objeto) {
+
+        console.log(objeto);
+
+        $http({
+
+            method: 'PUT',
+            url: '/web/updateBlog/'+objeto.id,
+
+            headers: {
+                // 'Content-Type': 'application/json',
+                //'Authorization': token
+            },
+            data: objeto
+
+
+        }).then(function successCallback(response) {
+
+            console.log(response.data);
+            location.reload();
+
+
+        }, function errorCallback(response) {
+
+            alert('error al realizar Ingreso');
+
+        });
+
+
+
+    }
+
+    $scope.eliminar=function (objeto) {
+
+
+        console.log(objeto);
+
+
+
+
+        $http({
+
+            method: 'DELETE',
+            url: '/web/eliminarBlog/'+objeto.id,
+
+            headers: {
+                // 'Content-Type': 'application/json',
+                //'Authorization': token
+            }
+        }).then(function successCallback(response) {
+
+            console.log(response.data);
+            location.reload();
+
+
+        }, function errorCallback(response) {
+
+            alert('error al realizar Ingreso');
+
+        });
+
+
+    }
 
     $rootScope.signout = function(){
 
