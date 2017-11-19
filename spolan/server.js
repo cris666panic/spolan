@@ -45,8 +45,6 @@ app.use(bodyParser.urlencoded({ limit: '50mb',extended: true }));
 
 app.use(serveStatic('./public'));
 
-
-
 app.listen(config.express.port);
 
 //creacion servicio
