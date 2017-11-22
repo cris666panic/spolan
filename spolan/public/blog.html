@@ -10,7 +10,7 @@
 
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
 
-
+    <link rel="stylesheet" href="style.css">
 
     <title>SPOLAN</title>
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
       font-size: 18px;
     }
     .topbar {
-      background: #79B9D2;
+      background: #ad1d24;
       color: white;
       width: 100%;
       z-index: 9999;
@@ -79,10 +79,10 @@
       cursor: pointer;
       -webkit-transition: background linear 0.5s;
       transition: background linear 0.5s;
-      border-bottom: 1px solid #3a8bab;
+      border-bottom: 1px solid #dbac1f;
     }
     ul.post-grid li:hover {
-      background: #3a8bab;
+      background: #dbac1f;
       color: white;
     }
     ul.post-grid li:hover h3 {
@@ -94,9 +94,10 @@
       padding: 20px 40px 20px;
     }
     h2,
-    h3 {
-      color: #3a8bab;
+    h3,h4 {
+      color: #ad1d24;
     }
+
     .post {
       -webkit-transition: 0.5s linear all;
       transition: 0.5s linear all;
@@ -114,7 +115,7 @@
     .comments ul li {
       list-style-type: none;
       padding: 20px 5px;
-      border-bottom: 1px #79B9D2 solid;
+      border-bottom: 1px #ad1d24 solid;
     }
     .post.ng-hide {
       opacity: 0;
@@ -134,13 +135,39 @@
       font-size: 1.1em;
     }
     .ng-invalid.ng-dirty {
-      border-color: red;
+      border-color: #ad1d24;
     }
     .ng-valid.ng-dirty {
-      border-color: green;
+      border-color: #dbac1f;
     }
     img {
       max-width: 100%;
+    }
+    .btn {
+      display: inline-block;
+      width: 150px;
+      padding: 16px;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .btn:hover,
+    .btn2:hover {
+      background: #DBAC1F  ;
+    }
+    .btn:active,
+    .btn2:active {
+      background: #DBAC1F;
+    }
+
+    .btn {
+      color: #fff;
+      background: #AD1D24 ;
     }
 
     </style>
@@ -154,13 +181,15 @@
       <div class="container">
         <div class="row">
           <div class="col-s-4">
-            <h1 ng-click="blog.selectTab('blog')" class="push-left">{{blog.title}}</h1>
+
+            <IMG src="images/sin.png" WIDTH=130 HEIGHT=130 >
+            <p class="brand_name">SPOLAN</p>
           </div>
-          <div class="offset-s-4 col-s-4">
+          <div class="offset-s-5 col-s-5">
             <nav role='navigation' class="push-right">
               <ul>
-                <li><a href="#" ng-click="blog.selectTab('blog')">See All Posts</a></li> //
-                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Add New Post</a></li>//
+                <li class="active"><a href="#" ng-click="blog.selectTab('blog')">Todos los Post</a></li> //
+                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Agregar Post</a></li>//
                 <li><a href="#" ng-click="blog.selectTab('miBlog')" >Mis posts</a></li> //
                 <li><a href="#" ng-click="signout()" >Cerrar Session</a></li>
               </ul>
@@ -179,7 +208,7 @@
         <div class="row">
           <ul class="post-grid" ng-show="blog.isSelected('blog')">
             <li ng-repeat="post in blog.posts | filter:searchText"  class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab(post)" >
-              <h3>{{post.title}}</h3>
+              <h3  style="text-transform: uppercase;">{{post.title}}</h3>
               <p>{{post.body.body[0] | limitTo:70}}...</p>
               <img src="{{post.image}}">
               <p class="fa fa-comment push-left"> {{post.comments.comments.length}}
@@ -193,16 +222,19 @@
 
             <div ng-show="post1">
 
+<div align="center">  <h3  style="text-transform: uppercase;" >{{post.title}} </h3>  </div>
 
-              <h2>{{post.title}} </h2>
-              <img src="{{post.image}}"/>
-              <cite>by {{post.author}} on {{post.createdOn | date}}</cite>
+              <img  src="{{post.image}}"/>
+              </br>
+              <cite >Creado por: {{post.author}} En {{post.createdOn | date}}</cite>
               <div class="post-body">
+                <h2>Descripción </h2>
+
                 <p ng-repeat="paragraph in post.body.body">
                   {{paragraph}}
                 </p>
 
-
+                <h2>Contenido</h2>
                 <div ng-bind-html="post.body.contenido[0]">
 
                 </div>
@@ -213,7 +245,7 @@
 
               <div class="comments" ng-controller="CommentController as commentCtrl">
 
-                <h3>Comments</h3>
+                <h2>Comentarios</h2>
                 <ul>
                   <li ng-repeat="comment in post.comments.comments">
                     "{{comment.body}}"
@@ -223,12 +255,13 @@
                 <form name="commentForm" ng-submit="commentForm.$valid && commentCtrl.addComment(post)" novalidate>
 
 
-                  <h4>Add Comment</h4>
+                  <h4>Agregar Comentario</h4>
                   <textarea ng-model="commentCtrl.comment.body" cols="30" rows="10" required></textarea>
 
                   <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name" ng-show="false"/>
+</br>
+                  <div align="right"> <button  class="btn" type="submit" >Agregar </button> </div>
 
-                  <input type="submit" value="Submit" />
                 </form>
               </div>
             </div>
@@ -236,34 +269,35 @@
 
             <div ng-show="btnEdicion">
 
-              <h2>botones</h2>
+              <h4>Edicion de Post</h4>
+<div align="left">
+              <button  class="btn" ng-click="postEditar()"><img src="images/editar.png" height="20"
+                                                                           width="20"/></button>
+<br>
 
-              <button ng-click="postEditar()">Editar</button>
+  <button  class="btn" ng-click="eliminar(post)"><img src="images/eliminar.png" height="20"
+                                                      width="20"/></button>
 
-              <button ng-click="eliminar(post)">Eliminar</button>
-
+</div>
 
               <div ng-show="Editar">
-                <h4>Title</h4>
+                <h4>Titulo</h4>
 
-
+                ng-click="eliminar(post)"
 
                 <input type="text" ng-model="post.title"/>
-                <h4>Body</h4>
+                <h4>Descripción</h4>
                 <textarea ng-model="post.body.body" ng-list="/\n/" rows="10"></textarea>
-                <label for="">Featured Image URL</label>
+                <h4 for="">Imagen</h4>
                 <input type="text" ng-model="post.image" placeholder="http://placekitten.com/g/2000/600" />
-
+                <h4 for="">Contenido</h4>
                 <textarea ng-model="post.body.contenido" data-ck-editor ng-list="/\n/" rows="10"></textarea>
 
                 <input type="text" ng-model="post.author" placeholder="Author Name" ng-disabled="true" ng-show="false"/>
-
-               <button ng-click="actualizar(post)">Actulizar</button>
-
-
-
-
-
+              </br>
+                <div align="right">
+               <button class="btn"  ng-click="actualizar(post)">Actulizar</button>
+                </div>
               </div>
 
 
@@ -275,22 +309,23 @@
           </div>
 
           <div class="post" ng-show="blog.isSelected('new')" >
-            <h2>Add New Post</h2>
+            <h2>Agregar nuevo Post</h2>
 
             <form name="postForm" ng-submit=" blog.addPost()" novalidate>
-              <h4>Title</h4>
+              <h4>Titulo</h4>
               <input type="text" ng-model="blog.post.title"/>
-              <h4>Body</h4>
-              <textarea ng-model="blog.post.body"  ng-list="/\n/" rows="10"></textarea>
-              <label for="">Featured Image URL</label>
+              <h4>Descripción</h4>
+              <textarea ng-model="blog.post.body"  ng-list="/\n/" rows="5"></textarea>
+              <h4 for="">Imagen</h4>
               <input type="text" ng-model="blog.post.image" placeholder="http://placekitten.com/g/2000/600" />
-
+              <h4 for="">Contenido</h4>
               <input type="text" ng-model="blog.post.author" placeholder="Author Name" ng-disabled="true" ng-show="false"/>
 
               <textarea ng-model="blog.post.contenido" data-ck-editor ng-list="/\n/" rows="10"></textarea>
 
+</br>
+              <input class="btn" type="submit" value="Crear Nuevo Post" />
 
-              <input type="submit" value="Crear Nuevo Post" />
               </select></form>
 
 
@@ -303,9 +338,18 @@
 
     </div>
   </div>
+<footer>
+
+
+
+
+</footer>
+
 
 
   </body>
+
+
 
 
 

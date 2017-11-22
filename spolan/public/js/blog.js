@@ -140,7 +140,7 @@ angular.module('blogApp', ['ngCkeditor','ngSanitize'])
 
 
     var blog = this;
-    blog.title = "AngularJS Blog App";
+    blog.title = "ACADEMY SPOLAN BLOG ";
 
     blog.posts = {};
 
