@@ -190,7 +190,7 @@
               <ul>
                 <li class="active"><a href="#" ng-click="blog.selectTab('blog')">Todos los Post</a></li> //
                 <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('new')">Agregar Post</a></li>//
-                <li><a href="#" ng-click="blog.selectTab('miBlog')" >Mis posts</a></li> //
+                <li ng-show="addBlog"><a href="#" ng-click="blog.selectTab('miBlog')" >Mis posts</a></li> //
                 <li><a href="#" ng-click="signout()" >Cerrar Session</a></li>
               </ul>
             </nav>
@@ -283,7 +283,6 @@
               <div ng-show="Editar">
                 <h4>Titulo</h4>
 
-                ng-click="eliminar(post)"
 
                 <input type="text" ng-model="post.title"/>
                 <h4>Descripción</h4>
