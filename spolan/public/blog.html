@@ -269,8 +269,8 @@
 
             <div ng-show="btnEdicion">
 
-              <h4>Edicion de Post</h4>
-<div align="left">
+              <h4 ng-show="post1">Edicion de Post</h4>
+<div align="left" ng-show="post1">
               <button  class="btn" ng-click="postEditar()"><img src="images/editar.png" height="20"
                                                                            width="20"/></button>
 <br>
@@ -295,7 +295,7 @@
                 <input type="text" ng-model="post.author" placeholder="Author Name" ng-disabled="true" ng-show="false"/>
               </br>
                 <div align="right">
-               <button class="btn"  ng-click="actualizar(post)">Actulizar</button>
+               <button class="btn"  ng-click="actualizar(post)">Actualizar</button>
                 </div>
               </div>
 
