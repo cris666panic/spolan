@@ -1,0 +1,178 @@
+
+<div class="container-fluid">
+
+
+
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Registro de Paciente</h3>
+
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+
+
+                        <form class="form-horizontal form-label-left input_mask">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
+                                <label>Datos del paciente: </label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Cedula: {{cedulaM}}</label>
+                                <input type="text" class="form-control has-feedback-left " placeholder="1111111111" ng-model="tarea.cedula" required="required" ng-change="cedulaPacient()">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Nombre: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="Primer Nombre" ng-model="tarea.nombre" required="required">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Apellido: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="Primer Apellido" ng-model="tarea.apellido" required="required">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Correo: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="hco@hotmail.com" ng-model="tarea.email" required="required">
+                                <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Telefono: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="0323756" ng-model="tarea.telefono" required="required">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Celular: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="0983212900" ng-model="tarea.celular" required="required">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Genero: </label>
+                                <select class="form-control "  ng-model="tarea.sexo" ng-options="item._id as item.descripcion for item in sexo" ></select>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+
+                                <label> Fecha de Nacimiento </label><br>
+                                <input class="datepicker form-control pull-right" type="text" id="datepicker" name="date" value="{{ tarea.fecha_de_nacimiento}}"  placeholder="02/27/1999"/>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Estado civil: </label>
+                                <select class="form-control "  ng-model="tarea.estado_civil" ng-options="item._id as item.descripcion for item in estadoCivil" ></select>
+
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Profesion: </label>
+                                <select class="form-control "  ng-model="tarea.profesion" ng-options="item._id as item.descripcion for item in profesion" ></select>
+
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Ocupacion: </label>
+                                <select class="form-control "  ng-model="tarea.ocupacion" ng-options="item._id as item.descripcion for item in ocupacion" ></select>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Domicilio: </label>
+                                <textarea class="form-control" rows="3" placeholder="Texto ..." ng-model="tarea.direccion"  required="required"> </textarea>
+
+                            </div>
+
+
+
+
+                            <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Datos del contacto de emergencia: </label>
+                            </div>
+
+
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Nombre y Apellido: </label>
+                                <input type="text" class="form-control has-feedback-left"  ng-model="tarea.contacto_de_emergencia" required="required">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Telefono: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="0323657" required="required"  ng-model="tarea.contacto_telefono">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Celular: </label>
+                                <input type="text" class="form-control has-feedback-left"  placeholder="0983212900" required="required" ng-model="tarea.contacto_celular">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+
+
+
+
+                            <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
+
+
+                                <label>
+                                    Posee discapacidad? <input type="checkbox" class="minimal" ng-model="tarea.poseeDiscapacidad"  ng-change="disCap()">
+
+                                </label>
+
+
+                                </label>
+                            </div>
+
+                            <div class="col-md-12" ng-show="discPaciente" >
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Tipo de Discapacidad: </label>
+                                <select class="form-control "  ng-model="tarea.discapacidad" ng-options="item._id as item.descripcion for item in tipoDiscapacidad" ></select>
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                <label>Porcentaje de Discapacidad: </label>
+                                <input type="text" class="form-control"   ng-model="tarea.porcentaje_discapacidad"/>
+
+                            </div>
+
+
+                            </div>
+
+
+
+                                <div class="col-md-12 col-sm-9 col-xs-12 ">
+                                    <button  class="btn btn-primary fa-pull-left" ng-click="regresar()">Regresar</button>
+                                    <button type="submit" class="btn btn-primary pull-right" ng-click="agregar()" ng-disabled="regPaciente">Registrar</button>
+                                </div>
+
+                        </form>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>

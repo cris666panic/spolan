@@ -60,3 +60,5 @@ app.use('/web', msg);
 app.use('/web', agenda);
 app.use('/web', require('./routes/correo'));
 app.use('/web', require('./routes/blog'));
+app.use('/web', require('./routes/docente'));
+
