@@ -1,6 +1,6 @@
 var tareasModule = angular.module('allmsg', []);
 
-
+//// pag web
 tareasModule.factory('datosmsg', function ($http,$q) {
 
     var datosmsg={};
