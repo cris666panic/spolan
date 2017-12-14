@@ -11,7 +11,7 @@ tareasModule.factory('estudiante', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.get('/web/allestudiante')
+        $http.get('/web/allestudiantes')
             .success(function (data) {
                 defered.resolve(data);
 
@@ -66,35 +66,48 @@ tareasModule.factory('estudiante', function ($http,$q) {
     };
 
 
+    estudiante.addusuario = function (usuario) {
 
+        var defered = $q.defer();
+        var promise = defered.promise;
 
+        $http.post('/web/registrarusaurio',usuario)
+            .success(function (data) {
+                defered.resolve(data);
 
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
 
     return estudiante;
-
-
-
 
 });
 
 
 
 
-tareasModule.controller('ctrlEstudiante', function ($scope, $location, estudiante,$timeout) {
+tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante,$timeout) {
 
 
     estudiante.getAll().then(function (data) {
 
+        console.log(data);
+        $scope.lestudiante = data;
 
-        }).catch(function (err) {
+    }).catch(function (err) {
+        console.log("error");
 
-
-        });
+    });
 
 
 
     $timeout(function(){
-        console.log( $scope.tareas);
+        console.log( $scope.lestudiante);
         $('#example1').dataTable({
             "language": {
                 "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
@@ -106,10 +119,12 @@ tareasModule.controller('ctrlEstudiante', function ($scope, $location, estudiant
 
 
 
-    $scope.procesarObjeto = function (tarea) {
-        comun.tarea = tarea;
-        console.log(tarea);
-      $location.path('/editarPaciente');
+
+
+
+    $scope.procesarObjeto = function (estudiante) {
+
+           $location.path('/editarPaciente');
 
     };
 
@@ -123,25 +138,35 @@ tareasModule.controller('ctrlRegistroEstudiante', function ($scope, $location, e
 
 console.log('holaa');
 
-
-
-
-
-
     $scope.guadarestudiante = function () {
                console.log( $scope.estudiante);
 
-        estudiante.add($scope.estudiante).then(function (data) {
+         ///guar estudiante
+var usuario= {nombre:$scope.estudiante.cedula,
+    contrasenia:$scope.estudiante.cedula,
+            idtipo:4 };
 
-console.log(data);
+        estudiante.addusuario(usuario).then(function (data) {
+            console.log(data);
+            $scope.estudiante.id_usuario= data[0].id_usuario;
+            //estudainte
+            estudiante.add($scope.estudiante).then(function (data) {
+
+
+                console.log(data);
+            }).catch(function (err) {
+
+                console.log(err);
+            });
+
+
         }).catch(function (err) {
 
             console.log(err);
         });
 
 
-
-    };
+            };
 
 });
 

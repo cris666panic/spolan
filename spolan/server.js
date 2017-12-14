@@ -52,12 +52,14 @@ var usuario = require('./routes/usuario');
 var info = require('./routes/info');
 var msg = require('./routes/msg');
 var agenda = require('./routes/agenda');
+var estudiante = require('./routes/estudiante');
 
 //api
 app.use('/web', usuario);
 app.use('/web', info);
 app.use('/web', msg);
 app.use('/web', agenda);
+app.use('/web', estudiante);
 app.use('/web', require('./routes/correo'));
 app.use('/web', require('./routes/blog'));
 app.use('/web', require('./routes/docente'));

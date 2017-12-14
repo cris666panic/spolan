@@ -28,10 +28,7 @@ router.post('/addDocente', function (req, res) {
         telefono:req.body.telefono,
         correo:req.body.correo,
         id_usuario:req.body.id_usuario
-
-
     };
-
 
     var client = new pg.Client(conString);
     client.connect();

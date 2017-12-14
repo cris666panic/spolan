@@ -102,8 +102,8 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 
     docente.getAll().then(function (data) {
 
-            console.log(data[0]);
-
+            console.log(data);
+       $scope.ldocentes = data;
 
         }).catch(function (err) {
             console.log("error");
@@ -113,7 +113,7 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 
 
     $timeout(function(){
-        console.log( $scope.tareas);
+        console.log( $scope.ldocentes);
         $('#example1').dataTable({
             "language": {
                 "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
@@ -144,15 +144,48 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 });
 
 
-tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, docente,$timeout) {
+tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, docente,estudiante,$timeout) {
 
 
 
+    $scope.guardardocente = function () {
+        console.log( $scope.docente);
 
+        ///guar estudiante
+        var usuario= {nombre:$scope.docente.cedula,
+            contrasenia:$scope.docente.cedula,
+            idtipo:5 };
+
+        estudiante.addusuario(usuario).then(function (data) {
+            console.log(data);
+            $scope.docente.id_usuario= data[0].id_usuario;
+            //estudainte
+            docente.add($scope.docente).then(function (data) {
+
+
+                console.log(data);
+            }).catch(function (err) {
+
+                console.log(err);
+            });
+
+
+        }).catch(function (err) {
+
+            console.log(err);
+        });
+
+
+    };
 
 });
 
+
+
 tareasModule.controller('ctrlEditarDocente', function ($scope, $location, comun) {
+
+
+
 
 
 

@@ -66,7 +66,7 @@ app.config(function($routeProvider){
 				.when('/notificadosuscriptores', { templateUrl: 'paginas/notificadosuscriptoress.html',controller: 'mostrarnotificadosuscriptores' })
 		.when('/pendientesuscriptores', { templateUrl: 'paginas/pendientesuscriptoress.html',controller: 'mostrarpendientesuscriptores' })
 
-
+        .when('/estudiante', { templateUrl: 'paginas/estudiante.html',controller: ('ctrlEstudiante' )})
 		.when('/calendario', { templateUrl: 'paginas/calendario.html',controller: ('ctrlCalendario' )})
 
 

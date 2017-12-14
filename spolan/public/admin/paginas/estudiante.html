@@ -5,9 +5,9 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Listado de Pacientes</h3>
+        <h3 class="box-title">Listado de estudiante</h3>
 <br>
-        <button type="button" class="btn btn-default" ng-click="showCargarArchivos('/registroDocente')">Registro de nuevo Paciente</button>
+        <button type="button" class="btn btn-default" ng-click="showCargarArchivos('/registroE')">Registro de nuevo Paciente</button>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
@@ -23,10 +23,10 @@
             </thead>
             <tbody>
 
-            <tr ng-repeat="docente in ldocentes ">
-                <td>{{docente.cedula}}</td>
-                <td>{{docente.nombres}}</td>
-                <td>{{docente.apellidos}}</td>
+            <tr ng-repeat="estudiante in lestudiante ">
+                <td>{{estudiante.cedula}}</td>
+                <td>{{estudiante.nombres}}</td>
+                <td>{{estudiante.apellidos}}</td>
 
                 <td>
                     <button type="button" ng-click="eliminar(tarea)" class="glyphicon glyphicon-remove text-danger">
