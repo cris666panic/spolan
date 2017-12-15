@@ -121,21 +121,16 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 
 
         });
-    }, 0, false);
+    }, 300, false);
 
 
 
+    $scope.editarDocente = function (docente) {
 
+        window.localStorage["docente"]= JSON.stringify(docente);
 
-    $scope.eliminar = function (tarea) {
-        comun.delet(tarea);
+        $location.path('/editarDocente');
 
-    };
-
-    $scope.procesarObjeto = function (tarea) {
-        comun.tarea = tarea;
-        console.log(tarea);
-      $location.path('/editarPaciente');
 
     };
 
@@ -182,12 +177,27 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
 
 
 
-tareasModule.controller('ctrlEditarDocente', function ($scope, $location, comun) {
+tareasModule.controller('ctrlEditarDocente', function ($scope, $location, docente) {
 
 
 
+  $scope.docente = JSON.parse(localStorage.getItem("docente"));
+
+console.log($scope.docente);
 
 
+
+$scope.actulizarDocente =function () {
+
+
+docente.update().then(function (data) {
+
+
+    console.log(data);
+}).catch(function (err) {
+
+    console.log(err);
+});
 
 
 });

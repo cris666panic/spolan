@@ -170,7 +170,7 @@ var usuario= {nombre:$scope.estudiante.cedula,
 
 });
 
-tareasModule.controller('ctrlEditarDocente', function ($scope, $location, comun) {
+tareasModule.controller('ctrlEditarEstudiante', function ($scope, $location,estudiante) {
 
 
 

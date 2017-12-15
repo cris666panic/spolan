@@ -80,6 +80,8 @@ app.config(function($routeProvider){
 
         .when('/registroDocente', { templateUrl: 'paginas/registroDocente.html',controller: ('ctrlRegistroDocente' )})
 
+        .when('/editarDocente', { templateUrl: 'paginas/editarDocente.html',controller: ('ctrlEditarDocente' )})
+
 		.otherwise({ redirectTo: '/' });
             
 
