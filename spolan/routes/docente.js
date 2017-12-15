@@ -95,7 +95,9 @@ router.put('/actulizarDocente/:id', function (req, res) {
       apellidos:req.body.apellidos,
       telefono:req.body.telefono,
       correo:req.body.correo,
-      id_usuario:req.body.id_usuario
+      id_usuario:req.body.id_usuario,
+      direccion: req.body.direccion,
+      edad: req.body.edad
   };
 
 //conection
@@ -105,8 +107,8 @@ router.put('/actulizarDocente/:id', function (req, res) {
   const results = [];
 
 
-  var query = client.query('UPDATE docente SET cedula=$1, nombres=$2, apellidos=$3, telefono=$4, correo=$5,id_usuario=$6 where id=$4 RETURNING *',
-      [p.cedula, p.nombres, p.apellidos,p.telefono,p.correo,p.id_usuario, id]);
+  var query = client.query('UPDATE docente SET cedula=$1, nombres=$2, apellidos=$3, telefono=$4, correo=$5,id_usuario=$6,direccion=$7,edad=$8 where id=$9 RETURNING *',
+      [p.cedula, p.nombres, p.apellidos,p.telefono,p.correo,p.id_usuario,p.direccion,p.edad, id]);
 
 
 

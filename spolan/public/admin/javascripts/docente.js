@@ -190,14 +190,18 @@ console.log($scope.docente);
 $scope.actulizarDocente =function () {
 
 
-docente.update().then(function (data) {
+    docente.update($scope.docente).then(function (data) {
 
 
-    console.log(data);
-}).catch(function (err) {
+        console.log(data);
+    }).catch(function (err) {
 
-    console.log(err);
-});
+        console.log(err);
+    });
+}
+
+
+
 
 
 });
