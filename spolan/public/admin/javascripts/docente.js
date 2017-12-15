@@ -50,7 +50,7 @@ tareasModule.factory('docente', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.put('/web/actulizarDocente',+ docente.id, docente)
+        $http.put('/web/actulizarDocente/'+docente.id, docente)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -194,6 +194,8 @@ $scope.actulizarDocente =function () {
 
 
         console.log(data);
+        $location.path('/docentes');
+
     }).catch(function (err) {
 
         console.log(err);

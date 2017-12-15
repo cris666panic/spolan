@@ -120,6 +120,7 @@ router.put('/actulizarDocente/:id', function (req, res) {
     client.end();
   return res.json(results);
 });
+
 });
 
 
