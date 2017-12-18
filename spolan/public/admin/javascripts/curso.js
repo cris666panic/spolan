@@ -103,7 +103,7 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
     curso.getAll().then(function (data) {
 
             console.log(data);
-       $scope.ldocentes = data;
+      // $scope.ldocentes = data;
 
         }).catch(function (err) {
             console.log("error");
