@@ -7,17 +7,17 @@
     <div class="box-header">
         <h3 class="box-title">Listado de Pacientes</h3>
 <br>
-        <button type="button" class="btn btn-default" ng-click="showCargarArchivos('/registroCurso')">Registro de nuevo Curso</button>
+        <button type="button" class="btn btn-primary" ng-click="showCargarArchivos('/registroCurso')">Registro de nuevo Curso</button>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
         <table id="example1"  class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>Cedula</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Opciones</th>
+                <th>Nivel</th>
+                <th>Paralelo</th>
+                <th>profesor</th>
+                <th>horario</th>
 
 
             </tr>
@@ -25,12 +25,13 @@
             <tbody>
 
             <tr ng-repeat="docente in ldocentes ">
-                <td>{{docente.cedula}}</td>
-                <td>{{docente.nombres}}</td>
-                <td>{{docente.apellidos}}</td>
+                <td>{{docente.nombre}}</td>
+                <td>{{docente.paralelo}}</td>
+                <td>{{docente.docente}}</td>
+                <td>{{docente.horario}}</td>
 
                 <td>
-                    <button type="button" ng-click="editarDocente(docente)" class="glyphicon glyphicon-edit text-warning">
+                    <button type="button" ng-click="editarCurso(docente)" class="glyphicon glyphicon-edit text-warning">
 
                     </button>
                 </td>

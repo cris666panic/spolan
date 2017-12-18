@@ -59,7 +59,7 @@ router.get('/allperiodo', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT id, inicio, fin FROM periodo ');
+    var query = client.query('SELECT * FROM periodo ');
 
     query.on('row', (row) => {
         results.push(row);
