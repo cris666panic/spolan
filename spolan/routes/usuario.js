@@ -34,8 +34,44 @@ router.post('/login', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT * FROM usuario INNER JOIN informacion ON usuario.id_usuario = informacion.id_usuario WHERE usuario.nombre=$1 and usuario.contrasena=$2',
+    var query = client.query('SELECT * FROM usuario  WHERE nombre=$1 and contrasena=$2',
         [data1.nombre, data1.contrasenia]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results[0]);
+});
+
+});
+
+
+
+
+
+
+
+router.post('/loginDatosUsuario', function (req, res) {
+
+    console.log(req.body);
+    var u = {
+        id_usuario: req.body.id_usuario,
+        tipo: req.body.tipo
+
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    const results = [];
+
+    var query = client.query(' SELECT * FROM '+u.tipo+' WHERE id_usuario=$1',
+        [u.id_usuario]);
 
     query.on('row', (row) => {
         results.push(row);

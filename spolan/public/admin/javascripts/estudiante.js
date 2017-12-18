@@ -50,7 +50,7 @@ tareasModule.factory('estudiante', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.put('/web/actulizarusuario',+ estudiante.id, estudiante)
+        $http.put('/web/actulizarEstudiante/'+estudiante.id, estudiante)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -115,16 +115,18 @@ tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante
 
 
         });
-    }, 0, false);
+    }, 300, false);
 
 
 
 
 
 
-    $scope.procesarObjeto = function (estudiante) {
+    $scope.editarEstudiante = function (estudiante) {
 
-           $location.path('/editarPaciente');
+        window.localStorage["estudiante"]= JSON.stringify(estudiante);
+
+        $location.path('/editarEstudiante');
 
     };
 
@@ -154,9 +156,11 @@ var usuario= {nombre:$scope.estudiante.cedula,
 
 
                 console.log(data);
+                $location.path('/estudiante');
             }).catch(function (err) {
 
                 console.log(err);
+
             });
 
 
@@ -172,6 +176,30 @@ var usuario= {nombre:$scope.estudiante.cedula,
 
 tareasModule.controller('ctrlEditarEstudiante', function ($scope, $location,estudiante) {
 
+
+
+
+
+    $scope.estudiante = JSON.parse(localStorage.getItem("estudiante"));
+
+    console.log($scope.estudiante);
+
+
+
+    $scope.actulizarEstudiante =function () {
+
+
+        estudiante.update($scope.estudiante).then(function (data) {
+
+
+            console.log(data);
+            $location.path('/estudiante');
+
+        }).catch(function (err) {
+
+            console.log(err);
+        });
+    }
 
 
 

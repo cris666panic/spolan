@@ -54,7 +54,7 @@ router.post('/regestudiante', function (req, res) {
 });
 ///actulizar usuarioo
 
-router.put('/actulizarusuario/:id', function (req, res) {
+router.put('/actulizarEstudiante/:id', function (req, res) {
     var id = req.params.id;
 
     console.log(req.body);
@@ -78,8 +78,8 @@ router.put('/actulizarusuario/:id', function (req, res) {
     const results = [];
 
 
-    var query = client.query('update estudiante set  cedula=$1, nombres=$2, apellidos=$3,  telefono=$4, correo=$5,direccion=$6,edad=$7,id_usuario=$8,  where  id=$9 RETURNING *',
-        [p.cedula,p.nombres, p.apellido, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario]);
+    var query = client.query('update estudiante set  cedula=$1, nombres=$2, apellidos=$3,  telefono=$4, correo=$5,direccion=$6,edad=$7,id_usuario=$8  where  id=$9 RETURNING *',
+        [p.cedula,p.nombres, p.apellido, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario,id]);
     query.on('row', (row) => {
         results.push(row);
 });

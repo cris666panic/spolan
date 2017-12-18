@@ -31,11 +31,28 @@ console.log($scope.usuario);
             if (data.id_tipo == "1") {
 
                 console.log("opcion 1");
-                //	 window.localStorage.setItem("usuario", JSON.stringify($scope.usuario1));
-                window.localStorage["usuario"]= JSON.stringify(data);
-                window.localStorage["authenticated"]= true;
 
-                window.location ='admin/index.html';
+                var usuario={
+                    id_usuario:data.id_usuario,
+                    tipo:"informacion"
+                }
+
+
+
+
+
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
+
+                    console.log(data);
+
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='admin/index.html';
+
+                });
+
+
+
 
 
 
@@ -50,15 +67,24 @@ console.log($scope.usuario);
             if (data.id_tipo == "2") {
 
 
-                window.localStorage["usuario"]= JSON.stringify(data);
-                window.localStorage["authenticated"]= true;
+                var usuario={
+                    id_usuario:data.id_usuario,
+                    tipo:"informacion"
+                }
 
-                window.location ='blog.html';
 
 
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
 
-                var usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
-                console.log(usuarioLog);
+                    console.log(data);
+
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='blog.html';
+
+                });
+
+
 
 
 
@@ -70,15 +96,25 @@ console.log($scope.usuario);
             if (data.id_tipo == "3") {
                 console.log("opcion 3");
 
-                window.localStorage["usuario"]= JSON.stringify(data);
-                window.localStorage["authenticated"]= true;
 
-                window.location ='blog.html';
+                var usuario={
+
+                    id_usuario:data.id_usuario,
+                    tipo:"informacion"
+                }
 
 
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
 
-                var usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
-                console.log(usuarioLog);
+                    console.log(data);
+
+                    data.id_tipo=3;
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='blog.html';
+
+                });
+
 
 
 
@@ -88,7 +124,12 @@ console.log($scope.usuario);
 
 
 
+
             if(data==""){
+
+
+
+
                 $scope.mensaje = 'Usuario o contraseña invalidos';
                 console.log("eeeroor");
 
@@ -100,6 +141,7 @@ console.log($scope.usuario);
 
 
         });
+
 
 
 

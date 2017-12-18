@@ -1,4 +1,4 @@
-var app = angular.module('chirpApp', ['ngCkeditor','correo','calendario','ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage','docente','estudiante']).run(function($http, $rootScope,$localStorage) {
+var app = angular.module('chirpApp', ['ngCkeditor','correo','calendario','ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage','docente','estudiante','curso']).run(function($http, $rootScope,$localStorage) {
   
    $rootScope.usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
    
@@ -81,6 +81,13 @@ app.config(function($routeProvider){
         .when('/registroDocente', { templateUrl: 'paginas/registroDocente.html',controller: ('ctrlRegistroDocente' )})
 
         .when('/editarDocente', { templateUrl: 'paginas/editarDocente.html',controller: ('ctrlEditarDocente' )})
+
+        .when('/editarEstudiante', { templateUrl: 'paginas/editarEstudiante.html',controller: ('ctrlEditarEstudiante' )})
+
+
+        .when('/cursos', { templateUrl: 'paginas/cursos.html',controller: ('ctrlCurso' )})
+
+        .when('/registroCurso', { templateUrl: 'paginas/registroCurso.html',controller: ('ctrlRegistroCurso' )})
 
 		.otherwise({ redirectTo: '/' });
             
