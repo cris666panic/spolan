@@ -5,10 +5,15 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Listado de estudiante</h3>
+        <div ALIGN="CENTER">
+        <h3 class="box-title">LISTA DE ESTUDIANTES</h3>
+        </div>
 <br>
-        <button type="button" class="btn btn-default" ng-click="showCargarArchivos('/registroE')">Registro de nuevo Estudiante</button>
-    </div>
+        <div align="right">
+        <button type="button" class="btn btn-primary antosubmit2" ng-click="showCargarArchivos('/registroE')">Nuevo Estudiante</button>
+
+        </div>
+        </div>
     <!-- /.box-header -->
     <div class="box-body">
         <table id="example1"  class="table table-bordered table-striped">
@@ -17,6 +22,10 @@
                 <th>Cedula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Edad</th>
+                <th>Dirección</th>
                 <th>Opciones</th>
 
             </tr>
@@ -27,15 +36,16 @@
                 <td>{{estudiante.cedula}}</td>
                 <td>{{estudiante.nombres}}</td>
                 <td>{{estudiante.apellidos}}</td>
-
-
-
-
-
+                <td>{{estudiante.correo}}</td>
+                <td>{{estudiante.telefono}}</td>
+                <td>{{estudiante.edad}}</td>
+                <td>{{estudiante.direccion}}</td>
 
                 <td>
+                    <button type="button" ng-click="eliminar(tarea)" class="glyphicon glyphicon-remove text-danger">
 
-                    <button type="button" ng-click="editarEstudiante(estudiante)" class="glyphicon glyphicon-edit text-warning">
+                    </button>
+                    <button type="button" ng-click="procesarObjeto(tarea)" class="glyphicon glyphicon-edit text-warning">
 
                     </button>
                 </td>
