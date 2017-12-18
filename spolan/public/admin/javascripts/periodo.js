@@ -31,7 +31,7 @@ tareasModule.factory('periodo', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.post('/web/addDocente',docente)
+        $http.post('/web/addPeriodo',docente)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -50,7 +50,7 @@ tareasModule.factory('periodo', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.put('/web/actulizarDocente/'+docente.id, docente)
+        $http.put('/web/actulizarPeriodo/'+docente.id, docente)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -97,10 +97,10 @@ tareasModule.factory('periodo', function ($http,$q) {
 
 
 
-tareasModule.controller('ctrlPeriodo', function ($scope, $location, docente,$timeout) {
+tareasModule.controller('ctrlPeriodo', function ($scope, $location, periodo,$timeout) {
 
 
-    docente.getAll().then(function (data) {
+    periodo.getAll().then(function (data) {
 
             console.log(data);
        $scope.ldocentes = data;
@@ -121,15 +121,15 @@ tareasModule.controller('ctrlPeriodo', function ($scope, $location, docente,$tim
 
 
         });
-    }, 300, false);
+    }, 500, false);
 
 
 
-    $scope.editarDocente = function (docente) {
+    $scope.editarPeriodo = function (docente) {
 
-        window.localStorage["docente"]= JSON.stringify(docente);
+        window.localStorage["periodo"]= JSON.stringify(docente);
 
-        $location.path('/editarDocente');
+        $location.path('/editarPeriodo');
 
 
     };
@@ -139,23 +139,34 @@ tareasModule.controller('ctrlPeriodo', function ($scope, $location, docente,$tim
 });
 
 
-tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, docente,estudiante,$timeout) {
+tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, periodo,estudiante,$timeout) {
+
+    $('.datepicker').datepicker();
+    $('.datepicker1').datepicker();
+
+    $scope.guardarPeriodo = function () {
+        console.log( $scope.periodo);
+
+        var aux=document.getElementById('datepicker').value.toString();
+        var vec=aux.split("T");
 
 
 
-    $scope.guardardocente = function () {
-        console.log( $scope.docente);
 
-        ///guar estudiante
-        var usuario= {nombre:$scope.docente.cedula,
-            contrasenia:$scope.docente.cedula,
-            idtipo:5 };
+        var aux1=document.getElementById('datepicker1').value.toString();
+        var vec1=aux1.split("T");
 
-        estudiante.addusuario(usuario).then(function (data) {
-            console.log(data);
-            $scope.docente.id_usuario= data[0].id_usuario;
-            //estudainte
-            docente.add($scope.docente).then(function (data) {
+
+
+
+        var perido={
+            inicio:vec[0],
+            fin:vec1[0],
+                 unido:$scope.periodo.unido
+        }
+
+
+            periodo.add(perido).then(function (data) {
 
 
                 console.log(data);
@@ -165,11 +176,6 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, doce
             });
 
 
-        }).catch(function (err) {
-
-            console.log(err);
-        });
-
 
     };
 
@@ -177,24 +183,40 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, doce
 
 
 
-    tareasModule.controller('ctrlEditarPeriodo', function ($scope, $location, docente) {
+    tareasModule.controller('ctrlEditarPeriodo', function ($scope, $location, periodo) {
 
 
 
-  $scope.docente = JSON.parse(localStorage.getItem("docente"));
+  $scope.periodo = JSON.parse(localStorage.getItem("periodo"));
 
-console.log($scope.docente);
+console.log($scope.periodo);
+
+        $('.datepicker').datepicker();
+        $('.datepicker1').datepicker();
+
+$scope.actulizarPeriodo =function () {
+
+    var aux=document.getElementById('datepicker').value.toString();
+    var vec=aux.split("T");
 
 
 
-$scope.actulizarDocente =function () {
 
+    var aux1=document.getElementById('datepicker1').value.toString();
+    var vec1=aux1.split("T");
 
-    docente.update($scope.docente).then(function (data) {
+    var perido={
+        id:$scope.periodo.id,
+        inicio:vec[0],
+        fin:vec1[0],
+        unido:$scope.periodo.unido
+    }
+
+    periodo.update(perido).then(function (data) {
 
 
         console.log(data);
-        $location.path('/docentes');
+        $location.path('/periodos');
 
     }).catch(function (err) {
 

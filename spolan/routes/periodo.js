@@ -11,31 +11,28 @@ var conString =  "postgres://postgres:"+config.postgres.password+"@"+config.post
 
 module.exports = router;
 
-//post insertat
-//put actilizar
-//get optener
-//delet eliminar
 
 
-router.post('/regperiodo', function (req, res) {
+router.post('/addPeriodo', function (req, res) {
 
     console.log(req.body);
 
     var p = {
         inicio: req.body.inicio,
         fin: req.body.fin,
+        unido:req.body.unido
 
     };
 
-//insertar
+
     var client = new pg.Client(conString);
     client.connect();
 
     const results = [];
 
-    var query = client.query('INSERT INTO periodo(inicio, fin)' +
-        ' VALUES ($1,$2) RETURNING *',
-        [p.inicio, p.fin]);
+    var query = client.query('INSERT INTO periodo(inicio, fin,unido)' +
+        ' VALUES ($1,$2,$3) RETURNING *',
+        [p.inicio, p.fin,p.unido]);
 
 
 
@@ -48,7 +45,7 @@ router.post('/regperiodo', function (req, res) {
     return res.json(results);
 });
 });
-//obtener todos
+
 
 
 
@@ -72,7 +69,43 @@ router.get('/allperiodo', function (req, res) {
 
 });
 
-//////////
+
+
+
+router.put('/actulizarPeriodo/:id', function (req, res) {
+    var id = req.params.id;
+
+    console.log(req.body);
+
+    var p = {
+
+        inicio: req.body.inicio,
+        fin: req.body.fin,
+        unido:req.body.unido
+    };
+
+//conection
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('UPDATE periodo SET inicio=$1, fin=$2,unido=$3 where id=$4 RETURNING *',
+        [p.inicio, p.fin, p.unido, id]);
+
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
 

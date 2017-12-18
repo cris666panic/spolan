@@ -90,8 +90,15 @@ app.config(function($routeProvider){
         .when('/registroCurso', { templateUrl: 'paginas/registroCurso.html',controller: ('ctrlRegistroCurso' )})
         .when('/editarCurso', { templateUrl: 'paginas/editarCurso.html',controller: ('ctrlEditarCurso' )})
 
+        .when('/periodos', { templateUrl: 'paginas/periodos.html',controller: ('ctrlPeriodo' )})
+
+        .when('/registroPeriodo', { templateUrl: 'paginas/registroPeriodo.html',controller: ('ctrlRegistroPeriodo' )})
+
+        .when('/editarPeriodo', { templateUrl: 'paginas/editarPeriodo.html',controller: ('ctrlEditarPeriodo' )})
+
 		.otherwise({ redirectTo: '/' });
             
+
 
 
 });
