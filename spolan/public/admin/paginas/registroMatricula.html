@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Ingreso de Docente</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+
+
+        <div class="box-body">
+
+
+
+            <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                <label class="control-label ">Estudiante: </label>
+
+
+                <input  id="hero-demo" autofocus type="text" name="q" placeholder=" ..." class="form-control col-md-7 col-xs-12"  ng-model="Opcion2">
+
+
+            </div>
+
+
+            <div class="form-group col-md-7 col-sm-5 col-xs-12">
+                <label class="control-label ">Curso: </label>
+
+                    <select  class=" form-control"  ng-model="curso" ng-options="item as item.descripcion for item in cursos"></select>
+
+            </div>
+
+
+            <div class="form-group " align="right">
+                <button style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2"    ng-click="guardarMatricula()"  >aceptar</button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -70,7 +70,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="javascripts/estudiante.js"></script>         
         <script src="javascripts/curso.js"></script>
         <script src="javascripts/periodo.js"></script>
-    </head>     
+        <script src="javascripts/matricula.js"></script>
+
+        <link rel="stylesheet" href="plugins/jquery.auto-complete.css">
+    </head>
+
     <!--
 BODY TAG OPTIONS:
 =================
@@ -231,7 +235,7 @@ desired effect
                         </li>
 
                         <li>
-                            <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-graduation-cap"></i><span>ACADEMICO</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                            <a href="" ><i class="fa fa-graduation-cap"></i><span>ACADEMICO</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                             <ul class="treeview-menu">
                                 <li>
                                     <a href="" ng-click="showCargarArchivos('/docentes')"><i class="fa fa-users"></i><span>DOCENTES</span></a>
@@ -242,8 +246,15 @@ desired effect
                                 <li>
                                     <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-university"></i><span>CURSOS</span></a>
                                 </li>
+
+
+
                                 <li>
                                     <a href="" ng-click="showCargarArchivos('/periodos')"><i class="fa fa-calendar"></i><span>PERIOS ACADEMICOSssssss</span></a>
+
+                                </li>
+                                <li>
+                                    <a href="" ng-click="showCargarArchivos('/matricula')"><i class="fa fa-university"></i><span>Matricula</span></a>
                                 </li>
 
                             </ul>
@@ -369,6 +380,9 @@ desired effect
         <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>         
         <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>         
         <script src="plugins/fullcalendar/fullcalendar.min.js"></script>         
-        <script src="plugins/moment.min.js"></script>         
+        <script src="plugins/moment.min.js"></script>
+
+        <script src="plugins/jquery.auto-complete.js"></script>
+
     </body>     
 </html>

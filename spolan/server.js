@@ -64,7 +64,5 @@ app.use('/web', require('./routes/correo'));
 app.use('/web', require('./routes/blog'));
 app.use('/web', require('./routes/docente'));
 app.use('/web', require('./routes/curso'));
-
-//ver si esta completo lo del periodo
 app.use('/web', require('./routes/periodo'));
-
+app.use('/web', require('./routes/matricula'));
