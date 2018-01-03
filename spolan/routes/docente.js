@@ -43,8 +43,8 @@ router.post('/addDocente', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *',
-        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad]);
+    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad,unido) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *',
+        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad,p.unido]);
 
     query.on('row', (row) => {
         results.push(row);
