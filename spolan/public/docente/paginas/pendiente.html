@@ -1,0 +1,119 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+
+
+        <div class="col-md-12">
+
+
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">MENSAJES PENDIENTES</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="box-body">
+                        <div class="row">
+
+                            <div class="col-md-12 col-xs-12 table-responsive">
+
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Nombre:</th>
+                                            <th>Apellido:</th>
+                                            <th>Estado:</th>
+                                            <th>Mensaje:</th>
+                                            <th>Correo:</th>
+                                            <th>Telefono:</th>
+
+ <th>accione</th>
+
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="consulta in listamsg ">
+                                            <td>
+                                                {{consulta.nombre}}
+                                            </td>
+                                            <td>
+
+                                                {{consulta.apellido}}
+
+                                            </td>
+                                            <td>
+                                            
+                                                <select style="cursor:default;  background-color: rgba(255, 255, 255, .4);" class="form-control "  ng-model="consulta.estado_msg" ng-options="item.nombre as item.nombre for item in estados" ng-change="actulizar(consulta)"  ></select>
+
+                                            </td>
+                                            <td>
+                                                {{consulta.msg}}
+                                            </td>
+
+
+                                            <td>
+
+                                                {{consulta.correo}}
+
+
+                                            </td>
+                                            <td>
+
+                                                {{consulta.telefono}}
+
+
+                                            </td>
+
+
+
+                                            <td>
+                                                <button type="button" ng-click="responder(consulta)" class="glyphicon glyphicon-envelope" alt="Enviar Email" title="Enviar Email">
+
+
+
+
+                    </button>
+                                            </td>
+
+
+
+
+
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+
+                        <!-- /.box-footer -->
+                </form>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>

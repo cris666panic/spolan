@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+
+
+
+<div class="box">
+    <div class="box-header">
+        <div align="center">
+        <h3 class="box-title">LISTA DE DOCENTES</h3>
+    </div>
+<br>
+        <div align="right">
+        <button type="button" style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2" ng-click="showCargarArchivos('/registroPeriodo')">Nuevo Periodo</button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example1"  class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Inicio</th>
+                <th>Fin</th>
+                <th>Nombre</th>
+                <th>Opciones</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="docente in ldocentes ">
+                <td>{{docente.inicio}}</td>
+                <td>{{docente.fin}}</td>
+                <td>{{docente.unido}}</td>
+
+
+                <td>
+                    <button  type="button" ng-click="editarPeriodo(docente)" class="glyphicon glyphicon-edit text-warning">
+
+                    </button>
+                </td>
+
+
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+
+
+    <!-- /.box-body -->
+</div>
+
+</div>

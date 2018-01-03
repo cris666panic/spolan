@@ -1,0 +1,97 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+
+
+        <div class="col-md-12">
+
+
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Imagenes </h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="box-body">
+                        <div class="row">
+
+                            <div class="col-md-12 col-xs-12 table-responsive">
+
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Codigo Imagen</th>
+                                            <th>Codigo Foja</th>
+                                            <th>Imagen</th>
+                                                                 
+ <th>acciones</th>
+
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="consulta in tareas  ">
+                                            <td>
+                                                {{consulta.codigo}}
+                                            </td>
+                                            <td>
+                                          
+                                                 {{consulta.nombre}}
+                                            </td>
+                                            <td>
+                                            
+                                                  <img src="{{consulta.url}}" width="100" height="75">
+                                                     
+                                            </td>
+                                          
+
+
+            
+                                            <td>
+                 
+                                                <a  href="{{consulta.url}}" download="{{consulta.codigo}}"+".jpg">
+Descargar
+                    </a>
+                                            </td>
+
+
+
+
+
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+
+                        <!-- /.box-footer -->
+                </form>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>

@@ -1,0 +1,99 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+
+
+        <div class="col-md-12">
+
+
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Sitios guardados</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="box-body">
+                        <div class="row">
+
+                            <div class="col-md-12 col-xs-12 table-responsive">
+
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Codigo </th>
+                                            <th>Nombre</th>
+                                            <th>Descripcion</th>
+                                                                 <th>Fecha </th>
+ <th>acciones</th>
+
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="consulta in tareas  ">
+                                            <td>
+                                                {{consulta.codigo}}
+                                            </td>
+                                            <td>
+                                          
+                                                 {{consulta.nombre}}
+                                            </td>
+                                            <td>
+                                            
+                                              {{consulta.descripcion}}
+                                            </td>
+                                            <td>
+                                                {{consulta.fecha | date:"MMM d, y"}}
+                                            </td>
+
+
+            
+                                            <td>
+                 
+                                                <button type="button" ng-click="procesarObjeto(consulta)" class="glyphicon glyphicon-edit text-warning" alt="Modificar datos"
+                                                    title="Modificar datos">
+Galeria
+                    </button>
+                                            </td>
+
+
+
+
+
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+
+                        <!-- /.box-footer -->
+                </form>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
