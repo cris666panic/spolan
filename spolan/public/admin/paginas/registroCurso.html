@@ -18,11 +18,11 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">Datos Informativos</h3>
                     </div>
-                    <label for="name" class="cols-sm-2 control-label">Nombre del nivel </label>
+                    <label for="name" class="cols-sm-2 control-label">Nivel </label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input ng-model="curso.nombre" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                            <span class="input-group-addon"><i class="fa fa-list-ol" aria-hidden="true"></i></span>
+                            <input ng-model="curso.nombre" type="text" class="form-control" name="name" id="name"  />
                         </div>
                     </div>
 
@@ -47,11 +47,11 @@
 
 
                 <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">paralelo</label>
+                    <label for="email" class="cols-sm-2 control-label">Paralelo</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input ng-model="curso.paralelo" type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                            <span class="input-group-addon"><i class="fa fa-th-large" aria-hidden="true"></i></span>
+                            <input ng-model="curso.paralelo" type="text" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     <label for="name" class="cols-sm-2 control-label">Periodo</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
                             <select  class=" form-control col-md-7 col-xs-12"  ng-model="curso.id_periodo" ng-options="item.id as item.unido for item in periodos" ></select>
 
 
@@ -190,8 +190,8 @@
             </div>
 
 
-            <div class="form-group ">
-                <button ng-click="guardarCurso()"  >aceptar</button>
+            <div class="form-group "  align="right">
+                <button ng-click="guardarCurso()" style="background-color: #AD1D24;border-color:#DBAC1F;"    class="btn btn-primary antosubmit2" >aceptar</button>
             </div>
 
 

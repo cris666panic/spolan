@@ -21,7 +21,7 @@
                     <label for="name" class="cols-sm-2 control-label">Inicio</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
                          <input  class=" datepicker form-control" id="datepicker" value="{{ periodo.inicio}}"  placeholder="02/27/1999" >
 
 
@@ -34,10 +34,10 @@
 
                 <div class="form-group">
 
-                    <label for="name" class="cols-sm-2 control-label">fin</label>
+                    <label for="name" class="cols-sm-2 control-label"Fin</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
                           <input  class=" datepicker form-control" id="datepicker1" value="{{periodo.fin}}"  placeholder="02/27/1999" >
 
 
@@ -49,10 +49,10 @@
 
                 <div class="form-group">
 
-                    <label for="name" class="cols-sm-2 control-label">nombre</label>
+                    <label for="name" class="cols-sm-2 control-label">Descripción</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-comment" aria-hidden="true"></i></span>
                             <input ng-model="periodo.unido" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
                         </div>
                     </div>
@@ -63,8 +63,8 @@
 
 
 
-                    <div class="form-group ">
-                        <button ng-click="actulizarPeriodo()"  >aceptar</button>
+                    <div class="form-group " align="right">
+                        <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary" ng-click="actulizarPeriodo()"  >Aceptar</button>
                     </div>
 
             </div>
