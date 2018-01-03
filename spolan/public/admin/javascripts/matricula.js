@@ -219,7 +219,7 @@ tareasModule.controller('ctrlRegistroMatricula', function ($scope, $location, ma
 
             id_estudiante:resultado.data.id,
             id_curso:$scope.curso.data.id,
-            estado:"pendiente"
+            estado:"En Curso"
         };
 
         console.log(matriculaData);

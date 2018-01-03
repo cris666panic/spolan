@@ -154,6 +154,7 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
         estudiante.addusuario(usuario).then(function (data) {
             console.log(data);
             $scope.docente.id_usuario= data[0].id_usuario;
+            $scope.docente.unido=$scope.docente.nombres+" "+$scope.docente.apellidos;
             //estudainte
             docente.add($scope.docente).then(function (data) {
 

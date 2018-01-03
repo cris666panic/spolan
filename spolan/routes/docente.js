@@ -30,7 +30,8 @@ router.post('/addDocente', function (req, res) {
 
         id_usuario:req.body.id_usuario,
         direccion: req.body.direccion,
-        edad: req.body.edad
+        edad: req.body.edad,
+        unido:req.body.unido
 
     };
 
