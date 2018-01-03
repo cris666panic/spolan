@@ -122,6 +122,32 @@ console.log($scope.usuario);
 
 
 
+            if (data.id_tipo == "5") {
+                console.log("opcion 5");
+
+
+                var usuario={
+
+                    id_usuario:data.id_usuario,
+                    tipo:"docente"
+                }
+
+
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
+
+                    console.log(data);
+
+                    data.id_tipo=3;
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='docente/index.html';
+
+                });
+
+
+
+
+            }
 
 
 
