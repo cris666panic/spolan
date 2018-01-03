@@ -141,7 +141,7 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 
 tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, docente,estudiante,$timeout) {
 
-
+//cambios de docencte
 
     $scope.guardardocente = function () {
         console.log( $scope.docente);
