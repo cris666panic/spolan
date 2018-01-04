@@ -49,24 +49,42 @@ router.post('/addMatricula', function (req, res) {
 
 router.get('/obtenerMatriculas', function (req, res) {
 
-  var client = new pg.Client(conString);
-  client.connect();
+    var data1 = {
 
-  const results = [];
+        cedula: req.body.cedula
+    };
 
-  var query = client.query('SELECT * from matricula');
+    var client = new pg.Client(conString);
+    client.connect();
 
 
-  query.on('row', (row) => {
-    results.push(row);
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
+        '        FROM Matricula as M\n' +
+        '        INNER JOIN estudiante as E ON M.id_estudiante=E.id\n' +
+        '\tINNER JOIN curso as C ON M.id_curso=C.id\n' +
+        '\tINNER JOIN periodo as P ON C.id_periodo=P.id\n' +
+        '\tINNER JOIN docente as D ON C.id_docente=D.id\n' +
+        '\n');
+
+
+    query.on('row', (row) => {
+        results.push(row);
 });
 
-  query.on('end', () => {
-    client.end();
-  return res.json(results);
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
 });
 
 });
+
+
 
 
 

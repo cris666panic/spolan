@@ -97,6 +97,10 @@ app.config(function($routeProvider){
         .when('/editarPeriodo', { templateUrl: 'paginas/editarPeriodo.html',controller: ('ctrlEditarPeriodo' )})
         .when('/matricula', { templateUrl: 'paginas/matricula.html',controller: ('ctrlMatricula' )})
         .when('/registroMatricula', { templateUrl: 'paginas/registroMatricula.html',controller: ('ctrlRegistroMatricula' )})
+
+
+        .when('/matricula1', { templateUrl: 'paginas/matricula1.html',controller: ('ctrlMatricula1' )})
+
 		.otherwise({ redirectTo: '/' });
             
 

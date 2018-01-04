@@ -26,6 +26,49 @@ tareasModule.factory('matricula', function ($http,$q) {
     };
 
 
+
+    matricula.obtenerAsistenciaEstudiante = function (estudiante) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerAsistenciaEstudiante',estudiante)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+
+    matricula.obtenerNotasEstudiante = function (estudiante) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerNotasEstudiante',estudiante)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+
+
+
     matricula.add = function (docente) {
 
         var defered = $q.defer();
@@ -97,13 +140,13 @@ tareasModule.factory('matricula', function ($http,$q) {
 
 
 
-tareasModule.controller('ctrlMatricula', function ($scope, $location, docente,$timeout) {
+tareasModule.controller('ctrlMatricula', function ($scope, $location, matricula,$timeout) {
 
 
-    docente.getAll().then(function (data) {
+    matricula.getAll().then(function (data) {
 
             console.log(data);
-       $scope.ldocentes = data;
+       $scope.matriculas = data;
 
         }).catch(function (err) {
             console.log("error");
@@ -113,7 +156,7 @@ tareasModule.controller('ctrlMatricula', function ($scope, $location, docente,$t
 
 
     $timeout(function(){
-        console.log( $scope.ldocentes);
+
         $('#example1').dataTable({
             "language": {
                 "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
@@ -125,11 +168,11 @@ tareasModule.controller('ctrlMatricula', function ($scope, $location, docente,$t
 
 
 
-    $scope.editarDocente = function (docente) {
+    $scope.verMas = function (matricula) {
 
-        window.localStorage["docente"]= JSON.stringify(docente);
+        window.localStorage["matricula"]= JSON.stringify(matricula);
 
-        $location.path('/editarDocente');
+        $location.path('/matricula1');
 
 
     };
@@ -244,34 +287,45 @@ tareasModule.controller('ctrlRegistroMatricula', function ($scope, $location, ma
 });
 
 
-
-tareasModule.controller('ctrlEditarMatricula', function ($scope, $location, docente) {
-
-
-
-  $scope.docente = JSON.parse(localStorage.getItem("docente"));
-
-console.log($scope.docente);
+tareasModule.controller('ctrlMatricula1', function ($scope, $location,matricula,$timeout) {
 
 
 
-$scope.actulizarDocente =function () {
+    $scope.matricula=  JSON.parse(localStorage.getItem("matricula"));
+
+    console.log( $scope.matricula);
 
 
-    docente.update($scope.docente).then(function (data) {
 
+    var objeto={
+        matricula:$scope.matricula.id
+    }
+
+
+    matricula.obtenerNotasEstudiante(objeto).then(function (data) {
 
         console.log(data);
-        $location.path('/docentes');
+        $scope.nota=data[0];
 
     }).catch(function (err) {
+        console.log("error");
 
-        console.log(err);
     });
-}
 
 
 
 
+
+
+    matricula.obtenerAsistenciaEstudiante(objeto).then(function (data) {
+
+        console.log(data);
+        $scope.asistencia=data;
+
+    }).catch(function (err) {
+        console.log("error");
+        //cambios
+
+    });
 
 });
