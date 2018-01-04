@@ -45,6 +45,25 @@ tareasModule.factory('curso', function ($http,$q) {
     };
 
 
+    curso.getAllEstudiante = function (docente) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerEstudiantesMatriculados',docente)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
     curso.update = function (docente) {
 
         var defered = $q.defer();
@@ -112,6 +131,9 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 
 
 
+
+
+
     $timeout(function(){
         console.log( $scope.ldocentes);
         $('#example1').dataTable({
@@ -134,9 +156,55 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 
     };
 
+    $scope.estudiantes=function (curso) {
+
+
+        window.localStorage["curso"]= JSON.stringify(curso);
+
+        $location.path('/cursoEstudiantes');
+
+
+    }
 
 
 });
+
+
+
+
+
+
+tareasModule.controller('ctrlCursoEstudiantes', function ($scope, $location,curso,$timeout) {
+
+
+    var nivel=  JSON.parse(localStorage.getItem("curso"));
+
+    console.log(nivel);
+
+    var objeto={
+        id_curso:nivel.id
+    }
+
+
+
+    curso.getAllEstudiante(objeto).then(function (data) {
+
+
+        console.log(data);
+        $scope.estudiantes=data;
+    }).catch(function (err) {
+
+        console.log(err);
+    });
+
+
+
+
+
+});
+
+
+
 
 
 tareasModule.controller('ctrlRegistroCurso', function ($scope, $location, docente,periodo,curso,$timeout) {

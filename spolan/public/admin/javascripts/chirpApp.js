@@ -101,6 +101,13 @@ app.config(function($routeProvider){
 
         .when('/matricula1', { templateUrl: 'paginas/matricula1.html',controller: ('ctrlMatricula1' )})
 
+        .when('/cursoEstudiantes', { templateUrl: 'paginas/cursoEstudiantes.html',controller: ('ctrlCursoEstudiantes' )})
+
+
+
+
+
+
 		.otherwise({ redirectTo: '/' });
             
 
