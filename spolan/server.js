@@ -66,3 +66,4 @@ app.use('/web', require('./routes/docente'));
 app.use('/web', require('./routes/curso'));
 app.use('/web', require('./routes/periodo'));
 app.use('/web', require('./routes/matricula'));
+app.use('/web', require('./routes/notas'));

@@ -49,6 +49,44 @@ router.post('/addCurso', function (req, res) {
 });
 
 
+
+
+
+
+router.post('/obtenerCursosDocentes', function (req, res) {
+
+    var data1 = {
+
+        id_docente: req.body.id_docente
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * FROM curso where id_docente=$1',[data1.id_docente]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+
+
+});
+
+
 router.get('/obtenerCursos', function (req, res) {
 
   var client = new pg.Client(conString);

@@ -1,0 +1,80 @@
+<div class="container-fluid"> 
+    <div class="row"> 
+        <div class="col-md-12"> 
+            <div class="box box-primary"> 
+                <div class="box-header with-border"> 
+                    <h3 class="box-title">Cursos</h3>
+                    <br> 
+
+                </div>                 
+                <!-- /.box-header -->                 
+                <!-- form start -->                 
+                <form class="form-horizontal"> 
+                    <div class="box-body"> 
+                        <div class="row"> 
+                            <div class="col-md-12 col-xs-12 table-responsive"> 
+                                <table id="example1" class="table table-bordered table-striped"> 
+                                    <thead> 
+                                        <tr> 
+                                            <th>Cedula</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Nota 1</th>
+                                            <th>Nota 2</th>
+                                            <th>Nota 3</th>
+                                            <th>Nota final</th>
+
+                                        </tr>                                         
+                                    </thead>                                     
+                                    <tbody> 
+                                        <tr ng-repeat="consulta in estudiantes ">
+                                            <td> 
+                                                {{consulta.cedula}}</td>
+                                            <td> 
+                                                {{consulta.nombres}}</td>
+
+                                            <td> 
+                                                {{consulta.apellidos}}</td>
+
+                                            <td>
+
+                                                <input class="col-md-1" ng-model="notas.nota1" type="text"  />
+                                                
+                                            </td>
+                                            <td>
+
+                                                <input  class="col-md-1" ng-model="notas.nota2" type="text"  />
+
+                                            </td>
+                                            <td>
+
+                                                <input class="col-md-1" ng-model="notas.nota3" type="text"  />
+
+                                            </td>
+                                            <td>
+
+                                                <input class="col-md-1" ng-model="notas.nota4" type="text"  />
+
+                                            </td>
+
+                                        </tr>                                         
+                                    </tbody>                                     
+                                </table>                                 
+                            </div>
+
+                        </div>                         
+                        <!-- /.box-body -->                         
+                        <!-- /.box-footer -->
+
+
+
+                </form>
+
+                <div class="form-group " align="right">
+                    <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2" ng-click="guardar()"  >aceptar</button>
+                </div>
+
+            </div>             
+        </div>         
+    </div>     
+</div>

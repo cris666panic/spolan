@@ -38,8 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="../angular-1.4.6/angular-local-storage.min.js"></script>         
         <script src="../angular-1.4.6/angular-local-storage.js"></script>         
         <script src="../angular-1.4.6/angular-local-storage.js"></script>         
-        <script src="javascripts/msg.js"></script>         
-        <script src="javascripts/calendario.js"></script>         
+
         <script src="javascripts/chirpApp.js"></script>         
         <script src="javascripts/CargasController.js"></script>         
         <script src="../angular-1.4.6/build/multiple-select.min.js"></script>         
@@ -59,20 +58,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     border-top: 5px solid #d2d6de;
   }</style>         
         <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css"> 
-        <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css"> 
-        <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print"> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>         
-        <script src="plugins/fullcalendar/fullcalendar.min.js"></script>         
-        <script src="javascripts/correo.js"></script>         
-        <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>         
-        <script src="https://s3-ap-southeast-1.amazonaws.com/naveensingh/posts_data/ckeditor_example/ng-ckeditor.min.js"></script>         
-        <script src="javascripts/docente.js"></script>         
-        <script src="javascripts/estudiante.js"></script>         
-        <script src="javascripts/curso.js"></script>
-        <script src="javascripts/periodo.js"></script>
-        <script src="javascripts/matricula.js"></script>
 
-        <link rel="stylesheet" href="plugins/jquery.auto-complete.css">
+
+        <script src="javascripts/curso.js"></script>
+
+
+
     </head>
 
     <!--
@@ -208,59 +199,12 @@ desired effect
                     <ul class="sidebar-menu"> 
                         <li class="header">MENU</li>                         
                         <!-- Optionally, you can add icons to the links -->                         
-                        <li> 
-                            <a href="" ng-click="showCargarArchivos('/suscriptores')"><i class="fa fa-users"></i> <span>SUSCRIPTORES</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a> 
-                            <ul class="treeview-menu"> 
-                                <li> 
-                                    <a href="" ng-click="showCargarArchivos('/pendientesuscriptores')"><i class="fa fa-eye-slash"></i>PENDIENTES</a> 
-                                </li>                                 
-                                <li> 
-                                    <a href="" ng-click="showCargarArchivos('/notificadosuscriptores')"><i class="fa fa-eye"></i>NOTIFICADOS</a> 
-                                </li>                                 
-                            </ul>                             
-                        </li>                         
-                        <li> 
-                            <a href="" ng-click="showCargarArchivos('/msg')"><i class="fa fa-commenting-o"></i><span>MENSAJES</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a> 
-                            <ul class="treeview-menu"> 
-                                <li> 
-                                    <a href="" ng-click="showCargarArchivos('/pendiente')"><i class="fa fa-eye-slash"></i>PENDIENTES</a> 
-                                </li>                                 
-                                <li> 
-                                    <a href="" ng-click="showCargarArchivos('/notificado')"><i class="fa fa-eye"></i>NOTIFICADOS</a> 
-                                </li>                                 
-                            </ul>                             
-                        </li>                         
-                        <li> 
-                            <a href="" ng-click="showCargarArchivos('/calendario')"><i class="fa fa-calendar"></i><span>AGENDA DE PRUEBAS</span></a> 
-                        </li>
+
+
 
                         <li>
-                            <a href="" ><i class="fa fa-graduation-cap"></i><span>ACADEMICO</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
-                            <ul class="treeview-menu">
-                                <li>
-                                    <a href="" ng-click="showCargarArchivos('/docentes')"><i class="fa fa-users"></i><span>DOCENTES</span></a>
-                                </li>
-                                <li>
-                                    <a href="" ng-click="showCargarArchivos('/estudiante')"><i class="fa fa-users"></i><span>ESTUDIANTES</span></a>
-                                </li>
-                                <li>
-                                    <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-university"></i><span>CURSOS</span></a>
-                                </li>
-
-
-
-                                <li>
-                                    <a href="" ng-click="showCargarArchivos('/periodos')"><i class="fa fa-calendar"></i><span>PERIOS ACADEMICOSssssss</span></a>
-
-                                </li>
-                                <li>
-                                    <a href="" ng-click="showCargarArchivos('/matricula')"><i class="fa fa-university"></i><span>Matricula</span></a>
-                                </li>
-
-                            </ul>
+                            <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-university"></i><span>Cursos</span></a>
                         </li>
-
-
 
 
 
@@ -379,8 +323,7 @@ desired effect
         <script src="plugins/datatables/jquery.dataTables.min.js"></script>         
         <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>         
         <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>         
-        <script src="plugins/fullcalendar/fullcalendar.min.js"></script>         
-        <script src="plugins/moment.min.js"></script>
+
 
         <script src="plugins/jquery.auto-complete.js"></script>
 

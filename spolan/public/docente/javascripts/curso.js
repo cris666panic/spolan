@@ -6,12 +6,12 @@ tareasModule.factory('curso', function ($http,$q) {
 
     var curso = {};
 
-    curso.getAll = function () {
+    curso.getAll = function (docente) {
 
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.get('/web/obtenerCursos')
+        $http.post('/web/obtenerCursosDocentes',docente)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -24,6 +24,27 @@ tareasModule.factory('curso', function ($http,$q) {
 
 
     };
+
+
+    curso.getAllEstudiante = function (docente) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerEstudiantesMatriculados',docente)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
 
 
     curso.add = function (docente) {
@@ -100,7 +121,16 @@ tareasModule.factory('curso', function ($http,$q) {
 tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout) {
 
 
-    curso.getAll().then(function (data) {
+
+    var usuario=  JSON.parse(localStorage.getItem("usuario"));
+
+    console.log(usuario);
+
+    var objeto={
+        id_docente:usuario.id
+    }
+
+    curso.getAll(objeto).then(function (data) {
 
             console.log(data);
        $scope.ldocentes = data;
@@ -125,11 +155,11 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 
 
 
-    $scope.editarCurso = function (docente) {
+    $scope.notas = function (curso) {
 
-        window.localStorage["curso"]= JSON.stringify(docente);
+        window.localStorage["curso"]= JSON.stringify(curso);
 
-        $location.path('/editarCurso');
+        $location.path('/notas');
 
 
     };
@@ -139,92 +169,32 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 });
 
 
-tareasModule.controller('ctrlRegistroCurso', function ($scope, $location, docente,periodo,curso,$timeout) {
+tareasModule.controller('ctrlNotas', function ($scope, $location,curso,$timeout) {
+
+
+    var nivel=  JSON.parse(localStorage.getItem("curso"));
+
+    console.log(nivel);
+
+    var objeto={
+        id_curso:nivel.id
+    }
 
 
 
-    docente.getAll().then(function (data) {
+    curso.getAllEstudiante(objeto).then(function (data) {
 
 
         console.log(data);
-        $scope.docentes=data;
+        $scope.estudiantes=data;
     }).catch(function (err) {
 
         console.log(err);
     });
 
 
-    periodo.getAll().then(function (data) {
-
-        $scope.periodos=data;
-        console.log(data);
-    }).catch(function (err) {
-
-        console.log(err);
-    });
 
 
-    $scope.selectHorario =function (horario) {
-        console.log(horario);
-        $scope.curso.horario=horario;
-        $scope.curso.estado="activo";
-
-    }
-
-    $scope.mAdvance=false;
-    $scope.mSemi=false;
-    $scope.mPres=false;
-
-
-
-    $scope.modalidadCkec =function () {
-
-        console.log($scope.modalidad);
-        $scope.mAdvance=false;
-        $scope.mSemi=false;
-        $scope.mPres=false;
-
-
-        if($scope.modalidad.presencial==true) {
-
-            $scope.mPres=true;
-
-        }
-        if($scope.modalidad.semipresencial==true) {
-            $scope.mSemi=true;
-        }
-        if($scope.modalidad.avanzado==true) {
-            $scope.mAdvance=true;
-        }
-
-
-
-
-    }
-
-
-
-
-
-
-    $scope.guardarCurso = function () {
-        console.log( $scope.curso);
-
-
-
-
-            curso.add($scope.curso).then(function (data) {
-
-
-                console.log(data);
-            }).catch(function (err) {
-
-                console.log(err);
-            });
-
-
-
-    };
 
 });
 
