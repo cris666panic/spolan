@@ -26,6 +26,47 @@ tareasModule.factory('curso', function ($http,$q) {
     };
 
 
+
+    curso.obtenerAsistenciaEstudiante = function (estudiante) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerAsistenciaEstudiante',estudiante)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+
+    curso.obtenerNotasEstudiante = function (estudiante) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerNotasEstudiante',estudiante)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+
     curso.add = function (docente) {
 
         var defered = $q.defer();
@@ -160,7 +201,35 @@ tareasModule.controller('ctrlMatricula', function ($scope, $location,curso,$time
 
 
 
+var objeto={
+    matricula:$scope.matricula.id
+}
 
+
+    curso.obtenerNotasEstudiante(objeto).then(function (data) {
+
+        console.log(data);
+      $scope.nota=data[0];
+
+    }).catch(function (err) {
+        console.log("error");
+
+    });
+
+
+
+
+
+
+    curso.obtenerAsistenciaEstudiante(objeto).then(function (data) {
+
+        console.log(data);
+        $scope.asistencia=data;
+
+    }).catch(function (err) {
+        console.log("error");
+
+    });
 
 });
 

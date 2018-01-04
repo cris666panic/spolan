@@ -89,22 +89,24 @@
                                         <table class="table table-bordered table-striped" cellspacing="0" rules="all" border="1"  style="border-collapse:collapse;">
                                             <tr>
 
-                                                <th scope="col" style="width:18px;">Asis</th>
-                                                <th scope="col" style="width:18px;">%</th>
-                                                <th scope="col">Prm. Ap</th><th scope="col">Prm. Eval</th>
-                                                <th scope="col">Suma</th><th scope="col">Prm</th>
-                                                <th scope="col">Pr-Final</th><th scope="col">Situaci&#243;n Final</th>
+                                                <th scope="col" style="width:18px;">Asistencia</th>
+                                                <th scope="col" style="width:18px;">Faltas</th>
+                                                <th scope="col" style="width:18px;">Atrasos</th>
+                                                <th scope="col">Nota 1</th>
+                                                <th scope="col">Nota 2</th>
+                                                <th scope="col">Nota 3</th>
+                                                <th scope="col">Promedio</th>
+                                                <th scope="col">Situaci&#243;n Final</th>
                                             </tr><tr>
 
-                                            <td align="center" style="width:18px;">100</td>
-                                            <td align="center" style="width:18px;">93</td>
-                                            <td align="center" style="width:18px;">5,80</td>
-                                            <td align="center" style="width:18px;">4,10</td>
-                                            <td align="center" style="width:18px;">9,90</td>
-                                            <td align="center" style="width:18px;">5,00</td>
-                                            <td align="center" style="width:18px;">5</td>
-                                            <td align="center" style="width:18px;">7</td>
-                                            <td align="center" style="width:100px;">APROBADO</td>
+                                            <td align="center" style="width:18px;">{{asistencia[0].count}}</td>
+                                            <td align="center" style="width:18px;">{{asistencia[1].count}}</td>
+                                            <td align="center" style="width:18px;">{{asistencia[2].count}}</td>
+                                            <td align="center" style="width:18px;">{{nota.nota1}}</td>
+                                            <td align="center" style="width:18px;">{{nota.nota2}}</td>
+                                            <td align="center" style="width:18px;">{{nota.nota3}}</td>
+                                            <td align="center" style="width:18px;">{{nota.nota_final}}</td>
+                                            <td align="center" style="width:100px;">" "</td>
                                         </tr>
                                         </table>
                                     </div>

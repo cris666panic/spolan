@@ -180,3 +180,71 @@ router.post('/obtenerMatriculasEstudiante', function (req, res) {
 });
 
 
+
+router.post('/obtenerNotasEstudiante', function (req, res) {
+
+    var data1 = {
+
+        matricula: req.body.matricula
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT id, id_matricula, nota1, nota2, nota3, nota_final\n' +
+        '  FROM nota where id_matricula=$1',[data1.matricula]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.post('/obtenerAsistenciaEstudiante', function (req, res) {
+
+    var data1 = {
+
+        matricula: req.body.matricula
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query(' \n' +
+        '  SELECT COUNT(id), estado \n' +
+        '  FROM asistencia where id_matricula=$1\n' +
+        ' GROUP BY estado ',[data1.matricula]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
