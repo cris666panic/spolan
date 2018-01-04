@@ -228,6 +228,7 @@ var objeto={
 
     }).catch(function (err) {
         console.log("error");
+        //cambios
 
     });
 
