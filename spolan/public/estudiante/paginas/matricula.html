@@ -1,0 +1,56 @@
+<div class="container-fluid"> 
+    <div class="row"> 
+        <div class="col-md-12"> 
+            <div class="box box-primary"> 
+                <div class="box-header with-border"> 
+                    <h3 class="box-title">matriculas</h3>
+                    <br> 
+
+                </div>                 
+                <!-- /.box-header -->                 
+                <!-- form start -->                 
+                <form class="form-horizontal"> 
+                    <div class="box-body"> 
+                        <div class="row"> 
+                            <div class="col-md-12 col-xs-12 table-responsive"> 
+                                <table id="example1" class="table table-bordered table-striped"> 
+                                    <thead> 
+                                        <tr> 
+                                            <th>Nombre:</th> 
+                                            <th>Apellido:</th> 
+                                            <th>Estado:</th> 
+                                            <th>Correo:</th> 
+                                            <th>Telefono:</th> 
+                                            <th>accione</th> 
+                                        </tr>                                         
+                                    </thead>                                     
+                                    <tbody> 
+                                        <tr ng-repeat="consulta in matriculas ">
+                                            <td> 
+                                                {{consulta.nombre}}</td> 
+                                            <td> 
+                                                {{consulta.paralelo}}</td>
+
+                                            <td> 
+                                                {{consulta.horario}}</td>
+                                            <td> 
+                                                {{consulta.unido}}</td>
+                                            <td>
+                                                {{consulta.estado}}</td>
+                                            <td> 
+                                                <button type="button" class="glyphicon glyphicon-envelope" alt="Enviar Email" title="Enviar Email" ng-click="verMas(consulta)">
+                                                    ver mas
+</button>                                                 
+                                            </td>                                             
+                                        </tr>                                         
+                                    </tbody>                                     
+                                </table>                                 
+                            </div>                             
+                        </div>                         
+                        <!-- /.box-body -->                         
+                        <!-- /.box-footer -->                         
+                </form>                 
+            </div>             
+        </div>         
+    </div>     
+</div>

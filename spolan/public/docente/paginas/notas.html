@@ -38,22 +38,22 @@
 
                                             <td>
 
-                                                <input  ng-model="notas.nota1" type="text"  />
+                                                <input  ng-model="notas[$index].nota1" ng-change="suma($index)" type="number"  />
                                                 
                                             </td>
                                             <td>
 
-                                                <input   ng-model="notas.nota2" type="text"  />
+                                                <input   ng-model="notas[$index].nota2" ng-change="suma($index)" type="number"  />
 
                                             </td>
                                             <td>
 
-                                                <input  ng-model="notas.nota3" type="text"  />
+                                                <input  ng-model="notas[$index].nota3" ng-change="suma($index)" type="number"  />
 
                                             </td>
                                             <td>
 
-                                                <input  ng-model="notas.nota4" type="text"  />
+                                                <input  ng-disabled="true" ng-model="notas[$index].nota4" type="number"  />
 
                                             </td>
 
@@ -71,7 +71,7 @@
                 </form>
 
                 <div class="form-group " align="right">
-                    <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2" ng-click="guardar()"  >aceptar</button>
+                    <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2" ng-click="guardar()"  >Guardar Notas</button>
                 </div>
 
             </div>             

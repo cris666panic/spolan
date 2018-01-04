@@ -47,12 +47,32 @@ tareasModule.factory('curso', function ($http,$q) {
 
 
 
-    curso.add = function (docente) {
+    curso.addNotas = function (nota) {
 
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.post('/web/addCurso',docente)
+        $http.post('/web/addNotas',nota)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+
+
+    curso.addAsistencia = function (asistencia) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/addAsistencia',asistencia)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -166,6 +186,18 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 
 
 
+
+
+    $scope.asistencia = function (curso) {
+
+        window.localStorage["curso"]= JSON.stringify(curso);
+
+        $location.path('/asistencia');
+
+
+    };
+
+
 });
 
 
@@ -194,99 +226,146 @@ tareasModule.controller('ctrlNotas', function ($scope, $location,curso,$timeout)
 
 
 
+$scope.notas=[];
 
 
-});
+    $scope.suma=function (index) {
 
-
-
-tareasModule.controller('ctrlEditarCurso', function ($scope, $location, curso,docente,periodo) {
-
-
-
-    docente.getAll().then(function (data) {
-
-
-        console.log(data);
-        $scope.docentes=data;
-    }).catch(function (err) {
-
-        console.log(err);
-    });
-
-
-    periodo.getAll().then(function (data) {
-
-        $scope.periodos=data;
-        console.log(data);
-    }).catch(function (err) {
-
-        console.log(err);
-    });
-
-
-
-  $scope.curso = JSON.parse(localStorage.getItem("curso"));
-
-console.log($scope.curso);
-
-
-    $scope.selectHorario =function (horario) {
-        console.log(horario);
-        $scope.curso.horario=horario;
-        $scope.curso.estado="activo";
+        $scope.notas[index].nota4=($scope.notas[index].nota1+$scope.notas[index].nota2+$scope.notas[index].nota3)/3;
 
     }
 
-    $scope.mAdvance=false;
-    $scope.mSemi=false;
-    $scope.mPres=false;
+$scope.guardar=function () {
+
+    console.log($scope.notas);
 
 
-
-    $scope.modalidadCkec =function () {
-
-        console.log($scope.modalidad);
-        $scope.mAdvance=false;
-        $scope.mSemi=false;
-        $scope.mPres=false;
+for (var i=0;i< $scope.estudiantes.length;i++){
 
 
-        if($scope.modalidad.presencial==true) {
-
-            $scope.mPres=true;
-
-        }
-        if($scope.modalidad.semipresencial==true) {
-            $scope.mSemi=true;
-        }
-        if($scope.modalidad.avanzado==true) {
-            $scope.mAdvance=true;
-        }
+    console.log( $scope.estudiantes[i]);
 
 
+    var objeto={
 
+        id_matricula:  $scope.estudiantes[i].id,
+        nota1: $scope.notas[i].nota1,
+        nota2:$scope.notas[i].nota2,
+        nota3:$scope.notas[i].nota3,
+        nota_final:$scope.notas[i].nota4
 
     }
 
 
-$scope.actulizarCurso =function () {
 
+    curso.addNotas(objeto).then(function (data) {
 
-    curso.update($scope.curso).then(function (data) {
-
-
-        console.log(data);
-        $location.path('/cursos');
-
+        console.log("inser nota",data);
     }).catch(function (err) {
 
         console.log(err);
     });
+
+
+
+
 }
 
 
 
+//cambiar estado de matricula
+
+
+
+}
+
+});
+
+
+tareasModule.controller('ctrlAsistencia', function ($scope, $location,curso,$timeout) {
+
+
+    var nivel=  JSON.parse(localStorage.getItem("curso"));
+
+    console.log(nivel);
+
+    var objeto={
+        id_curso:nivel.id
+    }
+
+
+
+    curso.getAllEstudiante(objeto).then(function (data) {
+
+
+        console.log(data);
+        $scope.estudiantes=data;
+    }).catch(function (err) {
+
+        console.log(err);
+    });
+
+    $scope.opciones=[
+        {
+            nombre:"Asistio"
+        },
+        {
+            nombre:"Falta"
+        },
+        {
+            nombre:"Atraso"
+        }
+    ];
+
+    $scope.asistencia=[];
+
+
+
+    $scope.guardar=function () {
+
+        console.log($scope.asistencia);
+
+
+        for (var i=0;i< $scope.estudiantes.length;i++){
+
+
+            console.log( $scope.estudiantes[i]);
+
+
+            var objeto={
+
+                id_matricula: $scope.estudiantes[i].id,
+                fecha: new Date(),
+                estado:$scope.asistencia[i].estado,
+                observacion:$scope.asistencia[i].observacion
+
+
+            }
+
+
+
+            curso.addAsistencia(objeto).then(function (data) {
+
+                console.log("inser asistencia",data);
+            }).catch(function (err) {
+
+                console.log(err);
+            });
+
+
+
+
+        }
+
+
+
+
+    }
+
 
 
 });
+
+
+
+

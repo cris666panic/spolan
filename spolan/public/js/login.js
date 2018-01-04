@@ -120,7 +120,32 @@ console.log($scope.usuario);
 
             }
 
+            if (data.id_tipo == "4") {
+                console.log("opcion 4");
 
+
+                var usuario={
+
+                    id_usuario:data.id_usuario,
+                    tipo:"estudiante"
+                }
+
+
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
+
+                    console.log(data);
+
+                    data.id_tipo=3;
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='estudiante/index.html';
+
+                });
+
+
+
+
+            }
 
             if (data.id_tipo == "5") {
                 console.log("opcion 5");

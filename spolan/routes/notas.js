@@ -31,7 +31,7 @@ router.post('/obtenerEstudiantesMatriculados', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT M.id, E.id, E.cedula, E.nombres, E.apellidos \n' +
+    var query = client.query('SELECT M.id, E.cedula, E.nombres, E.apellidos \n' +
         'FROM Matricula as M\n' +
         'INNER JOIN estudiante as E ON M.id_estudiante=E.id where M.id_curso=$1',[data1.id_curso]);
 
@@ -48,3 +48,72 @@ router.post('/obtenerEstudiantesMatriculados', function (req, res) {
 });
 
 
+
+
+router.post('/addNotas', function (req, res) {
+
+    var data1 = {
+        id_matricula: req.body.id_matricula,
+        nota1: req.body.nota1,
+        nota2:req.body.nota2,
+        nota3:req.body.nota3,
+        nota_final:req.body.nota_final
+
+
+
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+    const results = [];
+
+    var query = client.query('INSERT INTO nota(id_matricula, nota1, nota2, nota3, nota_final) VALUES ($1,$2,$3,$4,$5) RETURNING *',
+        [data1.id_matricula, data1.nota1,data1.nota2, data1.nota3,data1.nota_final]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results[0]);
+});
+
+});
+
+
+
+router.post('/addAsistencia', function (req, res) {
+
+    var data1 = {
+        id_matricula: req.body.id_matricula,
+        fecha: req.body.fecha,
+        estado:req.body.estado,
+        observacion:req.body.observacion
+
+
+
+
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+    const results = [];
+
+    var query = client.query('INSERT INTO asistencia(id_matricula, fecha, estado, observacion) VALUES ($1,$2,$3,$4) RETURNING *',
+        [data1.id_matricula, data1.fecha,data1.estado, data1.observacion]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results[0]);
+});
+
+});
