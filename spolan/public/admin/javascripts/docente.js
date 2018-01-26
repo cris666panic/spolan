@@ -160,6 +160,9 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
 
 
                 console.log(data);
+                $location.path('/docentes');
+
+
             }).catch(function (err) {
 
                 console.log(err);

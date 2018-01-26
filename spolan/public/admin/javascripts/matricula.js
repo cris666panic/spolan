@@ -196,7 +196,7 @@ tareasModule.controller('ctrlRegistroMatricula', function ($scope, $location, ma
 
         for (var i = 0; i < data.length; i++) {
 
-            $scope.cursos.push({descripcion:data[i].nombre + " " + data[i].paralelo+ " " + data[i].horario,data:data[i]});
+            $scope.cursos.push({descripcion:data[i].idioma+" "+data[i].nombre + " " + data[i].paralelo+ " " + data[i].horario,data:data[i]});
 
 
         }
@@ -272,6 +272,8 @@ tareasModule.controller('ctrlRegistroMatricula', function ($scope, $location, ma
 
 
             console.log(data);
+            $location.path('/matricula');
+
 
         }).catch(function (err) {
 

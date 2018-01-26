@@ -170,6 +170,7 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, peri
 
 
                 console.log(data);
+                $location.path('/periodos');
             }).catch(function (err) {
 
                 console.log(err);

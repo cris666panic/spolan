@@ -16,6 +16,7 @@
         <table id="example1"  class="table table-bordered table-striped">
             <thead>
             <tr>
+                <th>Idioma</th>
                 <th>Nivel</th>
                 <th>Paralelo</th>
                 <th>profesor</th>
@@ -29,6 +30,7 @@
             <tbody>
 
             <tr ng-repeat="docente in ldocentes ">
+                <td>{{docente.idioma}}</td>
                 <td>{{docente.nombre}}</td>
                 <td>{{docente.paralelo}}</td>
                 <td>{{docente.docente}}</td>

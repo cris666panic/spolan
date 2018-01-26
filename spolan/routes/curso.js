@@ -22,6 +22,7 @@ router.post('/addCurso', function (req, res) {
         nombre:req.body.nombre,
         paralelo:req.body.paralelo,
         id_periodo:req.body.id_periodo,
+        idioma:req.body.idioma
 
 
     };
@@ -34,8 +35,8 @@ router.post('/addCurso', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO curso(id_docente, horario, estado, nombre, paralelo, id_periodo) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *',
-        [data1.id_docente, data1.horario,data1.estado, data1.nombre,data1.paralelo, data1.id_periodo]);
+    var query = client.query('INSERT INTO curso(id_docente, horario, estado, nombre, paralelo, id_periodo,idioma) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *',
+        [data1.id_docente, data1.horario,data1.estado, data1.nombre,data1.paralelo, data1.id_periodo,data1.idioma]);
 
     query.on('row', (row) => {
         results.push(row);
@@ -94,7 +95,7 @@ router.get('/obtenerCursos', function (req, res) {
 
   const results = [];
 
-  var query = client.query('SELECT curso.id, curso.id_docente, curso.horario, curso.estado, curso.nombre, curso.paralelo, curso.id_periodo,docente.unido as docente,periodo.unido as periodo\n' +
+  var query = client.query('SELECT curso.id,curso.idioma, curso.id_docente, curso.horario, curso.estado, curso.nombre, curso.paralelo, curso.id_periodo,docente.unido as docente,periodo.unido as periodo\n' +
       '  FROM curso\n' +
       'INNER JOIN docente ON docente.id = curso.id_docente\n' +
       'INNER JOIN periodo ON periodo.id = curso.id_periodo');
@@ -128,7 +129,8 @@ router.put('/actulizarCurso/:id', function (req, res) {
       estado:req.body.estado,
       nombre:req.body.nombre,
       paralelo:req.body.paralelo,
-      id_periodo:req.body.id_periodo
+      id_periodo:req.body.id_periodo,
+      idioma:req.body.idioma
   };
 
 //conection
@@ -138,8 +140,8 @@ router.put('/actulizarCurso/:id', function (req, res) {
   const results = [];
 
 
-  var query = client.query('UPDATE curso SET id_docente=$1, horario=$2, estado=$3, nombre=$4, paralelo=$5,id_periodo=$6 where id=$7 RETURNING *',
-      [p.id_docente, p.horario, p.estado,p.nombre,p.paralelo,p.id_periodo, id]);
+  var query = client.query('UPDATE curso SET id_docente=$1, horario=$2, estado=$3, nombre=$4, paralelo=$5,id_periodo=$6,idioma=$7 where id=$8 RETURNING *',
+      [p.id_docente, p.horario, p.estado,p.nombre,p.paralelo,p.id_periodo,p.idioma,id]);
 
 
 

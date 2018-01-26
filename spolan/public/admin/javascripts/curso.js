@@ -279,17 +279,19 @@ tareasModule.controller('ctrlRegistroCurso', function ($scope, $location, docent
         console.log( $scope.curso);
 
 
-
-
             curso.add($scope.curso).then(function (data) {
 
 
                 console.log(data);
+
+
+                $location.path('/cursos');
+
+
             }).catch(function (err) {
 
                 console.log(err);
             });
-
 
 
     };

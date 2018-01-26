@@ -64,7 +64,7 @@ router.get('/obtenerMatriculas', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
+    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.idioma,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
         '        FROM Matricula as M\n' +
         '        INNER JOIN estudiante as E ON M.id_estudiante=E.id\n' +
         '\tINNER JOIN curso as C ON M.id_curso=C.id\n' +
@@ -176,7 +176,7 @@ router.post('/obtenerMatriculasEstudiante', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
+    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.idioma,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
         '        FROM Matricula as M\n' +
         '        INNER JOIN estudiante as E ON M.id_estudiante=E.id\n' +
         '\tINNER JOIN curso as C ON M.id_curso=C.id\n' +
