@@ -428,7 +428,7 @@ p + .btn_wr {
 /*==================     Banner    ======================*/
 .banner_wr {
   position: relative;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 .banner {
@@ -449,7 +449,7 @@ p + .btn_wr {
   position: relative;
   margin-top: 30px;
   width: 16.66%;
-  height: 358px;
+  height: 200px;
   padding: 25px 12px 20px;
   float: left;
   color: #fff;
@@ -465,7 +465,7 @@ p + .btn_wr {
 }
 .banner li:hover {
   margin-top: 0px;
-  height: 388px;
+  height: 250px;
   padding-bottom: 50px;
 }
 .banner li [class*="fa-"] {
@@ -822,9 +822,9 @@ table tr:nth-child(even) {
 }
 
 .sf-menu > li > a {
-  padding: 20px 23.5px;
+  padding: 20px 45.5px;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1;
   font-weight: 300;
   text-transform: uppercase;
@@ -845,7 +845,7 @@ table tr:nth-child(even) {
   display: none;
   position: absolute;
   top: 100%;
-  width: 235px;
+  width: 200px;
   background: #f5f5f5;
   z-index: 2;
   -moz-box-sizing: border-box;
@@ -859,14 +859,14 @@ table tr:nth-child(even) {
 .sf-menu ul > li > a {
   font-size: 16px;
   padding: 11px 31px;
-  color: #62bfe6;
-  background: #f5f5f5;
+  color: #f5f5f5;
+  background: #E4B23E ;
 }
 .sf-menu ul > li + li {
   border-top: 1px solid #e5e5e5;
 }
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  color: #777777;
+  color: #AD1F25 ;
 }
 
 .sf-menu ul ul {
@@ -923,8 +923,8 @@ table tr:nth-child(even) {
   bottom: -56px;
   width: 240px;
   padding: 132px 0 76px;
-  color: #666;
-  background: #FFF;
+  color: #F0F0F0;
+  background: #AD1F25 ;
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
@@ -961,9 +961,10 @@ table tr:nth-child(even) {
   color: #2d2d2d;
 }
 .rd-mobilemenu_ul a:hover {
-  background: #62bfe6;
+  background: #E4B23E ;
   color: #FFF;
 }
+
 .rd-mobilemenu_ul a .rd-submenu-toggle {
   position: absolute;
   top: 50%;

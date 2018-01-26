@@ -128,7 +128,7 @@ console.log("calendario");
                 }).then(function successCallback(response) {
                     console.log(response.data);
 
-                    $scope.mensaje="pronto se contactaran para confirmar su examen";
+                    $scope.mensaje="Pronto se contactaran para confirmar su examen";
 
 
                 }, function errorCallback(response) {

@@ -1146,6 +1146,7 @@ Copyright (c) 2014 Daniel Eden
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+
 }
 
 @-webkit-keyframes fadeInDown {

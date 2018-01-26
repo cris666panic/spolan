@@ -54,7 +54,7 @@ console.log("dc");
 
                 }).then(function successCallback(respnse) {
                     console.log(response.data);
-                    $scope.mensaje="pronto se contactaran para responder sus dudas";
+                    $scope.mensaje="Pronto se contactaran para responder sus dudas";
 
 
 
