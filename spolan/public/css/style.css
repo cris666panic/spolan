@@ -170,7 +170,7 @@ h3 + p {
 }
 
 * + hr {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .row + p {
@@ -290,7 +290,7 @@ p + .btn_wr {
 }
 
 .bg-image {
-  background: url(../images/a.jpg) center no-repeat;
+  background: url(../images/a.png) center no-repeat;
   background-size: cover;
 }
 .bg-image2 {
@@ -366,16 +366,16 @@ p + .btn_wr {
 }
 .btn:hover,
 .btn2:hover {
-  background: #DBAC1F  ;
+  background: #ad1d24;
 }
 .btn:active,
 .btn2:active {
-  background: #DBAC1F;
+  background: #e4b23e;
 }
 
 .btn {
   color: #fff;
-  background: #AD1D24 ;
+  background: #e4b23e;
 }
 
 .btn2 {
@@ -453,7 +453,7 @@ p + .btn_wr {
   padding: 25px 12px 20px;
   float: left;
   color: #fff;
-  background: #DBAC1F;
+  background: #e4b23e;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -495,7 +495,7 @@ p + .btn_wr {
   background: #AD1D24;
 }
 .banner li:nth-child(2) {
-  background: #DBAC1F;
+  background: #e4b23e;
 }
 .banner li:nth-child(3) {
   background: #AD1D24;
@@ -701,7 +701,7 @@ blockquote p + cite {
   }
 }
 .contact-list a:hover {
-  color: #dbac1f;
+  color: #e4b23e;
 }
 
 .contact-list2 {
@@ -832,13 +832,13 @@ table tr:nth-child(even) {
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   color: #fff;
-  background: #DBAC1F;
+  background: #e4b23e;
   border-right: 1px solid #AD1D24;
 }
 .sf-menu > li.active > a {
   color: #fff;
-  background: #DBAC1F ;
-  border-right: 1px solid #DBAC1F ;
+  background: #e4b23e;
+  border-right: 1px solid #e4b23e;
 }
 
 .sf-menu ul {
@@ -860,7 +860,7 @@ table tr:nth-child(even) {
   font-size: 16px;
   padding: 11px 31px;
   color: #f5f5f5;
-  background: #E4B23E ;
+  background: #e4b23e;
 }
 .sf-menu ul > li + li {
   border-top: 1px solid #e5e5e5;
@@ -1141,7 +1141,7 @@ table tr:nth-child(even) {
 .isStuck {
   margin-top: 0;
   z-index: 9999;
-  border-bottom: 1px solid #dbac1f;
+  border-bottom: 1px solid #e4b23e;
 }
 
 @media only screen and (max-width: 979px) {
@@ -1156,7 +1156,7 @@ table tr:nth-child(even) {
   font-size: 24px;
   line-height: 40px;
   color: #fff;
-  background: #dbac1f;
+  background: #e4b23e;
   position: fixed;
   right: 66px;
   bottom: 180px;
@@ -1253,14 +1253,14 @@ main p + a[href^="mailto:"] {
   display: inline-block;
   margin-top: 10px;
   font-size: 16px;
-  color: #dbac1f;
+  color: #e4b23e;
 }
 main p + a[href^="mailto:"]:hover {
   text-decoration: underline;
 }
 
 a[href^="callto:"]:hover {
-  color: #dbac1f;
+  color: #e4b23e;
 }
 
 .video {
@@ -1325,7 +1325,7 @@ footer {
   background: #AD1D24;
 }
 footer section + section .container {
-  border-top: 1px solid #dbac1f;
+  border-top: 1px solid #e4b23e;
 }
 footer .copyright {
   padding-top: 21px;
