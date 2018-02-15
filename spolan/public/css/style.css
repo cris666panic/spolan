@@ -118,7 +118,7 @@ hr {
 
 @media (max-width: 767px) {
   .mobile-center {
-    text-align: center;
+    text-align: justify;
   }
 }
 
@@ -290,13 +290,23 @@ p + .btn_wr {
 }
 
 .bg-image {
-  background: url(../images/a.png) center no-repeat;
+  background: url(../images/bannerspolan.png) center no-repeat;
   background-size: cover;
 }
+.bg-image4 {
+  background: url(../images/spolanbannerportugues2.png) center no-repeat;
+  background-size: cover;
+}
+
 .bg-image2 {
-  background: url(../images/tres.jpg) center no-repeat;
+  background: url(../images/spolanportugues.png) center no-repeat;
   background-size: cover;
 }
+.bg-image3 {
+  background: url(../images/spolanitaliano.png) center no-repeat;
+  background-size: cover;
+}
+
 
 
 
@@ -845,7 +855,7 @@ table tr:nth-child(even) {
   display: none;
   position: absolute;
   top: 100%;
-  width: 200px;
+  width: 225px;
   background: #f5f5f5;
   z-index: 2;
   -moz-box-sizing: border-box;
@@ -858,7 +868,7 @@ table tr:nth-child(even) {
 }
 .sf-menu ul > li > a {
   font-size: 16px;
-  padding: 11px 31px;
+  padding: 11px 35px;
   color: #f5f5f5;
   background: #e4b23e;
 }
@@ -1262,8 +1272,7 @@ main p + a[href^="mailto:"]:hover {
 a[href^="callto:"]:hover {
   color: #e4b23e;
 }
-
-.video {
+video {
   position: relative;
   width: 100%;
   padding-bottom: 69%;
@@ -1275,6 +1284,7 @@ a[href^="callto:"]:hover {
   width: 100%;
   height: 100%;
 }
+
 
 /*==================      Well     ======================*/
 .well {

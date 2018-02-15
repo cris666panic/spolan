@@ -134,6 +134,24 @@ include('js/jquery.easing.1.3.js');
 })
 (jQuery);
 
+(function ($) {
+    var o = document.getElementById("google-map2");
+    if (o) {
+        include('//maps.google.com/maps/api/js?key=AIzaSyBSAGUZUt8BWZ4Y6JeL-i4n2hawI44t3jw');
+        include('js/jquery.rd-google-map2.js');
+
+        $(document).ready(function () {
+            var o = $('#google-map2');
+            if (o.length > 0) {
+                o.googleMap({
+                    styles: [{"featureType":"water","elementType":"all","stylers":[{"hue":"#76aee3"},{"saturation":38},{"lightness":-11},{"visibility":"on"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#8dc749"},{"saturation":-47},{"lightness":-17},{"visibility":"on"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#c6e3a4"},{"saturation":17},{"lightness":-2},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#cccccc"},{"saturation":-100},{"lightness":13},{"visibility":"on"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"hue":"#5f5855"},{"saturation":6},{"lightness":-31},{"visibility":"on"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[]}]
+                });
+            }
+        });
+    }
+})
+(jQuery);
+
 /* WOW
  ========================================================*/
 ;
@@ -228,13 +246,14 @@ var o = $('#camera');
         $(document).ready(function () {
             o.camera({
                 autoAdvance: true,
-                height: '30.859375%',
+                autoAdvance: true,
+                height: '38.859375%',
                 minHeight: '350px',
                 pagination: false,
                 thumbnails: false,
                 playPause: false,
                 hover: false,
-                loader: 'none',
+                lnoneoader: '',
                 navigation: true,
                 navigationHover: false,
                 mobileNavHover: false,

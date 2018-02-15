@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CONTACTOS</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/google-map.css">
+    <link rel="stylesheet" href="css/mailform.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script><!--[if lt IE 9]>
+    <html class="lt-ie9">
+      <div style="clear: both; text-align:center; position: relative;"><a href="http://windows.microsoft.com/en-US/internet-explorer/.."><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    </html>
+    <script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/device.min.js"></script>
+    <!-- para angular  -->
+      <script src="js/angular.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/msg.js"></script>
+    </head>
+    <body>
+      <div class="page">
+        <!--
+        ========================================================
+                                    HEADER
+        ========================================================
+
+
+        -->
+      <header>
+        <div class="container">
+          <div class="brand">
+            <IMG src="images/sin.png" WIDTH=130 HEIGHT=130 >
+            <h1 class="brand_name"><a href="./">SPOLAN</a></h1>
+            <p class="brand_slogan">Academia de Idiomas</p>
+          </div><a href="callto:#" class="fa-phone">(03)2962505 - 0996617500</a>
+          <p style="color:#AD1D24  " >Escríbenos o comunícate con nosotros</p>
+        </div>
+        <div id="stuck_container" class="stuck_container">
+          <div class="container">
+            <nav class="nav">
+              <ul data-type="navbar" class="sf-menu">
+                <li >
+                  <a   href="index.html">Inicio</a>
+                </li>
+
+                <li>
+                  <a href="index-1.html">Spolan</a>
+                </li>
+                <li>
+                  <a >Idiomas</a>
+                  <ul>
+                    <li><a href="ingles.html">INGLES</a></li>
+                    <li><a href="italiano.html">ITALIANO</a></li>
+                    <li><a href="portugues.html"> PORTUGUÉS</a></li>
+                  </ul></a>
+                <li>
+                  <a href="https://accounts.google.com/ServiceLogin/identifier?service=classroom&passive=1209600&continue=https%3A%2F%2Fclassroom.google.com%2F&followup=https%3A%2F%2Fclassroom.google.com%2F&emr=1&flowName=GlifWebSignIn&flowEntry=AddSession">Aula Virtual</a>
+                </li>
+                <li>
+                  <a class="active">Contactos</a>
+                  <ul>
+                    <li ><a href="index-4.html">UBÍCANOS</a></li>
+                    <li><a href="index-8.html">SUSCRIBETE</a></li>
+                    <li><a href="agenda.html">AGENDA TU PRUEBA</a></li>
+                  </ul></a>
+
+                </li>
+
+                <li>
+                  <a href="login.html">Administrar</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--
+      ========================================================
+                                  CONTENT
+      ========================================================
+      -->
+      <main>
+              <section class="map">
+          <div id="google-map2" class="map_model"></div>
+          <ul class="map_locations">
+            <li data-x="-78.66719,18" data-y="-1.91069">
+              <p >Av. Los Puentes y 9 de Octubre </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="well1" id="suscribite" ng-app="myAppMsg">
+          <div class="container"  >
+            <h2 align="center" style="color: #AD1D24">Dejanos tu mensaje y nos comunicaremos de inmediato</h2>
+            <form  class="mailform off2" ng-controller="msg">
+              <input type="hidden" name="form-type" value="contact">
+              <fieldset class="row">
+                <label class="grid_4">
+                  <input type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
+                </label>
+                <label class="grid_4">
+                  <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
+                </label>
+                <label class="grid_4">
+                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
+                </label>
+                <label class="grid_4">
+    <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
+                </label>
+                <label class="grid_12">
+                  <textarea  placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
+                </label>
+                <div class="grid_12">
+                  <button  class="btn" ng-click="enviar()">Enviar</button>
+
+                  <label>{{mensaje}}</label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </main>
+
+
+      <!--
+      ========================================================
+                                  FOOTER
+      ========================================================
+      -->
+        <footer>
+          <section class="wel9">
+            <div class="container">
+              <ul class="row contact-list">
+                <li class="grid_4">
+                  <div class="box">
+                    <div class="box_aside">
+                      <div class="icon2 fa-map-marker"></div>
+                    </div>
+                    <div class="box_cnt__no-flow">
+                      <address>Carlos Zambrano <br/>Y Primera Constituyente <br/>Riobamba </address>
+                    </div>
+
+                  </div>
+                  <div class="box">
+                    <div class="box_aside">
+                      <div class="icon2 fa-map-marker"></div>
+                    </div>
+                    <div class="box_cnt__no-flow">
+                      <address>Av. Los Puentes  <br/>Y 9 de Octubre<br/>
+                        Cumandá</address>
+                    </div>
+                  </div>
+
+                </li>
+                <li class="grid_4">
+                  <div class="box">
+                    <div class="box_aside">
+                      <div class="icon2 fa-phone"></div>
+                    </div>
+                    <div class="box_cnt__no-flow"><a href="callto:#">(03)2962505 </a></div>
+                  </div>
+                  <div class="box">
+                    <div class="box_aside">
+                      <div class="icon2 fa-envelope"></div>
+                    </div>
+                    <div class="box_cnt__no-flow"><a href="mailto:#">spolaningles@gmail.com</a></div>
+
+                  </div>
+                </li>
+                <li class="grid_4">
+                  <div class="box">
+                    <div class="box_aside">
+                      <div class="icon2 fa-facebook"></div>
+                    </div>
+                    <div class="box_cnt__no-flow"><a href="https://www.facebook.com/spolanidiomas/">Academia de Idiomas Spolan
+
+                    </a>
+                      <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fspolanidiomas%2F&width=100&height=21&layout=button_count&size=small&show_faces=false&appId" width="100" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <div class="container">
+              <div class="copyright">Spolan Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="">Privacy Policy</a>
+              </div>
+            </div>
+          </section>
+        </footer>
+
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
