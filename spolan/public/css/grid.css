@@ -209,7 +209,6 @@ input[type='button']::-moz-focus-inner {
 }
 .container .grid_6 {
   width: 570px;
-  align: "center";
 }
 .container .grid_7 {
   width: 670px;

@@ -98,7 +98,7 @@ strong {
 }
 
 .page {
-  overflow-y:hidden;
+  overflow: hidden;
   min-height: 500px;
 }
 .lt-ie9 .page {
@@ -109,16 +109,16 @@ hr {
   border: none;
   width: 100%;
   height: 1px;
-  background: #DBAC1F;
+  background: #e5e5e5;
 }
 
 .hr {
-  border-bottom: 3px solid #DBAC1F;
+  border-bottom: 3px solid #62bfe6;
 }
 
 @media (max-width: 767px) {
   .mobile-center {
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -170,7 +170,7 @@ h3 + p {
 }
 
 * + hr {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .row + p {
@@ -231,7 +231,7 @@ p + .btn_wr {
   font-weight: 700;
   font-size: 55px;
   line-height: 62px;
-  color: #AD1D24;
+  color: #5ab7de;
   vertical-align: bottom;
 }
 .brand_slogan {
@@ -239,7 +239,6 @@ p + .btn_wr {
   padding-left: 10px;
   padding-bottom: 5px;
   font-size: 24px;
-  color: #DBAC1F;
   vertical-align: bottom;
 }
 .brand a:hover {
@@ -256,7 +255,7 @@ p + .btn_wr {
 }
 .bg-primary .icon {
   color: #62bfe6;
-  background: yellow;
+  background: #fff;
 }
 .bg-primary .product-list li .box:hover .icon {
   background: #fff;
@@ -282,7 +281,7 @@ p + .btn_wr {
 }
 
 .bg-secondary {
-  background: #AD1D24;
+  background: #434547;
 }
 
 .bg-secondary2 {
@@ -290,26 +289,9 @@ p + .btn_wr {
 }
 
 .bg-image {
-  background: url(../images/bannerspolan.png) center no-repeat;
+  background: url(../images/page-3_bg.jpg) center no-repeat;
   background-size: cover;
 }
-.bg-image4 {
-  background: url(../images/spolanbannerportugues2.png) center no-repeat;
-  background-size: cover;
-}
-
-.bg-image2 {
-  background: url(../images/spolanportugues.png) center no-repeat;
-  background-size: cover;
-}
-.bg-image3 {
-  background: url(../images/spolanitaliano.png) center no-repeat;
-  background-size: cover;
-}
-
-
-
-
 .bg-image p {
   font-size: 16px;
 }
@@ -323,7 +305,7 @@ p + .btn_wr {
   font-size: 52px;
   text-align: center;
   color: #fff;
-  background: #AD1D24;
+  background: #62bfe6;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
@@ -335,8 +317,6 @@ p + .btn_wr {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #AD1D24;
-
 }
 
 .icon2 {
@@ -346,8 +326,8 @@ p + .btn_wr {
   line-height: 70px;
   font-size: 34px;
   text-align: center;
-  color: white;
-  background: transparent;
+  color: #62bfe6;
+  background: #4a4c4d;
 }
 .icon2:before {
   position: absolute;
@@ -356,8 +336,6 @@ p + .btn_wr {
   bottom: 0;
   left: 0;
 }
-
-
 
 /*==================    Buttons    ======================*/
 .btn,
@@ -376,16 +354,16 @@ p + .btn_wr {
 }
 .btn:hover,
 .btn2:hover {
-  background: #ad1d24;
+  background: #4ab5e2;
 }
 .btn:active,
 .btn2:active {
-  background: #e4b23e;
+  background: #22a1d7;
 }
 
 .btn {
   color: #fff;
-  background: #e4b23e;
+  background: #62bfe6;
 }
 
 .btn2 {
@@ -429,12 +407,10 @@ p + .btn_wr {
 }
 .box_aside {
   float: left;
-
 }
 .box_cnt__no-flow {
   overflow: hidden;
 }
-
 /*==================     Banner    ======================*/
 .banner_wr {
   position: relative;
@@ -473,6 +449,7 @@ p + .btn_wr {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
+
 .banner li:hover {
   margin-top: 0px;
   height: 250px;
@@ -612,7 +589,7 @@ blockquote q:before {
   left: 0;
   padding-right: 7px;
   content: "\f10d";
-  color:#AD1D24 ;
+  color: #62bfe6;
   font-family: "FontAwesome";
   font-size: 34px;
   line-height: 28px;
@@ -622,7 +599,7 @@ blockquote q:before {
 blockquote cite {
   display: block;
   font-size: 16px;
-  color: #AD1D24;
+  color: #62bfe6;
 }
 blockquote cite a:hover {
   text-decoration: underline;
@@ -667,7 +644,7 @@ blockquote p + cite {
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
-  color: #0f0f0f;
+  color: #62bfe6;
 }
 .marked-list li a:before {
   content: "\f00c";
@@ -688,7 +665,7 @@ blockquote p + cite {
 
 /*==================  Contact List  =====================*/
 .contact-list {
-  color: white;
+  color: #888a8c;
   font-size: 16px;
 }
 .contact-list .box {
@@ -711,7 +688,7 @@ blockquote p + cite {
   }
 }
 .contact-list a:hover {
-  color: #e4b23e;
+  color: #62bfe6;
 }
 
 .contact-list2 {
@@ -761,7 +738,7 @@ table tr:nth-child(even) {
   margin-top: 7px;
   padding: 30px 30px 25px;
   color: #fff;
-  background: #AD1D24;
+  background: #57aacd;
 }
 .info-box dt,
 .info-box dd {
@@ -832,30 +809,30 @@ table tr:nth-child(even) {
 }
 
 .sf-menu > li > a {
-  padding: 20px 45.5px;
+  padding: 22px 30px;
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
-  border-right: 1px solid #AD1D24 ;
+  border-right: 1px solid #56585a;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   color: #fff;
-  background: #e4b23e;
-  border-right: 1px solid #AD1D24;
+  background: #5ab7de;
+  border-right: 1px solid #4bb0db;
 }
 .sf-menu > li.active > a {
   color: #fff;
-  background: #e4b23e;
-  border-right: 1px solid #e4b23e;
+  background: #5ab7de;
+  border-right: 1px solid #4bb0db;
 }
 
 .sf-menu ul {
   display: none;
   position: absolute;
   top: 100%;
-  width: 225px;
+  width: 235px;
   background: #f5f5f5;
   z-index: 2;
   -moz-box-sizing: border-box;
@@ -868,15 +845,15 @@ table tr:nth-child(even) {
 }
 .sf-menu ul > li > a {
   font-size: 16px;
-  padding: 11px 35px;
-  color: #f5f5f5;
-  background: #e4b23e;
+  padding: 11px 31px;
+  color: #62bfe6;
+  background: #f5f5f5;
 }
 .sf-menu ul > li + li {
   border-top: 1px solid #e5e5e5;
 }
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  color: #AD1F25 ;
+  color: #777777;
 }
 
 .sf-menu ul ul {
@@ -933,8 +910,8 @@ table tr:nth-child(even) {
   bottom: -56px;
   width: 240px;
   padding: 132px 0 76px;
-  color: #F0F0F0;
-  background: #AD1F25 ;
+  color: #666;
+  background: #FFF;
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
@@ -971,10 +948,9 @@ table tr:nth-child(even) {
   color: #2d2d2d;
 }
 .rd-mobilemenu_ul a:hover {
-  background: #E4B23E ;
+  background: #62bfe6;
   color: #FFF;
 }
-
 .rd-mobilemenu_ul a .rd-submenu-toggle {
   position: absolute;
   top: 50%;
@@ -1144,14 +1120,14 @@ table tr:nth-child(even) {
 }
 /*==================  Stuck menu  ======================*/
 .stuck_container {
-  margin-top: 30px;
-  background: #AD1D24;
+  margin-top: 22px;
+  background: #434547;
 }
 
 .isStuck {
   margin-top: 0;
   z-index: 9999;
-  border-bottom: 1px solid #e4b23e;
+  border-bottom: 1px solid #888;
 }
 
 @media only screen and (max-width: 979px) {
@@ -1166,7 +1142,7 @@ table tr:nth-child(even) {
   font-size: 24px;
   line-height: 40px;
   color: #fff;
-  background: #e4b23e;
+  background: #888;
   position: fixed;
   right: 66px;
   bottom: 180px;
@@ -1178,7 +1154,7 @@ table tr:nth-child(even) {
 }
 .toTop:hover {
   color: #fff;
-  background: #AD1D24;
+  background: #62bfe6;
   text-decoration: none;
 }
 
@@ -1188,7 +1164,7 @@ table tr:nth-child(even) {
   }
 }
 .primary {
-  color: #AD1D24;
+  color: #62bfe6;
 }
 
 /*========================================================
@@ -1217,7 +1193,7 @@ header a[href^="callto:"]:before {
   top: -4px;
   left: -44px;
   font-size: 34px;
-  color: #AD1D24;
+  color: #6bc7ed;
 }
 header a[href^="callto:"]:hover {
   color: map;
@@ -1263,16 +1239,17 @@ main p + a[href^="mailto:"] {
   display: inline-block;
   margin-top: 10px;
   font-size: 16px;
-  color: #e4b23e;
+  color: #62bfe6;
 }
 main p + a[href^="mailto:"]:hover {
   text-decoration: underline;
 }
 
 a[href^="callto:"]:hover {
-  color: #e4b23e;
+  color: #62bfe6;
 }
-video {
+
+.video {
   position: relative;
   width: 100%;
   padding-bottom: 69%;
@@ -1284,7 +1261,6 @@ video {
   width: 100%;
   height: 100%;
 }
-
 
 /*==================      Well     ======================*/
 .well {
@@ -1331,11 +1307,11 @@ video {
 					 FOOTER  Styles
 =========================================================*/
 footer {
-  color: white;
-  background: #AD1D24;
+  color: #888a8c;
+  background: #434547;
 }
 footer section + section .container {
-  border-top: 1px solid #e4b23e;
+  border-top: 1px solid #888a8c;
 }
 footer .copyright {
   padding-top: 21px;
