@@ -109,7 +109,7 @@ hr {
   border: none;
   width: 100%;
   height: 1px;
-  background: #DBAC1F;
+  background: #e4b23e;
 }
 
 .hr {
@@ -266,7 +266,7 @@ p + .btn_wr {
 }
 .bg-primary .product-list hr {
   margin-top: 50px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #E4B23E ;
 }
 .bg-primary .product-list hr + .box {
   margin-top: 39px;

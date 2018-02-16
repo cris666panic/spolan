@@ -109,11 +109,11 @@ hr {
   border: none;
   width: 100%;
   height: 1px;
-  background: #e5e5e5;
+  background: #e4b23e;
 }
 
 .hr {
-  border-bottom: 3px solid #62bfe6;
+  border-bottom: 3px solid #e4b23e;
 }
 
 @media (max-width: 767px) {
@@ -231,7 +231,7 @@ p + .btn_wr {
   font-weight: 700;
   font-size: 55px;
   line-height: 62px;
-  color: #5ab7de;
+  color: #ad1f25;
   vertical-align: bottom;
 }
 .brand_slogan {
@@ -289,7 +289,7 @@ p + .btn_wr {
 }
 
 .bg-image {
-  background: url(../images/page-3_bg.jpg) center no-repeat;
+  background: url(../images/bannerspolan.png) center no-repeat;
   background-size: cover;
 }
 .bg-image p {
@@ -305,7 +305,7 @@ p + .btn_wr {
   font-size: 52px;
   text-align: center;
   color: #fff;
-  background: #62bfe6;
+  background: #ad1f25;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
@@ -326,8 +326,8 @@ p + .btn_wr {
   line-height: 70px;
   font-size: 34px;
   text-align: center;
-  color: #62bfe6;
-  background: #4a4c4d;
+  color: #FFF;
+  background: #AD1F25 ;
 }
 .icon2:before {
   position: absolute;
@@ -354,16 +354,16 @@ p + .btn_wr {
 }
 .btn:hover,
 .btn2:hover {
-  background: #4ab5e2;
+  background: #AD1F25  ;
 }
 .btn:active,
 .btn2:active {
-  background: #22a1d7;
+  background: #AD1F25  ;
 }
 
 .btn {
   color: #fff;
-  background: #62bfe6;
+  background: #e4b23e;
 }
 
 .btn2 {
@@ -589,7 +589,7 @@ blockquote q:before {
   left: 0;
   padding-right: 7px;
   content: "\f10d";
-  color: #62bfe6;
+  color: #e4b23e;
   font-family: "FontAwesome";
   font-size: 34px;
   line-height: 28px;
@@ -644,7 +644,7 @@ blockquote p + cite {
   padding-bottom: 16px;
   font-size: 16px;
   line-height: 18px;
-  color: #62bfe6;
+  color: #ad1d24;
 }
 .marked-list li a:before {
   content: "\f00c";
@@ -665,7 +665,7 @@ blockquote p + cite {
 
 /*==================  Contact List  =====================*/
 .contact-list {
-  color: #888a8c;
+  color: #FFF;
   font-size: 16px;
 }
 .contact-list .box {
@@ -738,7 +738,7 @@ table tr:nth-child(even) {
   margin-top: 7px;
   padding: 30px 30px 25px;
   color: #fff;
-  background: #57aacd;
+  background: #ad1f25;
 }
 .info-box dt,
 .info-box dd {
@@ -779,7 +779,7 @@ table tr:nth-child(even) {
 /*==================     Info     ======================*/
 .info dt {
   font-size: 24px;
-  color: #434547;
+  color: #ad1d24;
 }
 .info dt + dd {
   margin-top: 17px;
@@ -809,23 +809,23 @@ table tr:nth-child(even) {
 }
 
 .sf-menu > li > a {
-  padding: 22px 30px;
+  padding: 22px 65px;
   color: #fff;
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
-  border-right: 1px solid #56585a;
+  border-right: 1px solid #E4B23E;
 }
 .sf-menu > li.sfHover > a, .sf-menu > li > a:hover {
   color: #fff;
-  background: #5ab7de;
-  border-right: 1px solid #4bb0db;
+  background: #E4B23E;
+  border-right: 1px solid #E4B23E;
 }
 .sf-menu > li.active > a {
   color: #fff;
-  background: #5ab7de;
-  border-right: 1px solid #4bb0db;
+  background: #E4B23E;
+  border-right: 1px solid #E4B23E;
 }
 
 .sf-menu ul {
@@ -846,14 +846,14 @@ table tr:nth-child(even) {
 .sf-menu ul > li > a {
   font-size: 16px;
   padding: 11px 31px;
-  color: #62bfe6;
-  background: #f5f5f5;
+  color: #FFF;
+  background: #AD1F25 ;
 }
 .sf-menu ul > li + li {
   border-top: 1px solid #e5e5e5;
 }
 .sf-menu ul > li.sfHover > a, .sf-menu ul > li > a:hover {
-  color: #777777;
+  color: #E4B23E ;
 }
 
 .sf-menu ul ul {
@@ -910,8 +910,8 @@ table tr:nth-child(even) {
   bottom: -56px;
   width: 240px;
   padding: 132px 0 76px;
-  color: #666;
-  background: #FFF;
+  color: #ffffff;
+  background: #AD1F25 ;
   font-size: 14px;
   line-height: 20px;
   overflow: auto;
@@ -948,7 +948,7 @@ table tr:nth-child(even) {
   color: #2d2d2d;
 }
 .rd-mobilemenu_ul a:hover {
-  background: #62bfe6;
+  background: #E4B23E ;
   color: #FFF;
 }
 .rd-mobilemenu_ul a .rd-submenu-toggle {
@@ -1007,8 +1007,8 @@ table tr:nth-child(even) {
   left: 0;
   right: 0;
   height: 56px;
-  background: #FFF;
-  color: #000;
+  background: #e4b23e;
+  color: #ffffff;
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -1020,7 +1020,7 @@ table tr:nth-child(even) {
   top: 4px;
   left: 56px;
   right: 56px;
-  color: #000;
+  color: #ffffff;
   font-size: 24px;
   line-height: 48px;
   text-overflow: ellipsis;
@@ -1059,7 +1059,7 @@ table tr:nth-child(even) {
 .rd-mobilepanel_toggle span:after, .rd-mobilepanel_toggle span:before, .rd-mobilepanel_toggle span {
   width: 24px;
   height: 4px;
-  background-color: #000;
+  background-color: #ffffff;
   backface-visibility: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1121,7 +1121,7 @@ table tr:nth-child(even) {
 /*==================  Stuck menu  ======================*/
 .stuck_container {
   margin-top: 22px;
-  background: #434547;
+  background: #AD1F25 ;
 }
 
 .isStuck {
@@ -1142,7 +1142,7 @@ table tr:nth-child(even) {
   font-size: 24px;
   line-height: 40px;
   color: #fff;
-  background: #888;
+  background: #ad1f25;
   position: fixed;
   right: 66px;
   bottom: 180px;
@@ -1154,7 +1154,7 @@ table tr:nth-child(even) {
 }
 .toTop:hover {
   color: #fff;
-  background: #62bfe6;
+  background: #e4b23e;
   text-decoration: none;
 }
 
@@ -1186,14 +1186,14 @@ header a[href^="callto:"] {
   margin-top: 7px;
   position: relative;
   font-size: 24px;
-  color: #777777;
+  color: #AD1F25 ;
 }
 header a[href^="callto:"]:before {
   position: absolute;
   top: -4px;
   left: -44px;
   font-size: 34px;
-  color: #6bc7ed;
+  color: #AD1F25 ;
 }
 header a[href^="callto:"]:hover {
   color: map;
@@ -1307,8 +1307,8 @@ a[href^="callto:"]:hover {
 					 FOOTER  Styles
 =========================================================*/
 footer {
-  color: #888a8c;
-  background: #434547;
+  color: #fff;
+  background: #ad1f25;
 }
 footer section + section .container {
   border-top: 1px solid #888a8c;
