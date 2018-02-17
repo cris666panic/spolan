@@ -119,6 +119,19 @@ tareasModule.factory('curso', function ($http,$q) {
 tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout) {
 
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
     curso.getAll().then(function (data) {
 
             console.log(data);

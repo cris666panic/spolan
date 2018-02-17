@@ -159,6 +159,40 @@ router.put('/actulizarCurso/:id', function (req, res) {
 
 
 
+
+router.put('/actulizarCursoEstado/:id', function (req, res) {
+    var id = req.params.id;
+
+    console.log(req.body);
+
+    var p = {
+
+        estado:req.body.estado
+    };
+
+//conection
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('UPDATE curso SET estado=$1 where id=$2 RETURNING *',
+        [ p.estado,id]);
+
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 /////////eliminar
 
 

@@ -141,7 +141,18 @@ tareasModule.factory('curso', function ($http,$q) {
 tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout) {
 
 
+    $timeout(function(){
 
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
 
     var usuario=  JSON.parse(localStorage.getItem("usuario"));
 
@@ -192,7 +203,6 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
 
 
 tareasModule.controller('ctrlMatricula', function ($scope, $location,curso,$timeout) {
-
 
 
     $scope.matricula=  JSON.parse(localStorage.getItem("matricula"));

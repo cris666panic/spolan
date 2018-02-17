@@ -489,6 +489,20 @@ tareasModule.factory('datosmsg', function ($http,$q) {
 
 
 tareasModule.controller('mostrarmsg', function ($scope, $location, datosmsg,$timeout,correo) {
+
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
     console.log("si");
 
     datosmsg.getAllmsg().then(function (data) {
@@ -576,6 +590,19 @@ console.log(tarea);
 tareasModule.controller('mostrarpendiente', function ($scope, $location, datosmsg,$timeout,correo) {
     console.log("si");
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
     datosmsg.getAllmsgPendiente().then(function (data) {
 
         $scope.listamsg=data;
@@ -652,6 +679,18 @@ tareasModule.controller('mostrarpendiente', function ($scope, $location, datosms
 
 
 tareasModule.controller('mostrarnotificado', function ($scope, $location, datosmsg,$timeout,correo) {
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
     console.log("si");
 
     datosmsg.getAllmsgNotificado().then(function (data) {
@@ -731,6 +770,26 @@ tareasModule.controller('mostrarnotificado', function ($scope, $location, datosm
 
 
 tareasModule.controller('mostrarsuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
+
+
+
+
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
+
+
+
     console.log("si");
 
     datosmsg.getusuarios().then(function (data) {
@@ -742,17 +801,6 @@ tareasModule.controller('mostrarsuscriptores', function ($scope, $location, dato
     });
 
 
-    $timeout(function(){
-
-        console.log( $scope.listamsg);
-        $('#example1').dataTable({
-            "language": {
-                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-            }
-
-
-        });
-    }, 300, false);
 
     $scope.estados = [{nombre:"pendiente"} ,{nombre:"notificado"} ];
 
@@ -801,6 +849,22 @@ tareasModule.controller('mostrarsuscriptores', function ($scope, $location, dato
 });
 
 tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
+
+
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
+
     console.log("si");
 
     datosmsg.getusuariospendiente().then(function (data) {
@@ -873,6 +937,21 @@ tareasModule.controller('mostrarpendientesuscriptores', function ($scope, $locat
 
 
 tareasModule.controller('mostrarnotificadosuscriptores', function ($scope, $location, datosmsg,$timeout,correo) {
+
+
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
     console.log("si");
 
     datosmsg.getusuariosnotificado().then(function (data) {

@@ -99,6 +99,18 @@ tareasModule.factory('periodo', function ($http,$q) {
 
 tareasModule.controller('ctrlPeriodo', function ($scope, $location, periodo,$timeout) {
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
 
     periodo.getAll().then(function (data) {
 

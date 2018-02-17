@@ -93,6 +93,18 @@ tareasModule.factory('estudiante', function ($http,$q) {
 
 tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante,$timeout) {
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
 
     estudiante.getAll().then(function (data) {
 

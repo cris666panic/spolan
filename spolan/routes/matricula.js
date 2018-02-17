@@ -98,8 +98,6 @@ router.put('/actulizarMatricula/:id', function (req, res) {
 
   var p = {
 
-      id_estudiante: req.body.id_estudiante,
-      id_curso: req.body.id_curso,
       estado:req.body.estado
   };
 
@@ -110,8 +108,8 @@ router.put('/actulizarMatricula/:id', function (req, res) {
   const results = [];
 
 
-  var query = client.query('UPDATE matricula SET id_estudiante=$1, id_curso=$2, estado=$3 where id=$4 RETURNING *',
-      [p.id_estudiante, p.id_curso, p.estado, id]);
+  var query = client.query('UPDATE matricula SET  estado=$1 where id=$2 RETURNING *',
+      [p.estado, id]);
 
 
 

@@ -143,6 +143,19 @@ tareasModule.factory('matricula', function ($http,$q) {
 tareasModule.controller('ctrlMatricula', function ($scope, $location, matricula,$timeout) {
 
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
     matricula.getAll().then(function (data) {
 
             console.log(data);

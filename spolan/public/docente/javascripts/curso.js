@@ -86,12 +86,32 @@ tareasModule.factory('curso', function ($http,$q) {
     };
 
 
-    curso.update = function (docente) {
+    curso.update = function (matricula) {
 
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.put('/web/actulizarCurso/'+docente.id, docente)
+        $http.put('/web/actulizarMatricula/'+matricula.id_matricula, matricula)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+
+    };
+
+    curso.updateCurso = function (curso) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.put('/web/actulizarCursoEstado/'+curso.id, curso)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -141,6 +161,18 @@ tareasModule.factory('curso', function ($http,$q) {
 tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout) {
 
 
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
 
     var usuario=  JSON.parse(localStorage.getItem("usuario"));
 
@@ -258,9 +290,33 @@ for (var i=0;i< $scope.estudiantes.length;i++){
 
 
 
+
     curso.addNotas(objeto).then(function (data) {
 
         console.log("inser nota",data);
+
+
+
+        var objet={
+            id_matricula:data.id_matricula,
+            estado:"Finalizado"
+
+        }
+
+        curso.update(objet).then(function (data1) {
+
+            console.log("actulizar matricula",data1);
+
+
+
+        }).catch(function (err) {
+
+            console.log(err);
+        });
+
+
+
+
     }).catch(function (err) {
 
         console.log(err);
@@ -272,8 +328,29 @@ for (var i=0;i< $scope.estudiantes.length;i++){
 }
 
 
+var objetcurso={
 
-//cambiar estado de matricula
+    id:nivel.id,
+    estado:"inactivo"
+
+
+}
+
+    curso.updateCurso(objetcurso).then(function (data1) {
+
+
+
+        $location.path('/cursos');
+
+    }).catch(function (err) {
+
+        console.log(err);
+    });
+
+
+
+
+
 
 
 
@@ -347,6 +424,10 @@ tareasModule.controller('ctrlAsistencia', function ($scope, $location,curso,$tim
             curso.addAsistencia(objeto).then(function (data) {
 
                 console.log("inser asistencia",data);
+
+                $location.path('/cursos');
+
+
             }).catch(function (err) {
 
                 console.log(err);
