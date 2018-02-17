@@ -118,17 +118,23 @@
                 <label class="grid_4">
                   <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
                 </label>
-                <label class="grid_4">
-                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
-                </label>
+
+                <br>
+                <br>
+                <br>
                 <label class="grid_4">
     <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
                 </label>
+
+                <label class="grid_4">
+                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
+                </label>
+
                 <label class="grid_12">
                   <textarea  placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
                 </label>
                 <div class="grid_12">
-                  <button  class="btn" ng-click="enviar()">Enviar</button>
+                  <button  class="btn" ng-click="enviarRiobamba()">Enviar</button>
 
                   <label>{{mensaje}}</label>
                 </div>

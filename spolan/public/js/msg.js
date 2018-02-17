@@ -4,7 +4,7 @@ angular.module('myAppMsg', [])
 
 console.log("dc");
 
-	$scope.enviar = function () {
+	$scope.enviarRiobamba = function () {
 		
 		console.log($scope.formulario);
 
@@ -48,7 +48,8 @@ console.log("dc");
                     },data:{
                         id_informacion: response.data[0].id_informacion,
                         msg: $scope.formulario.msg,
-                        estado: "pendiente"
+                        estado: "pendiente",
+                        ciudad:"Riobamba"
 
                     }
 
@@ -125,7 +126,8 @@ console.log("dc");
                             },data:{
                                 id_informacion: response.data[0].id_informacion,
                                 msg: $scope.formulario.msg,
-                                estado: "pendiente"
+                                estado: "pendiente",
+                                ciudad:"Riobamba"
 
                             }
 
@@ -189,6 +191,193 @@ console.log("dc");
 
 	}
 
+
+    $scope.enviarCumanda = function () {
+
+        console.log($scope.formulario);
+
+
+
+
+        $http({
+            method: 'POST',
+            url: '/web/usuarioExiste',
+            headers: {
+                'Content-Type': 'application/json',
+                //'Authorization': token
+            },
+            data: {
+
+                "usuario": $scope.formulario.email,
+
+
+            }
+
+
+        }).then(function successCallback(response) {
+            console.log(response.data);
+
+
+
+            if (response.data.length!==0){
+
+                console.log("si");
+
+
+
+
+
+                $http({
+                    method: 'post',
+                    url: '/web/registmsg',
+                    headers: {
+                        // 'Content-Type': 'application/json',
+                        //'Authorization': token
+                    },data:{
+                        id_informacion: response.data[0].id_informacion,
+                        msg: $scope.formulario.msg,
+                        estado: "pendiente",
+                        ciudad:"Cumanda"
+
+                    }
+
+                }).then(function successCallback(respnse) {
+                    console.log(response.data);
+                    $scope.mensaje="Pronto se contactaran para responder sus dudas";
+
+
+
+                }, function errorCallback(response) {
+
+                    alert('error al realizar Ingreso');
+
+                });
+
+
+
+
+            }
+            else {
+
+                console.log("no");
+
+
+
+
+                var objeto = {
+                    nombre: $scope.formulario.email,
+                    contrasenia: "spolan" + $scope.formulario.nombre,
+                    idtipo: 2
+                };
+
+                $http({
+                    method: 'post',
+                    url: '/web/registrarusaurio',
+                    headers: {
+                        // 'Content-Type': 'application/json',
+                        //'Authorization': token
+                    }
+                    ,data:objeto
+
+                }).then(function successCallback(response) {
+                    console.log(response.data);
+
+                    correo(response.data[0]);
+
+                    $http({
+                        method: 'post',
+                        url: '/web/registrarinfo',
+                        headers: {
+                            // 'Content-Type': 'application/json',
+                            //'Authorization': token
+                        }
+                        ,data:{
+
+                            nombre: $scope.formulario.nombre,
+                            apellido: $scope.formulario.apellido,
+                            correo: $scope.formulario.email,
+                            telefono: $scope.formulario.telefono,
+                            id_usuario: response.data[0].id_usuario,
+                            estado: "pendiente"
+                        }
+
+                    }).then(function successCallback(response) {
+                        console.log(response.data);
+
+
+                        $http({
+                            method: 'post',
+                            url: '/web/registmsg',
+                            headers: {
+                                // 'Content-Type': 'application/json',
+                                //'Authorization': token
+                            },data:{
+                                id_informacion: response.data[0].id_informacion,
+                                msg: $scope.formulario.msg,
+                                estado: "pendiente",
+                                ciudad:"Cumanda"
+
+                            }
+
+                        }).then(function successCallback(respnse) {
+                            console.log(response.data);
+
+
+
+
+                        }, function errorCallback(response) {
+
+                            alert('error al realizar Ingreso');
+
+                        });
+
+
+
+                    }, function errorCallback(response) {
+
+                        alert('error al realizar Ingreso');
+
+                    });
+
+                }, function errorCallback(response) {
+
+                    alert('error al realizar Ingreso');
+
+                });
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+        }, function errorCallback(response) {
+
+            alert('error al realizar Ingreso');
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 	function correo(objeto) {
 

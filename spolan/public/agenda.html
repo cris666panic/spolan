@@ -26,7 +26,12 @@
     <script src="admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <link rel="stylesheet" href="admin/plugins/timepicker/bootstrap-timepicker.min.css">
 
+
     <link rel="stylesheet" href="bootstrap.css">
+
+
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
   </head>
     <body>
@@ -105,11 +110,19 @@
       ========================================================
       -->
         <main>
-          <section class="well1" id="suscribite" ng-app="myAppCalendario">
+          <section class="well1" id="suscribite" ng-app="myAppCalendario" ng-controller="calendario">
             <div class="container"  >
               <h2>Agenda tu Examen</h2>
 
-              <form  class="mailform off2" ng-controller="calendario" style=" text-align: center " >
+              <div class="form-group col ">
+                <label>Escoja la ciudad</label>
+                <select class="form-control select2"  ng-model="ciudad" style="width: 100%;">
+                  <option selected="selected">Riobamba</option>
+                  <option>Cumanda</option>
+                </select>
+              </div>
+
+              <form  class="mailform off2"  style=" text-align: center " >
                 <input type="hidden" name="form-type" value="contact">
 
                 <fieldset class="row">
@@ -119,15 +132,23 @@
                   <label class="grid_4">
                     <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
                   </label>
-                  <label class="grid_4">
-                    <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone @NotEmpty " ng-model="formulario.telefono"  >
-                  </label>
+
                   <label class="grid_4">
                     <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
                   </label>
+
+
+                  <label class="grid_4">
+                    <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone @NotEmpty " ng-model="formulario.telefono"  >
+
+                  </label>
+
+
+
+
                   <label class="grid_4">
                     <div class="form-group">
-
+<label>Fecha:</label>
                       <div class="input-group date">
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
@@ -141,7 +162,7 @@
                   <label class="grid_4">
                     <div class="bootstrap-timepicker">
                       <div class="form-group">
-
+                        <label>Hora:</label>
                                           <div class="input-group">
                           <input style="height: 10%" type="text" class="form-control timepicker" id="timepicker">
 
@@ -153,6 +174,8 @@
                       </div>
                       <!-- /.form group -->
                     </div>
+
+
 
                   </label>
 
@@ -245,6 +268,8 @@
           </section>
         </footer>
       </div>
+
       <script src="js/script.js"></script>
+
     </body>
 </html>

@@ -120,7 +120,8 @@ console.log("calendario");
                         backgroundColor: "#00c0ef",
                         borderColor: "#00c0ef",
                         estado: "pendiente",
-                        id_informacion:response.data[0].id_informacion
+                        id_informacion:response.data[0].id_informacion,
+                        ciudad:$scope.ciudad
 
                     }
 
@@ -251,7 +252,8 @@ console.log("calendario");
                                 backgroundColor: "#00c0ef",
                                 borderColor: "#00c0ef",
                                 estado: "pendiente",
-                                id_informacion:response.data[0].id_informacion
+                                id_informacion:response.data[0].id_informacion,
+                                ciudad:$scope.ciudad
 
                             }
 

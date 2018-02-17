@@ -118,8 +118,8 @@ router.post('/registmsg', function (req, res) {
   var p = {
     id_informacion: req.body.id_informacion,
     msg: req.body.msg,
-    estado: req.body.estado
-
+    estado: req.body.estado,
+ciudad:req.body.ciudad
   };
 
 //conection

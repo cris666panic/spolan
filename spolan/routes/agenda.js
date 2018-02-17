@@ -26,7 +26,8 @@ router.post('/registrarCalendario', function (req, res) {
     backgroundColor:req.body.backgroundColor,
     borderColor:req.body.borderColor,
     estado: req.body.estado,
-    id_informacion:req.body.id_informacion
+    id_informacion:req.body.id_informacion,
+      ciudad:req.body.ciudad
   };
 
 
@@ -38,8 +39,8 @@ router.post('/registrarCalendario', function (req, res) {
 
   const results = [];
 
-  var query = client.query('INSERT INTO agenda(estado, start, "backgroundColor", id_informacion,"end", "borderColor", evento,title) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *',
-      [p.estado, p.start, p.backgroundColor, p.id_informacion, p.end, p.borderColor, p.evento,p.title]);
+  var query = client.query('INSERT INTO agenda(estado, start, "backgroundColor", id_informacion,"end", "borderColor", evento,title,ciudad) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *',
+      [p.estado, p.start, p.backgroundColor, p.id_informacion, p.end, p.borderColor, p.evento,p.title,p.ciudad]);
 
 
   query.on('row', (row) => {
