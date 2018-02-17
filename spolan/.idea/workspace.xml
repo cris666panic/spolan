@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d115d366-3567-4cab-891b-2a08bbdfa9a1" name="Default" comment="cambios de forma general">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/admin/index.html" afterPath="$PROJECT_DIR$/public/admin/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/curso.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/curso.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/docente.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/docente.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/estudiante.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/estudiante.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/matricula.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/matricula.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/msg.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/msg.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/javascripts/periodo.js" afterPath="$PROJECT_DIR$/public/admin/javascripts/periodo.js" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/cursos.html" afterPath="$PROJECT_DIR$/public/admin/paginas/cursos.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/docentes.html" afterPath="$PROJECT_DIR$/public/admin/paginas/docentes.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/estudiante.html" afterPath="$PROJECT_DIR$/public/admin/paginas/estudiante.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/matricula.html" afterPath="$PROJECT_DIR$/public/admin/paginas/matricula.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/msg.html" afterPath="$PROJECT_DIR$/public/admin/paginas/msg.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/notificado.html" afterPath="$PROJECT_DIR$/public/admin/paginas/notificado.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/notificadosuscriptoress.html" afterPath="$PROJECT_DIR$/public/admin/paginas/notificadosuscriptoress.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/pendiente.html" afterPath="$PROJECT_DIR$/public/admin/paginas/pendiente.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/pendientesuscriptoress.html" afterPath="$PROJECT_DIR$/public/admin/paginas/pendientesuscriptoress.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/periodos.html" afterPath="$PROJECT_DIR$/public/admin/paginas/periodos.html" />
-      <change beforePath="$PROJECT_DIR$/public/admin/paginas/suscriptores.html" afterPath="$PROJECT_DIR$/public/admin/paginas/suscriptores.html" />
-      <change beforePath="$PROJECT_DIR$/public/docente/index.html" afterPath="$PROJECT_DIR$/public/docente/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/docente/javascripts/curso.js" afterPath="$PROJECT_DIR$/public/docente/javascripts/curso.js" />
-      <change beforePath="$PROJECT_DIR$/public/docente/paginas/matricula.html" afterPath="$PROJECT_DIR$/public/docente/paginas/matricula.html" />
-      <change beforePath="$PROJECT_DIR$/public/estudiante/index.html" afterPath="$PROJECT_DIR$/public/estudiante/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/estudiante/javascripts/curso.js" afterPath="$PROJECT_DIR$/public/estudiante/javascripts/curso.js" />
-      <change beforePath="$PROJECT_DIR$/public/estudiante/paginas/matricula.html" afterPath="$PROJECT_DIR$/public/estudiante/paginas/matricula.html" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/js/script.js" afterPath="$PROJECT_DIR$/public/js/script.js" />
-      <change beforePath="$PROJECT_DIR$/routes/curso.js" afterPath="$PROJECT_DIR$/routes/curso.js" />
-      <change beforePath="$PROJECT_DIR$/routes/matricula.js" afterPath="$PROJECT_DIR$/routes/matricula.js" />
+    <list default="true" id="d115d366-3567-4cab-891b-2a08bbdfa9a1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/c6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/estudiantes/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/spolaninicio1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/spolaninicio2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/spolaninicio3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/spolaninicio4.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spolan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,126 +37,49 @@
     <favorites_list name="spolan" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="495" column="7" lean-forward="false" selection-start-line="495" selection-start-column="7" selection-end-line="495" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#1;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#2;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#3;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#4;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#5;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#2;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#span#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#span#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#p#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#2;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#3;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#4;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#5;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#6;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1518743182772" expanded="true" signature="559:912" ph="..." />
-                <marker date="1518743182772" expanded="false" signature="579:630" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index-1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5151">
-              <caret line="303" column="23" lean-forward="false" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
-              <folding>
-                <marker date="1518743193675" expanded="true" signature="452:805" ph="..." />
-                <marker date="1518743193675" expanded="false" signature="472:523" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>enviar</find>
-      <find>content</find>
-      <find>ng-v</find>
-      <find>actulizarDocente</find>
-      <find>actulizarusuario</find>
-      <find>editarEstudiante</find>
-      <find>addBlog</find>
-      <find>login</find>
-      <find>ocentes</find>
-      <find>curso</find>
-      <find>.btn-primar</find>
-      <find>cursos</find>
-      <find>loginDatosUsuario</find>
-      <find>matricula</find>
-      <find>calendar</find>
-      <find>addCurso</find>
-      <find>registro</find>
-      <find>obtenerCursos</find>
-      <find>actulizarCurso</find>
-      <find>obtenerMatriculas</find>
-      <find>obtenerMatriculasEstudiante</find>
-      <find>pat</find>
-      <find>correo</find>
-      <find>locat</find>
-      <find>loca</find>
-      <find>body</find>
-      <find>overflow-y</find>
-      <find>overflow</find>
-      <find>page</find>
+      <find>idiomas</find>
+      <find>envia</find>
+      <find>entrar</find>
+      <find>a.pn</find>
+      <find>ingles</find>
+      <find>Totalmente Gratuita</find>
+      <find>misi</find>
+      <find>spolan</find>
+      <find>acerca</find>
+      <find>google-map</find>
+      <find>s</find>
+      <find>NOTA</find>
+      <find>-webkit-transform:</find>
+      <find>camera</find>
+      <find>simpleFade</find>
+      <find>.grid_6</find>
+      <find>nuestro</find>
+      <find>.container .grid_6</find>
+      <find>.well1</find>
+      <find>.row</find>
       <find>video</find>
+      <find>li</find>
+      <find>.li</find>
+      <find>.bane</find>
+      <find>baner</find>
+      <find>ban</find>
+      <find>nav</find>
+      <find>q</find>
+      <find>hr</find>
+      <find>entr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,57 +88,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/admin/bootstrap/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/public/admin/dist/css/AdminLTE.min.css" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/registroPeriodo.html" />
-        <option value="$PROJECT_DIR$/routes/periodo.js" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/editarPeriodo.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/registroMatricula.html" />
-        <option value="$PROJECT_DIR$/routes/docente.js" />
-        <option value="$PROJECT_DIR$/public/docente/paginas/notas.html" />
-        <option value="$PROJECT_DIR$/public/docente/javascripts/chirpApp.js" />
-        <option value="$PROJECT_DIR$/public/docente/paginas/asistencia.html" />
-        <option value="$PROJECT_DIR$/routes/notas.js" />
-        <option value="$PROJECT_DIR$/public/js/login.js" />
-        <option value="$PROJECT_DIR$/public/estudiante/javascripts/chirpApp.js" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/matricula1.html" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/chirpApp.js" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/cursoEstudiantes.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/registroCurso.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/editarCurso.html" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/routes/horaServer.js" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/suscriptores.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/pendientesuscriptoress.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/notificadosuscriptoress.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/msg.html" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/pendiente.html" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/msg.js" />
-        <option value="$PROJECT_DIR$/public/admin/paginas/notificado.html" />
         <option value="$PROJECT_DIR$/public/admin/paginas/docentes.html" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/docente.js" />
         <option value="$PROJECT_DIR$/public/admin/paginas/estudiante.html" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/estudiante.js" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/curso.js" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/registroDocente.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/editarDocente.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/editarEstudiante.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/registroCurso.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/editarPeriodo.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/registroPeriodo.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/editarCurso.html" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/routes/docente.js" />
+        <option value="$PROJECT_DIR$/../../../gentelella-master/production/tables_dynamic.html" />
+        <option value="$PROJECT_DIR$/public/admin/index.html" />
+        <option value="$PROJECT_DIR$/public/docente/javascripts/msg.js" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/registroEstudiante.html" />
         <option value="$PROJECT_DIR$/public/admin/paginas/cursos.html" />
         <option value="$PROJECT_DIR$/public/admin/paginas/periodos.html" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/periodo.js" />
-        <option value="$PROJECT_DIR$/public/admin/javascripts/matricula.js" />
-        <option value="$PROJECT_DIR$/public/admin/index.html" />
-        <option value="$PROJECT_DIR$/public/estudiante/index.html" />
+        <option value="$PROJECT_DIR$/public/admin/paginas/pendientesuscriptoress.html" />
+        <option value="$PROJECT_DIR$/public/admin/plugins/datatables/jquery.dataTables.min.js" />
         <option value="$PROJECT_DIR$/public/admin/paginas/matricula.html" />
         <option value="$PROJECT_DIR$/public/estudiante/paginas/matricula.html" />
-        <option value="$PROJECT_DIR$/public/estudiante/paginas/matricula1.html" />
-        <option value="$PROJECT_DIR$/public/estudiante/javascripts/curso.js" />
-        <option value="$PROJECT_DIR$/public/docente/index.html" />
-        <option value="$PROJECT_DIR$/public/docente/paginas/matricula.html" />
-        <option value="$PROJECT_DIR$/routes/matricula.js" />
-        <option value="$PROJECT_DIR$/routes/curso.js" />
-        <option value="$PROJECT_DIR$/public/docente/javascripts/curso.js" />
+        <option value="$PROJECT_DIR$/public/js/msg.js" />
+        <option value="$PROJECT_DIR$/public/js/calendario.js" />
+        <option value="$PROJECT_DIR$/public/index-3.html" />
+        <option value="$PROJECT_DIR$/public/index-5.html" />
+        <option value="$PROJECT_DIR$/public/index-6.html" />
+        <option value="$PROJECT_DIR$/public/index-7.html" />
+        <option value="$PROJECT_DIR$/public/css/google-map.css" />
+        <option value="$PROJECT_DIR$/public/css/animate.css" />
+        <option value="$PROJECT_DIR$/public/index-2.html" />
+        <option value="$PROJECT_DIR$/public/msgcale.html" />
+        <option value="$PROJECT_DIR$/public/msgsus.html" />
+        <option value="$PROJECT_DIR$/public/js/jquery.rd-google-map2.js" />
+        <option value="$PROJECT_DIR$/public/este.html" />
+        <option value="$PROJECT_DIR$/public/js/device.min.js" />
+        <option value="$PROJECT_DIR$/public/css/grid.css" />
+        <option value="$PROJECT_DIR$/../../../site/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/script.js" />
+        <option value="$PROJECT_DIR$/public/css/owl-carousel.css" />
+        <option value="$PROJECT_DIR$/public/css/camera.css" />
+        <option value="$PROJECT_DIR$/public/italiano.html" />
+        <option value="$PROJECT_DIR$/public/portugues.html" />
+        <option value="$PROJECT_DIR$/public/ingles.html" />
+        <option value="$PROJECT_DIR$/public/index-4.html" />
+        <option value="$PROJECT_DIR$/public/cumanda.html" />
+        <option value="$PROJECT_DIR$/public/agenda.html" />
+        <option value="$PROJECT_DIR$/public/index-8.html" />
+        <option value="$PROJECT_DIR$/public/index-1.html" />
+        <option value="$PROJECT_DIR$/public/style.css" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/index-1.html" />
-        <option value="$PROJECT_DIR$/public/js/script.js" />
       </list>
     </option>
   </component>
@@ -240,9 +152,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
-    <option name="height" value="775" />
+    <option name="x" value="746" />
+    <option name="y" value="68" />
+    <option name="width" value="1196" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -262,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -275,33 +189,53 @@
               <item name="spolan" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spolan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spolan" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ionic2/ionic2-basics" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="207" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1131" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="207" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="224" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1131" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\dist\css\skins" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\images" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\italiano" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\subirProyectos\spolan\spolan\routes" />
-      <recent name="E:\subirProyectos\spolan\spolan\public\admin\paginas" />
-      <recent name="E:\subirProyectos\spolan\spolan\public\estudiante\paginas" />
-      <recent name="E:\subirProyectos\spolan\spolan\public\docente\paginas" />
-      <recent name="E:\subirProyectos\spolan\spolan\public\admin\plugins" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\js" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\admin" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\admin\paginas" />
+      <recent name="C:\Users\denny\Desktop\trabajo\spolan\spolan\public\dist\css\skins" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -316,8 +250,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Node.js.server.js">
+    <configuration name="Inicio.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spolan/public/admin/Inicio.html" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -349,29 +303,21 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-    </configuration>
+    <configuration name="logging.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spolan/public/Flip Login or Register Form - Bootsnipp.com_files/logging.html" />
+    <configuration name="logging.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spolan/public/logging.html" />
+    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.logging.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.logging.html (1)" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Inicio.html" />
+    </list>
     <recent_temporary>
-      <list size="1">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Inicio.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.logging.html (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.logging.html" />
       </list>
     </recent_temporary>
   </component>
@@ -389,483 +335,465 @@
       <option name="presentableId" value="Default" />
       <updated>1506027171352</updated>
       <workItem from="1506027172570" duration="479000" />
-      <workItem from="1506029701160" duration="7394000" />
-      <workItem from="1506093911694" duration="3311000" />
-      <workItem from="1506117558690" duration="651000" />
-      <workItem from="1506188891935" duration="19000" />
-      <workItem from="1506872309797" duration="846000" />
-      <workItem from="1506875779732" duration="878000" />
-      <workItem from="1506882647841" duration="2894000" />
-      <workItem from="1506956188524" duration="58000" />
-      <workItem from="1507424009196" duration="761000" />
-      <workItem from="1507480899319" duration="25546000" />
-      <workItem from="1507509745312" duration="154000" />
-      <workItem from="1507510306595" duration="327000" />
-      <workItem from="1507565924293" duration="4069000" />
-      <workItem from="1507570097897" duration="226000" />
-      <workItem from="1507570675876" duration="226000" />
-      <workItem from="1507600867414" duration="4924000" />
-      <workItem from="1507644246297" duration="22000" />
-      <workItem from="1507644469442" duration="16000" />
-      <workItem from="1507645232868" duration="976000" />
-      <workItem from="1507646335959" duration="343000" />
-      <workItem from="1507655675362" duration="81000" />
-      <workItem from="1507910389582" duration="2403000" />
-      <workItem from="1507914000774" duration="3848000" />
-      <workItem from="1508084754301" duration="292000" />
-      <workItem from="1508089033536" duration="7150000" />
-      <workItem from="1508183317558" duration="214000" />
-      <workItem from="1508185457964" duration="168000" />
-      <workItem from="1508338300749" duration="8278000" />
-      <workItem from="1508355032719" duration="6960000" />
-      <workItem from="1508423568883" duration="5941000" />
-      <workItem from="1508883851983" duration="797000" />
-      <workItem from="1508943549838" duration="26000" />
-      <workItem from="1509380439348" duration="2256000" />
-      <workItem from="1509388388130" duration="30000" />
-      <workItem from="1509477383055" duration="51000" />
-      <workItem from="1509483571862" duration="4276000" />
-      <workItem from="1510095728031" duration="28000" />
-      <workItem from="1510187588193" duration="1675000" />
-      <workItem from="1510249495538" duration="530000" />
-      <workItem from="1510259729829" duration="2652000" />
-      <workItem from="1510265411562" duration="1742000" />
-      <workItem from="1510608410535" duration="30000" />
-      <workItem from="1511028437622" duration="1265000" />
-      <workItem from="1511036378729" duration="10634000" />
-      <workItem from="1511113190885" duration="16205000" />
-      <workItem from="1511194156888" duration="381000" />
-      <workItem from="1511374018209" duration="923000" />
-      <workItem from="1511472397500" duration="5403000" />
-      <workItem from="1511533491097" duration="63000" />
-      <workItem from="1513194717606" duration="8595000" />
-      <workItem from="1513208645843" duration="25000" />
-      <workItem from="1513293567798" duration="4173000" />
-      <workItem from="1513358814960" duration="13333000" />
-      <workItem from="1513380783265" duration="221000" />
-      <workItem from="1513545012621" duration="418000" />
-      <workItem from="1513628456541" duration="8866000" />
-      <workItem from="1513638579857" duration="2975000" />
-      <workItem from="1513649020268" duration="217000" />
-      <workItem from="1513788790231" duration="5557000" />
-      <workItem from="1514231121279" duration="409000" />
-      <workItem from="1515012388478" duration="5686000" />
-      <workItem from="1515018633219" duration="7785000" />
-      <workItem from="1515027330844" duration="15000" />
-      <workItem from="1515087418951" duration="16545000" />
-      <workItem from="1515272348838" duration="599000" />
-      <workItem from="1516047994925" duration="5862000" />
-      <workItem from="1516115651285" duration="179000" />
-      <workItem from="1516206297122" duration="40000" />
-      <workItem from="1516377757301" duration="598000" />
-      <workItem from="1517003761528" duration="977000" />
-      <workItem from="1517004907816" duration="657000" />
-      <workItem from="1517015202143" duration="73000" />
-      <workItem from="1517015757032" duration="635000" />
-      <workItem from="1517196329475" duration="6000" />
-      <workItem from="1517321769921" duration="29000" />
-      <workItem from="1517347655656" duration="7298000" />
-      <workItem from="1517525812336" duration="200000" />
-      <workItem from="1517587861690" duration="642000" />
-      <workItem from="1517590704928" duration="162000" />
-      <workItem from="1517755000680" duration="624000" />
-      <workItem from="1517760092922" duration="25000" />
-      <workItem from="1518739116058" duration="5656000" />
-      <workItem from="1518882359856" duration="204000" />
+      <workItem from="1506029753733" duration="99000" />
+      <workItem from="1506029868786" duration="8312000" />
+      <workItem from="1506092233545" duration="13546000" />
+      <workItem from="1506113436504" duration="10584000" />
+      <workItem from="1506218516002" duration="5570000" />
+      <workItem from="1506279085876" duration="745000" />
+      <workItem from="1506379074944" duration="639000" />
+      <workItem from="1506556314240" duration="4117000" />
+      <workItem from="1506870559659" duration="16160000" />
+      <workItem from="1506899477854" duration="4125000" />
+      <workItem from="1507236448710" duration="387000" />
+      <workItem from="1507239079831" duration="4538000" />
+      <workItem from="1507404212724" duration="18365000" />
+      <workItem from="1507475053364" duration="1560000" />
+      <workItem from="1507484563240" duration="23674000" />
+      <workItem from="1507565812615" duration="6501000" />
+      <workItem from="1507644355629" duration="2148000" />
+      <workItem from="1507647867122" duration="558000" />
+      <workItem from="1507648441182" duration="2934000" />
+      <workItem from="1508084300452" duration="1060000" />
+      <workItem from="1508089305658" duration="6146000" />
+      <workItem from="1511027782989" duration="76000" />
+      <workItem from="1511027995511" duration="2294000" />
+      <workItem from="1511034779534" duration="13284000" />
+      <workItem from="1511112956025" duration="121000" />
+      <workItem from="1511113102710" duration="21041000" />
+      <workItem from="1511365123839" duration="8843000" />
+      <workItem from="1511468360529" duration="6798000" />
+      <workItem from="1511483229130" duration="1267000" />
+      <workItem from="1512242461794" duration="26000" />
+      <workItem from="1512242869325" duration="931000" />
+      <workItem from="1513023202960" duration="591000" />
+      <workItem from="1513192938605" duration="28000" />
+      <workItem from="1513193898136" duration="10313000" />
+      <workItem from="1513208658336" duration="1159000" />
+      <workItem from="1513271090632" duration="939000" />
+      <workItem from="1513272076826" duration="184000" />
+      <workItem from="1513272380937" duration="1827000" />
+      <workItem from="1513289789493" duration="7917000" />
+      <workItem from="1513557098033" duration="10153000" />
+      <workItem from="1513628545701" duration="13660000" />
+      <workItem from="1515010005772" duration="3827000" />
+      <workItem from="1515013891977" duration="3318000" />
+      <workItem from="1515018241120" duration="741000" />
+      <workItem from="1515020574950" duration="4578000" />
+      <workItem from="1515096567950" duration="6259000" />
+      <workItem from="1515159513554" duration="2785000" />
+      <workItem from="1515784252501" duration="5045000" />
+      <workItem from="1516047863303" duration="6309000" />
+      <workItem from="1516201272069" duration="2738000" />
+      <workItem from="1516239359269" duration="752000" />
+      <workItem from="1516243936989" duration="395000" />
+      <workItem from="1516244467586" duration="374000" />
+      <workItem from="1516245204337" duration="1144000" />
+      <workItem from="1516246746905" duration="4828000" />
+      <workItem from="1516287401577" duration="2973000" />
+      <workItem from="1516306262136" duration="721000" />
+      <workItem from="1516739080877" duration="880000" />
+      <workItem from="1516831524317" duration="26000" />
+      <workItem from="1516999004457" duration="12589000" />
+      <workItem from="1517238615949" duration="2876000" />
+      <workItem from="1517345474550" duration="10130000" />
+      <workItem from="1517949799908" duration="589000" />
+      <workItem from="1517959246157" duration="7287000" />
+      <workItem from="1518124554445" duration="2020000" />
+      <workItem from="1518126720764" duration="1490000" />
+      <workItem from="1518129851770" duration="1068000" />
+      <workItem from="1518130959210" duration="6293000" />
+      <workItem from="1518537479268" duration="923000" />
+      <workItem from="1518729332823" duration="6104000" />
+      <workItem from="1518738232012" duration="2637000" />
+      <workItem from="1514853360272" duration="2714000" />
+      <workItem from="1518757607210" duration="6347000" />
+      <workItem from="1518826099894" duration="629000" />
+      <workItem from="1518882249717" duration="667000" />
     </task>
-    <task id="LOCAL-00002" summary="aumento de dos espacios">
-      <created>1506032796629</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1506032796629</updated>
-    </task>
-    <task id="LOCAL-00003" summary="color en el foter">
-      <created>1506034347710</created>
+    <task id="LOCAL-00003" summary="fff">
+      <created>1506031259768</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1506034347710</updated>
+      <updated>1506031259768</updated>
     </task>
-    <task id="LOCAL-00004" summary="color en el foter">
-      <created>1506034452993</created>
+    <task id="LOCAL-00004" summary="color menu">
+      <created>1506031328661</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1506034452993</updated>
+      <updated>1506031328661</updated>
     </task>
-    <task id="LOCAL-00005" summary="mison y vision">
-      <created>1506037302975</created>
+    <task id="LOCAL-00005" summary="fff">
+      <created>1506031777226</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1506037302975</updated>
+      <updated>1506031777226</updated>
     </task>
-    <task id="LOCAL-00006" summary="color">
-      <created>1506038113187</created>
+    <task id="LOCAL-00006" summary="fff">
+      <created>1506032623290</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1506038113187</updated>
+      <updated>1506032623290</updated>
     </task>
-    <task id="LOCAL-00007" summary="registro de examen">
-      <created>1507504185033</created>
+    <task id="LOCAL-00007" summary="fff">
+      <created>1506033436076</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1507504185033</updated>
+      <updated>1506033436076</updated>
     </task>
-    <task id="LOCAL-00008" summary="calendario">
-      <created>1507510373534</created>
+    <task id="LOCAL-00008" summary="fff">
+      <created>1506034397589</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1507510373534</updated>
+      <updated>1506034397589</updated>
     </task>
-    <task id="LOCAL-00009" summary="enviod e correo">
-      <created>1507570783674</created>
+    <task id="LOCAL-00009" summary="fff">
+      <created>1506037286009</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1507570783674</updated>
+      <updated>1506037286009</updated>
     </task>
-    <task id="LOCAL-00010" summary="correo masivo">
-      <created>1507605790824</created>
+    <task id="LOCAL-00010" summary="fff">
+      <created>1506038069744</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1507605790824</updated>
+      <updated>1506038069744</updated>
     </task>
-    <task id="LOCAL-00011" summary="color en el foter">
-      <created>1507646190863</created>
+    <task id="LOCAL-00011" summary="fff">
+      <created>1506103982431</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1507646190863</updated>
+      <updated>1506103982431</updated>
     </task>
-    <task id="LOCAL-00012" summary="color en el foter">
-      <created>1507646612605</created>
+    <task id="LOCAL-00012" summary="fff">
+      <created>1506134178130</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1507646612605</updated>
+      <updated>1506134178130</updated>
     </task>
-    <task id="LOCAL-00013" summary="color en el foter">
-      <created>1508085050475</created>
+    <task id="LOCAL-00013" summary="fff">
+      <created>1506231263788</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1508085050475</updated>
+      <updated>1506231263788</updated>
     </task>
-    <task id="LOCAL-00014" summary="arreglo de todo">
-      <created>1508884586260</created>
+    <task id="LOCAL-00014" summary="fff">
+      <created>1506309588202</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1508884586260</updated>
+      <updated>1506309588202</updated>
     </task>
-    <task id="LOCAL-00015" summary="arreglo de todo">
-      <created>1511028555889</created>
+    <task id="LOCAL-00015" summary="fff">
+      <created>1506560436749</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1511028555889</updated>
+      <updated>1506560436749</updated>
     </task>
-    <task id="LOCAL-00016" summary="arreglo calendario">
-      <created>1511045150893</created>
+    <task id="LOCAL-00016" summary="fff">
+      <created>1506882566290</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1511045150893</updated>
+      <updated>1506882566290</updated>
     </task>
-    <task id="LOCAL-00017" summary="arreglo calendario">
-      <created>1511113297202</created>
+    <task id="LOCAL-00017" summary="fff">
+      <created>1506882851438</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1511113297202</updated>
+      <updated>1506882851438</updated>
     </task>
-    <task id="LOCAL-00018" summary="cambios nuevos de blog">
-      <created>1511129372922</created>
+    <task id="LOCAL-00018" summary="fff">
+      <created>1506882877894</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1511129372922</updated>
+      <updated>1506882877894</updated>
     </task>
-    <task id="LOCAL-00019" summary="cambios nuevos de blog">
-      <created>1511129501950</created>
+    <task id="LOCAL-00019" summary="fff">
+      <created>1506883748954</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1511129501950</updated>
+      <updated>1506883748954</updated>
     </task>
-    <task id="LOCAL-00020" summary="cambios nuevos de blog">
-      <created>1511131003359</created>
+    <task id="LOCAL-00020" summary="fff">
+      <created>1506896142006</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1511131003359</updated>
+      <updated>1506896142006</updated>
     </task>
-    <task id="LOCAL-00021" summary="cambios nuevos de blog">
-      <created>1511135169169</created>
+    <task id="LOCAL-00021" summary="fff">
+      <created>1506913153592</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1511135169169</updated>
+      <updated>1506913153592</updated>
     </task>
-    <task id="LOCAL-00022" summary="cambios nuevos de blog">
-      <created>1511374918830</created>
+    <task id="LOCAL-00022" summary="fff">
+      <created>1507413904232</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1511374918830</updated>
+      <updated>1507413904232</updated>
     </task>
-    <task id="LOCAL-00023" summary="cambios nuevos de blog">
-      <created>1511472916398</created>
+    <task id="LOCAL-00023" summary="fff">
+      <created>1507503759885</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1511472916398</updated>
+      <updated>1507503759885</updated>
     </task>
-    <task id="LOCAL-00024" summary="cambios nuevos de blog">
-      <created>1511476276198</created>
+    <task id="LOCAL-00024" summary="fff">
+      <created>1507569837666</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1511476276199</updated>
+      <updated>1507569837666</updated>
     </task>
-    <task id="LOCAL-00025" summary="cambios de admin">
-      <created>1513198133188</created>
+    <task id="LOCAL-00025" summary="fff">
+      <created>1508084461667</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1513198133188</updated>
+      <updated>1508084461667</updated>
     </task>
-    <task id="LOCAL-00026" summary="cambios de template">
-      <created>1513199581974</created>
+    <task id="LOCAL-00026" summary="fff">
+      <created>1511045401807</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1513199581974</updated>
+      <updated>1511045401807</updated>
     </task>
-    <task id="LOCAL-00027" summary="cambios de template">
-      <created>1513203781312</created>
+    <task id="LOCAL-00027" summary="fff">
+      <created>1511045865204</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1513203781312</updated>
+      <updated>1511045865204</updated>
     </task>
-    <task id="LOCAL-00028" summary="cambios de template">
-      <created>1513296928322</created>
+    <task id="LOCAL-00028" summary="fff">
+      <created>1511135397487</created>
       <option name="number" value="00028" />
       <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1513296928322</updated>
+      <updated>1511135397487</updated>
     </task>
-    <task id="LOCAL-00029" summary="cambios docente">
-      <created>1513297357760</created>
+    <task id="LOCAL-00029" summary="fff">
+      <created>1511135719676</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1513297357760</updated>
+      <updated>1511135719676</updated>
     </task>
-    <task id="LOCAL-00030" summary="cambios docente">
-      <created>1513299726175</created>
+    <task id="LOCAL-00030" summary="fff">
+      <created>1511373899483</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1513299726175</updated>
+      <updated>1511373899483</updated>
     </task>
-    <task id="LOCAL-00031" summary="cambios">
-      <created>1513628677073</created>
+    <task id="LOCAL-00031" summary="fff">
+      <created>1511373945145</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1513628677073</updated>
+      <updated>1511373945145</updated>
     </task>
-    <task id="LOCAL-00032" summary="crud de cursos">
-      <created>1513635461766</created>
+    <task id="LOCAL-00032" summary="fff">
+      <created>1511472231194</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1513635461766</updated>
+      <updated>1511472231194</updated>
     </task>
-    <task id="LOCAL-00033" summary="crud de periodo">
-      <created>1513637664698</created>
+    <task id="LOCAL-00033" summary="fff">
+      <created>1511478254898</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1513637664698</updated>
+      <updated>1511478254898</updated>
     </task>
-    <task id="LOCAL-00034" summary="cambios de forma general">
-      <created>1513638807903</created>
+    <task id="LOCAL-00034" summary="fff">
+      <created>1513274169325</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1513638807903</updated>
+      <updated>1513274169325</updated>
     </task>
-    <task id="LOCAL-00035" summary="cambios de forma general">
-      <created>1513639691267</created>
+    <task id="LOCAL-00035" summary="fff">
+      <created>1513293585702</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1513639691267</updated>
+      <updated>1513293585702</updated>
     </task>
-    <task id="LOCAL-00036" summary="cambios de forma general">
-      <created>1513641442420</created>
+    <task id="LOCAL-00036" summary="fff">
+      <created>1513295430714</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1513641442420</updated>
+      <updated>1513295430714</updated>
     </task>
-    <task id="LOCAL-00037" summary="cambios de forma general">
-      <created>1515014225444</created>
+    <task id="LOCAL-00037" summary="fff">
+      <created>1513295507894</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1515014225444</updated>
+      <updated>1513295507894</updated>
     </task>
-    <task id="LOCAL-00038" summary="cambios de forma general">
-      <created>1515017662786</created>
+    <task id="LOCAL-00038" summary="fff">
+      <created>1513630129794</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1515017662786</updated>
+      <updated>1513630129794</updated>
     </task>
-    <task id="LOCAL-00039" summary="cambios de forma general">
-      <created>1515017854246</created>
+    <task id="LOCAL-00039" summary="fff">
+      <created>1513641378167</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1515017854246</updated>
+      <updated>1513641378167</updated>
     </task>
-    <task id="LOCAL-00040" summary="cambios de forma general">
-      <created>1515018071691</created>
+    <task id="LOCAL-00040" summary="fff">
+      <created>1515012087045</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1515018071691</updated>
+      <updated>1515012087046</updated>
     </task>
-    <task id="LOCAL-00041" summary="cambios de forma general">
-      <created>1515018657940</created>
+    <task id="LOCAL-00041" summary="fff">
+      <created>1515013484778</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1515018657940</updated>
+      <updated>1515013484778</updated>
     </task>
-    <task id="LOCAL-00042" summary="creacion de docente">
-      <created>1515020589621</created>
+    <task id="LOCAL-00042" summary="fff">
+      <created>1515013712180</created>
       <option name="number" value="00042" />
       <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
-      <updated>1515020589622</updated>
+      <updated>1515013712180</updated>
     </task>
-    <task id="LOCAL-00043" summary="cambios del modulo docentes">
-      <created>1515026346602</created>
+    <task id="LOCAL-00043" summary="fff">
+      <created>1515013822410</created>
       <option name="number" value="00043" />
       <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
-      <updated>1515026346602</updated>
+      <updated>1515013822410</updated>
     </task>
-    <task id="LOCAL-00044" summary="cambios de forma general">
-      <created>1515026608204</created>
+    <task id="LOCAL-00044" summary="fff">
+      <created>1515013933182</created>
       <option name="number" value="00044" />
       <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
-      <updated>1515026608204</updated>
+      <updated>1515013933182</updated>
     </task>
-    <task id="LOCAL-00045" summary="cambios de forma general">
-      <created>1515097632112</created>
+    <task id="LOCAL-00045" summary="fff">
+      <created>1515100351372</created>
       <option name="number" value="00045" />
       <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1515097632112</updated>
+      <updated>1515100351372</updated>
     </task>
-    <task id="LOCAL-00046" summary="cambios de forma general">
-      <created>1515100236156</created>
+    <task id="LOCAL-00046" summary="fff">
+      <created>1517004742674</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1515100236156</updated>
+      <updated>1517004742674</updated>
     </task>
-    <task id="LOCAL-00047" summary="cambios de forma general">
-      <created>1515100528126</created>
+    <task id="LOCAL-00047" summary="fff">
+      <created>1517347663036</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1515100528126</updated>
+      <updated>1517347663036</updated>
     </task>
-    <task id="LOCAL-00048" summary="cambios de forma general">
-      <created>1515101884887</created>
+    <task id="LOCAL-00048" summary="fff">
+      <created>1518738591322</created>
       <option name="number" value="00048" />
       <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1515101884887</updated>
+      <updated>1518738591323</updated>
     </task>
-    <task id="LOCAL-00049" summary="cambios de forma general">
-      <created>1515105601667</created>
+    <task id="LOCAL-00049" summary="fff">
+      <created>1518743260953</created>
       <option name="number" value="00049" />
       <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1515105601667</updated>
+      <updated>1518743260953</updated>
     </task>
-    <task id="LOCAL-00050" summary="cambios de forma general">
-      <created>1517005484055</created>
+    <task id="LOCAL-00050" summary="fff">
+      <created>1518764088116</created>
       <option name="number" value="00050" />
       <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1517005484056</updated>
+      <updated>1518764088116</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fff">
+      <created>1518882476200</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1518882476200</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237708000" />
+    <option name="totallyTimeSpent" value="345755000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-9" y="-9" width="1860" height="1098" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16443452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2616721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16820988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18827161" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41945606" sideWeight="0.50878155" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32635984" sideWeight="0.49564743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41945606" sideWeight="0.49121845" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3976261" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32845187" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16897081" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19122024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -879,448 +807,329 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aumento de dos espacios" />
-    <MESSAGE value="mison y vision" />
-    <MESSAGE value="color" />
-    <MESSAGE value="registro de examen" />
-    <MESSAGE value="calendario" />
-    <MESSAGE value="enviod e correo" />
-    <MESSAGE value="correo masivo" />
-    <MESSAGE value="color en el foter" />
-    <MESSAGE value="arreglo de todo" />
-    <MESSAGE value="arreglo calendario" />
-    <MESSAGE value="cambios nuevos de blog" />
-    <MESSAGE value="cambios de admin" />
-    <MESSAGE value="cambios de template" />
-    <MESSAGE value="cambios docente" />
-    <MESSAGE value="cambios" />
-    <MESSAGE value="crud de cursos" />
-    <MESSAGE value="crud de periodo" />
-    <MESSAGE value="creacion de docente" />
-    <MESSAGE value="cambios del modulo docentes" />
-    <MESSAGE value="cambios de forma general" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios de forma general" />
+    <MESSAGE value="ffffgdsgsd" />
+    <MESSAGE value="color menu" />
+    <MESSAGE value="fff" />
+    <option name="LAST_COMMIT_MESSAGE" value="fff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/blog.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/notas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/cursoEstudiantes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="54" column="14" lean-forward="false" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/registroPeriodo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/pg/lib/query.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/registroCurso.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/editarCurso.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="218" column="138" lean-forward="false" selection-start-line="218" selection-start-column="138" selection-end-line="218" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/registroMatricula.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/estudiante.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/horaServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/angular-1.4.6/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="33" />
+        <state relative-caret-position="-422">
+          <caret line="215" column="33" lean-forward="false" selection-start-line="187" selection-start-column="25" selection-end-line="215" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/login.js">
+    <entry file="file://$PROJECT_DIR$/public/manten.html" />
+    <entry file="file://$PROJECT_DIR$/public/msgcale.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="838">
+          <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/public/msgsus.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="70" column="47" lean-forward="false" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+        <state relative-caret-position="775">
+          <caret line="164" column="17" lean-forward="false" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/public/css/google-map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mailform.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/suscriptores.html">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.rd-google-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.rd-google-map2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/page-1_img02.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/images/page-1_img04.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/images/gmap_marker0.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/gmap_marker_active.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/corazonitaliano.png" />
+    <entry file="file://$PROJECT_DIR$/public/images/gmap_marker_active1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/gmap_marker2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/gmap_marker.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/camera-loader.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery-migrate-1.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3402">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="158" />
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/notificadosuscriptoress.html">
+    <entry file="file://$PROJECT_DIR$/../../../site/index-1.html" />
+    <entry file="file://$PROJECT_DIR$/public/css/animate.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="1391" column="1" lean-forward="false" selection-start-line="1391" selection-start-column="1" selection-end-line="1391" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/pendientesuscriptoress.html">
+    <entry file="file://$PROJECT_DIR$/public/js/camera.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="286">
+          <caret line="31" column="134" lean-forward="false" selection-start-line="31" selection-start-column="129" selection-end-line="31" selection-end-column="134" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/notificado.html">
+    <entry file="file://$PROJECT_DIR$/../../../site/css/camera.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="-40">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/pendiente.html">
+    <entry file="file://$PROJECT_DIR$/public/images/spolanportugues.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/device.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="742">
+          <caret line="65" column="14" lean-forward="true" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/docente.js">
+    <entry file="file://$PROJECT_DIR$/../../../site/css/grid.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="112" column="19" lean-forward="false" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="19" />
+        <state relative-caret-position="499">
+          <caret line="335" column="23" lean-forward="false" selection-start-line="335" selection-start-column="23" selection-end-line="335" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/msg.html">
+    <entry file="file://$PROJECT_DIR$/public/este.html" />
+    <entry file="file://$PROJECT_DIR$/public/js/html5shiv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="313">
+          <caret line="286" column="1" lean-forward="true" selection-start-line="286" selection-start-column="1" selection-end-line="286" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/docentes.html">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="274">
+          <caret line="2" column="15806" lean-forward="false" selection-start-line="2" selection-start-column="15801" selection-end-line="2" selection-end-column="15806" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/msg.js">
+    <entry file="file://$PROJECT_DIR$/../../../site/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="688" column="13" lean-forward="true" selection-start-line="681" selection-start-column="2" selection-end-line="692" selection-end-column="19" />
+        <state relative-caret-position="212">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/estudiante.js">
+    <entry file="file://$PROJECT_DIR$/../../../css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="95" column="3" lean-forward="false" selection-start-line="95" selection-start-column="3" selection-end-line="106" selection-end-column="19" />
+        <state relative-caret-position="307">
+          <caret line="466" column="30" lean-forward="true" selection-start-line="466" selection-start-column="30" selection-end-line="466" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/estudiante.html">
+    <entry file="file://$PROJECT_DIR$/../../../site/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="-281">
+          <caret line="414" column="28" lean-forward="false" selection-start-line="414" selection-start-column="25" selection-end-line="414" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/periodos.html">
+    <entry file="file://$PROJECT_DIR$/../../../style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="134" lean-forward="false" selection-start-line="17" selection-start-column="134" selection-end-line="17" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/periodo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="112" column="19" lean-forward="false" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/matricula1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/cursos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/curso.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="132" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/chirpApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="97" column="90" lean-forward="false" selection-start-line="97" selection-start-column="90" selection-end-line="97" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="83" column="107" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="83" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/estudiante/paginas/matricula.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/estudiante/javascripts/chirpApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="32" column="87" lean-forward="false" selection-start-line="32" selection-start-column="87" selection-end-line="32" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/estudiante/javascripts/curso.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/estudiante/paginas/matricula1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/docente/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="329" column="0" lean-forward="true" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/estudiante/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="335" column="3" lean-forward="true" selection-start-line="335" selection-start-column="3" selection-end-line="346" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/paginas/matricula.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/docente/paginas/matricula.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/javascripts/matricula.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="145" column="4" lean-forward="false" selection-start-line="145" selection-start-column="4" selection-end-line="156" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/docente/paginas/asistencia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/docente/javascripts/chirpApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="33" column="78" lean-forward="false" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/docente/javascripts/curso.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="338" column="32" lean-forward="false" selection-start-line="338" selection-start-column="32" selection-end-line="338" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/curso.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="162" column="33" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/matricula.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5151">
-          <caret line="303" column="23" lean-forward="false" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
-          <folding>
-            <marker date="1518743193675" expanded="true" signature="452:805" ph="..." />
-            <marker date="1518743193675" expanded="false" signature="472:523" ph="..." />
-          </folding>
+        <state relative-caret-position="-8972">
+          <caret line="859" column="16" lean-forward="true" selection-start-line="859" selection-start-column="16" selection-end-line="859" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="475">
+          <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/owl.carousel.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/owl-carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1129">
+          <caret line="251" column="1" lean-forward="true" selection-start-line="251" selection-start-column="1" selection-end-line="251" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/camera.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="279" column="18" lean-forward="true" selection-start-line="279" selection-start-column="18" selection-end-line="279" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/italiano.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="104" column="64" lean-forward="true" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/cumanda.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="194" column="24" lean-forward="true" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index-4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="214" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ingles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="67" column="40" lean-forward="true" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/agenda.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/portugues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="187" column="4" lean-forward="false" selection-start-line="187" selection-start-column="4" selection-end-line="255" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index-8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="125" column="5" lean-forward="true" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5166">
+          <caret line="279" column="16" lean-forward="true" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="99" column="184" lean-forward="false" selection-start-line="99" selection-start-column="184" selection-end-line="99" selection-end-column="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1634">
+          <caret line="112" column="1" lean-forward="true" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/idiomas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2942">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="495" column="7" lean-forward="false" selection-start-line="495" selection-start-column="7" selection-end-line="495" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#section#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#1;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#2;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#3;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#4;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#5;n#ul#0;n#div#0;n#section#1;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#2;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#3;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#span#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#span#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#2;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#3;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#4;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#5;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#q#0;n#p#0;n#div#1;n#blockquote#0;n#div#6;n#div#1;n#div#4;n#div#0;n#div#0;n#section#2;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#li#1;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#li#2;n#ul#0;n#div#0;n#section#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1518743182772" expanded="true" signature="559:912" ph="..." />
-            <marker date="1518743182772" expanded="false" signature="579:630" ph="..." />
-          </folding>
+        <state relative-caret-position="370">
+          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
         </state>
       </provider>
     </entry>
