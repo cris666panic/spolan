@@ -38,7 +38,7 @@ router.post('/sendMail',function(req,res) {
         "\t\t\t\t\t\t\t\t\t<td align=\"left\" height=\"20\" valign=\"top\"><img alt=\"\" src=\"images/top-shadow-basica.png\" style=\"display: block; width: 600px; height: 20px;\" /></td>\n" +
         "\t\t\t\t\t\t\t  </tr>\n" +
         "                              <tr>\n" +
-        "\t\t\t\t\t\t\t\t\t<td align=\"left\" height=\"20\" valign=\"top\"><img alt=\"\" src=\"https://image.ibb.co/fvtxhm/1.jpg\" style=\"display: block; width: 600px; height: 200px;\" /></td>\n" +
+        "\t\t\t\t\t\t\t\t\t<td align=\"left\" height=\"20\" valign=\"top\"><img alt=\"\" src=\"https://image.ibb.co/ehFi87/spolan.jpg\" style=\"display: block; width: 600px; height: 200px;\" /></td>\n" +
         "\t\t\t\t\t\t\t  </tr>\n" +
         "                              <tr>\n" +
         "\t\t\t\t\t\t\t\t\t<td align=\"left\" bgcolor=\"#ffffff\" height=\"15\" valign=\"top\"><img alt=\"\" src=\"images/shadow-basica.png\" style=\"display: block; width: 600px; height: 15px;\" /></td>\n" +
@@ -100,11 +100,7 @@ router.post('/sendMail',function(req,res) {
         "\t\t\t</tbody>\n" +
         "\t\t</table>\n" +
         "\t</body>\n" +
-        "</html>" +
-
-
-    "<h1>"+req.body.usuario+"</h1>"
-    +"<h1>"+req.body.contrasenia+"</h1>";
+        "</html>"
 
 
 
