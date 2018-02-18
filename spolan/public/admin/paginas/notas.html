@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">matriculas</h3>
+                    <br>
+
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="box-body">
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <label>Reporte cualquier novedad.</label><br />
+                                <div class="table-responsive">
+                                    <table>
+                                        <tr>
+                                            <td colspan="2">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Horario:&nbsp;</span> </strong></td>
+                                            <td style="width: 569px; height: 15px;">
+                                                <span id="body_LabelEscuela" style="display:inline-block;width:531px;">{{matricula.horario}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Idioma:&nbsp;</span></strong></td>
+                                            <td style="width: 569px">
+                                                <span id="body_LabelCarrera" style="display:inline-block;width:531px;">{{matricula.idioma}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Nivel:&nbsp;</span></strong></td>
+                                            <td style="width: 569px; height: 3px">
+                                                <span id="body_LabelNivel" style="display:inline-block;width:531px;">{{matricula.nombre}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Paralelo:&nbsp;</span></strong></td>
+                                            <td style="width: 569px">
+                                                <span id="body_LabelParalelo" style="display:inline-block;width:531px;">{{matricula.paralelo}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Período:&nbsp;</span></strong></td>
+                                            <td style="width: 569px">
+                                                <span id="body_LabelPeriodo" style="display:inline-block;width:531px;">{{matricula.unido}}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="table-responsive">
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td>
+                                                <strong><span class="labelCampo">Código Matrícula:&nbsp; </span></strong>
+                                                <span id="body_LabelMatriculaID" style="display:inline-block;width:105px;">{{matricula.id}}</span>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <strong><span class="labelCampo">Situación:&nbsp; </span></strong>
+                                                <span id="body_LabelSituacion" style="display:inline-block;width:238px;">LEGALIZADA</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+
+
+
+
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12 col-xs-12 table-responsive">
+                                                <table id="example1" class="table table-bordered table-striped">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Cedula</th>
+                                                        <th>Nombre</th>
+                                                        <th>Apellido</th>
+                                                        <th>Nota 1</th>
+                                                        <th>Nota 2</th>
+                                                        <th>Nota 3</th>
+                                                        <th>Nota final</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr >
+                                                        <td>
+                                                            {{matricula.cedula}}</td>
+                                                        <td>
+                                                            {{matricula.nombres}}</td>
+
+                                                        <td>
+                                                            {{matricula.apellidos}}</td>
+
+                                                        <td>
+
+                                                            <input  ng-model="nota.nota1" ng-change="suma()" type="text"  />
+
+                                                        </td>
+                                                        <td>
+
+                                                            <input   ng-model="nota.nota2" ng-change="suma()" type="text"  />
+
+                                                        </td>
+                                                        <td>
+
+                                                            <input  ng-model="nota.nota3" ng-change="suma()" type="text"  />
+
+                                                        </td>
+                                                        <td>
+
+                                                            <input  ng-disabled="true" ng-model="nota.nota_final" type="text"  />
+
+                                                        </td>
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.box-body -->
+                                        <!-- /.box-footer -->
+
+
+
+                                </form>
+
+                                <div class="form-group " align="right">
+                                    <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary antosubmit2" ng-click="guardar()"  >Actulizar Notas</button>
+                                </div>
+
+
+
+                                <!-- /.box-body -->
+                                <!-- /.box-footer -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

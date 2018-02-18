@@ -583,7 +583,6 @@ for (var i=0;i< $scope.estudiantes.length;i++){
 }
 
 
-/*
 
 var objetcurso={
 
@@ -606,7 +605,7 @@ var objetcurso={
 
 
 
-*/
+
 
 
 
