@@ -11,7 +11,46 @@ tareasModule.factory('curso', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.post('/web/obtenerCursosDocentes',docente)
+        $http.post('/web/obtenerCursosDocentesActivos',docente)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+    curso.obtenerAsistenciaEstudiante = function (estudiante) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerAsistenciaEstudiante',estudiante)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+
+    };
+
+
+    curso.getAll1 = function (docente) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/obtenerCursosDocentesInactivos',docente)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -155,9 +194,6 @@ tareasModule.factory('curso', function ($http,$q) {
 
 });
 
-
-
-
 tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout) {
 
 
@@ -182,10 +218,138 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
         id_docente:usuario.id
     }
 
+
+    $scope.ldocentes=[];
+
     curso.getAll(objeto).then(function (data) {
 
+        console.log(data);
+
+        console.log(new Date(Date.parse(data[0].fin)));
+        console.log(new Date(Date.parse(data[0].activacion)));
+
+        for (var i=0;i<data.length;i++){
+
+
+            var objeto=data[i];
+
+
+            objeto.fin=new Date(Date.parse(data[i].fin));
+            objeto.activacion=new Date(Date.parse(data[i].activacion));
+
+
+
+            $scope.ldocentes.push(objeto);
+
+        }
+
+
+
+
+
+    }).catch(function (err) {
+        console.log("error");
+
+    });
+
+
+
+
+    $scope.fecha=new Date();
+
+    console.log($scope.fecha);
+
+    $timeout(function(){
+        console.log( $scope.ldocentes);
+        $('#example1').dataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+
+
+        });
+    }, 300, false);
+
+
+
+    $scope.notas = function (curso) {
+
+        window.localStorage["curso"]= JSON.stringify(curso);
+
+        $location.path('/notas');
+
+
+    };
+
+
+
+
+
+    $scope.asistencia = function (curso) {
+
+        window.localStorage["curso"]= JSON.stringify(curso);
+
+        $location.path('/asistencia');
+
+
+    };
+
+
+});
+
+
+tareasModule.controller('ctrlCurso1', function ($scope, $location, curso,$timeout) {
+
+
+    $timeout(function(){
+
+        $('#datatable-responsive').DataTable(
+            {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            }
+        );
+
+
+    }, 500, false);
+
+    var usuario=  JSON.parse(localStorage.getItem("usuario"));
+
+    console.log(usuario);
+
+    var objeto={
+        id_docente:usuario.id
+    }
+
+
+    $scope.ldocentes=[];
+
+    curso.getAll1(objeto).then(function (data) {
+
             console.log(data);
-       $scope.ldocentes = data;
+
+console.log(new Date(Date.parse(data[0].fin)));
+        console.log(new Date(Date.parse(data[0].activacion)));
+
+for (var i=0;i<data.length;i++){
+
+
+    var objeto=data[i];
+
+
+       objeto.fin=new Date(Date.parse(data[i].fin));
+    objeto.activacion=new Date(Date.parse(data[i].activacion));
+
+
+
+    $scope.ldocentes.push(objeto);
+
+}
+
+
+
+
 
         }).catch(function (err) {
             console.log("error");
@@ -193,6 +357,11 @@ tareasModule.controller('ctrlCurso', function ($scope, $location, curso,$timeout
         });
 
 
+
+
+$scope.fecha=new Date();
+
+console.log($scope.fecha);
 
     $timeout(function(){
         console.log( $scope.ldocentes);
@@ -263,16 +432,98 @@ $scope.notas=[];
 
     $scope.suma=function (index) {
 
-        $scope.notas[index].nota4=($scope.notas[index].nota1+$scope.notas[index].nota2+$scope.notas[index].nota3)/3;
+        $scope.notas[index].nota4=Math.trunc(($scope.notas[index].nota1+$scope.notas[index].nota2+$scope.notas[index].nota3)/3);
 
+
+        var objeto = {
+            matricula: $scope.estudiantes[index].id
+        }
+
+        var atrasos = 0;
+        var faltas = 0;
+
+
+        curso.obtenerAsistenciaEstudiante(objeto).then(function (data) {
+            console.log(data);
+
+
+            atrasos = parseInt(data[2].count);
+            faltas = parseInt(data[0].count);
+
+
+            var total = faltas + Math.trunc(atrasos / 4);
+
+
+            var ver = Math.trunc(total / 4);
+
+            if (ver >= 1) {
+
+                console.log(ver, total, atrasos);
+                $scope.notas[index].situacion="Reprobado";
+
+
+            } else {
+                $scope.notas[index].situacion="Aprobado";
+
+                console.log(ver, total, atrasos);
+
+            }
+
+
+        }).catch(function (err) {
+
+            console.log(err);
+        });
+
+
+
+
+if ($scope.notas[index].nota4<80){
+
+    $scope.notas[index].situacion="Reprobado";
+    $scope.notas[index].letra="F";
+}else {
+
+    if ($scope.notas[index].nota4>=80&&$scope.notas[index].nota4<=84){
+
+        $scope.notas[index].letra="C";
     }
 
-$scope.guardar=function () {
+    if ($scope.notas[index].nota4>=85&&$scope.notas[index].nota4<=89){
+
+        $scope.notas[index].letra="B";
+    }
+
+    if ($scope.notas[index].nota4>=90&&$scope.notas[index].nota4<=100){
+
+        $scope.notas[index].letra="A";
+    }
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+        $scope.guardar=function () {
 
     console.log($scope.notas);
 
 
 for (var i=0;i< $scope.estudiantes.length;i++){
+
+
+
 
 
     console.log( $scope.estudiantes[i]);
@@ -284,7 +535,9 @@ for (var i=0;i< $scope.estudiantes.length;i++){
         nota1: $scope.notas[i].nota1,
         nota2:$scope.notas[i].nota2,
         nota3:$scope.notas[i].nota3,
-        nota_final:$scope.notas[i].nota4
+        nota_final:$scope.notas[i].nota4,
+        situacion:$scope.notas[i].situacion,
+        letra:$scope.notas[i].letra
 
     }
 
@@ -325,8 +578,12 @@ for (var i=0;i< $scope.estudiantes.length;i++){
 
 
 
+
+
 }
 
+
+/*
 
 var objetcurso={
 
@@ -349,7 +606,7 @@ var objetcurso={
 
 
 
-
+*/
 
 
 

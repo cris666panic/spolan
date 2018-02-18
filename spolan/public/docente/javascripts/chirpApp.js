@@ -29,7 +29,7 @@ app.config(function($routeProvider){
 
 
         .when('/cursos', { templateUrl: 'paginas/matricula.html',controller: ('ctrlCurso' )})
-
+        .when('/cursos1', { templateUrl: 'paginas/matricula1.html',controller: ('ctrlCurso1' )})
 
         .when('/notas', { templateUrl: 'paginas/notas.html',controller: ('ctrlNotas' )})
 

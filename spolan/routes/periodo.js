@@ -20,7 +20,8 @@ router.post('/addPeriodo', function (req, res) {
     var p = {
         inicio: req.body.inicio,
         fin: req.body.fin,
-        unido:req.body.unido
+        unido:req.body.unido,
+        activacion:req.body.activacion
 
     };
 
@@ -30,9 +31,9 @@ router.post('/addPeriodo', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO periodo(inicio, fin,unido)' +
-        ' VALUES ($1,$2,$3) RETURNING *',
-        [p.inicio, p.fin,p.unido]);
+    var query = client.query('INSERT INTO periodo(inicio, fin,unido,activacion)' +
+        ' VALUES ($1,$2,$3,$4) RETURNING *',
+        [p.inicio, p.fin,p.unido,p.activacion]);
 
 
 

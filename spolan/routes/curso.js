@@ -54,7 +54,7 @@ router.post('/addCurso', function (req, res) {
 
 
 
-router.post('/obtenerCursosDocentes', function (req, res) {
+router.post('/obtenerCursosDocentesActivos', function (req, res) {
 
     var data1 = {
 
@@ -71,7 +71,9 @@ router.post('/obtenerCursosDocentes', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT * FROM curso where id_docente=$1',[data1.id_docente]);
+    var query = client.query('SELECT curso.id,curso.id_docente,curso.horario,curso.estado,curso.nombre,curso.paralelo,curso.id_periodo,curso.idioma ,periodo.activacion, periodo.inicio,periodo.fin,periodo.unido FROM curso \n' +
+        '\n' +
+        'inner join periodo  on periodo.id =curso.id_periodo where id_docente=$1 and curso.estado=$2',[data1.id_docente,'activo']);
 
 
     query.on('row', (row) => {
@@ -87,6 +89,41 @@ router.post('/obtenerCursosDocentes', function (req, res) {
 
 });
 
+
+router.post('/obtenerCursosDocentesInactivos', function (req, res) {
+
+    var data1 = {
+
+        id_docente: req.body.id_docente
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT curso.id,curso.id_docente,curso.horario,curso.estado,curso.nombre,curso.paralelo,curso.id_periodo,curso.idioma ,periodo.activacion, periodo.inicio,periodo.fin,periodo.unido FROM curso \n' +
+        '\n' +
+        'inner join periodo  on periodo.id =curso.id_periodo where id_docente=$1 and curso.estado=$2',[data1.id_docente,'inactivo']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+
+
+});
 
 router.get('/obtenerCursos', function (req, res) {
 

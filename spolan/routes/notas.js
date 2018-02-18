@@ -57,7 +57,9 @@ router.post('/addNotas', function (req, res) {
         nota1: req.body.nota1,
         nota2:req.body.nota2,
         nota3:req.body.nota3,
-        nota_final:req.body.nota_final
+        nota_final:req.body.nota_final,
+        situacion:req.body.situacion,
+        letra:req.body.letra
 
 
 
@@ -69,8 +71,8 @@ router.post('/addNotas', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO nota(id_matricula, nota1, nota2, nota3, nota_final) VALUES ($1,$2,$3,$4,$5) RETURNING *',
-        [data1.id_matricula, data1.nota1,data1.nota2, data1.nota3,data1.nota_final]);
+    var query = client.query('INSERT INTO nota(id_matricula, nota1, nota2, nota3, nota_final,situacion,letra) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *',
+        [data1.id_matricula, data1.nota1,data1.nota2, data1.nota3,data1.nota_final,data1.situacion,data1.letra]);
 
     query.on('row', (row) => {
         results.push(row);

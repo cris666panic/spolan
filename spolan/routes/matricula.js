@@ -214,7 +214,7 @@ router.post('/obtenerNotasEstudiante', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT id, id_matricula, nota1, nota2, nota3, nota_final\n' +
+    var query = client.query('SELECT *\n' +
         '  FROM nota where id_matricula=$1',[data1.matricula]);
 
 

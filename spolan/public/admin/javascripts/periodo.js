@@ -160,21 +160,66 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, peri
         console.log( $scope.periodo);
 
         var aux=document.getElementById('datepicker').value.toString();
-        var vec=aux.split("T");
+
 
 
 
 
         var aux1=document.getElementById('datepicker1').value.toString();
+
+
+//ver el calendario y restarle 5 el dia final
+
+
+
+var days=-5;
+
+            milisegundos=parseInt(35*24*60*60*1000);
+
+            fecha=new Date(aux1);
+
+            day=fecha.getDate();
+            // el mes es devuelto entre 0 y 11
+            month=fecha.getMonth()+1;
+            year=fecha.getFullYear();
+
+           console.log("Fecha actual: "+day+"/"+month+"/"+year);
+
+            //Obtenemos los milisegundos desde media noche del 1/1/1970
+            tiempo=fecha.getTime();
+            //Calculamos los milisegundos sobre la fecha que hay que sumar o restar...
+            milisegundos=parseInt(days*24*60*60*1000);
+            //Modificamos la fecha actual
+            total=fecha.setTime(tiempo+milisegundos);
+            day=fecha.getDate();
+            month=fecha.getMonth()+1;
+            year=fecha.getFullYear();
+
+            console.log("Fecha modificada: "+day+"/"+month+"/"+year);
+
+
+            if (month<10){
+                month="0"+month;
+            }
+
         var vec1=aux1.split("T");
 
+            console.log(vec1);
+
+        var separadaos =vec1[0].split("/");
+
+        console.log(separadaos);
+
+var fin =separadaos[2]+"-"+separadaos[0]+"-"+separadaos[1];
 
 
+var activacion =year+"-"+month+"-"+day;
 
         var perido={
-            inicio:vec[0],
-            fin:vec1[0],
-                 unido:$scope.periodo.unido
+            inicio:aux,
+            fin:fin,
+                 unido:$scope.periodo.unido,
+            activacion:activacion
         }
 
 
@@ -187,7 +232,6 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, peri
 
                 console.log(err);
             });
-
 
 
     };

@@ -13,6 +13,7 @@ module.exports = router;
 
 //post insertat
 //put actilizar
+
 //get optener
 //delet eliminar
 
