@@ -176,6 +176,36 @@ console.log($scope.usuario);
 
 
 
+
+
+            if (data.id_tipo == "6") {
+                console.log("opcion 6");
+
+
+                var usuario={
+
+                    id_usuario:data.id_usuario,
+                    tipo:"informacion"
+                }
+
+
+
+                $http.post('/web/loginDatosUsuario', usuario).success(function (data) {
+
+                    console.log(data);
+
+                    data.id_tipo=3;
+                    window.localStorage["usuario"]= JSON.stringify(data);
+                    window.localStorage["authenticated"]= true;
+                    window.location ='secretaria/index.html';
+
+                });
+
+
+
+
+            }
+
             if(data==""){
 
 

@@ -83,6 +83,51 @@ router.get('/obtenerCalendario', function (req, res) {
 });
 
 
+router.get('/obtenerCalendarioRio', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * from agenda where ciudad=$1',['Riobamba']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+router.get('/obtenerCalendarioCu', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * from agenda where ciudad=$1',['Cumanda']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 
 router.put('/actulizarCalendario/:id', function (req, res) {
     var id = req.params.id;
@@ -147,6 +192,55 @@ router.get('/obtenerCalendarioPendientes', function (req, res) {
 
 
 
+
+
+router.get('/obtenerCalendarioPendientesRio', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['pendiente','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+router.get('/obtenerCalendarioPendientesCu', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['pendiente','Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
 router.get('/obtenerCalendarioOcupados', function (req, res) {
 
 
@@ -157,6 +251,55 @@ router.get('/obtenerCalendarioOcupados', function (req, res) {
 
 
     var query = client.query('SELECT * from agenda where estado= $1 ', ['ocupado']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.get('/obtenerCalendarioOcupadosRio', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['ocupado','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+
+router.get('/obtenerCalendarioOcupadosCu', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['ocupado','Cumanda']);
 
     query.on('row', (row) => {
         results.push(row);
@@ -195,6 +338,52 @@ router.get('/obtenerCalendarioCancelado', function (req, res) {
 
 
 
+router.get('/obtenerCalendarioCanceladoRio', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['cancelado','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.get('/obtenerCalendarioCanceladoCu', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['cancelado','Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 
 
 router.get('/obtenerCalendarioCambio', function (req, res) {
@@ -221,10 +410,52 @@ router.get('/obtenerCalendarioCambio', function (req, res) {
 
 
 
+router.get('/obtenerCalendarioCambioRio', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['cambio','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
 
 
+router.get('/obtenerCalendarioCambioCu', function (req, res) {
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('SELECT * from agenda where estado= $1 and ciudad=$2', ['cambio','Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
    
 

@@ -61,6 +61,52 @@ router.get('/allobtenermsg', function (req, res) {
 
 });
 
+
+
+
+
+
+router.get('/allobtenermsgRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.ciudad=$1',['Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.get('/allobtenermsgCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.ciudad=$1',['Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 ///////////////////////////////////////obtenert pendientes
 
 router.get('/allobtenermsgpendiente', function (req, res) {
@@ -84,8 +130,47 @@ return res.json(results);
 });
 
 
+router.get('/allobtenermsgpendienteRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 and msg.ciudad=$2 ', ['pendiente','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
+
+router.get('/allobtenermsgpendienteCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 and msg.ciudad=$2 ', ['pendiente','Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 ///////////////////////////////////////// notificados
 
@@ -109,6 +194,53 @@ return res.json(results);
 
 });
 
+
+
+
+
+router.get('/allobtenermsgnotificadoRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 and msg.ciudad=$2', ['notificado','Riobamba']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.get('/allobtenermsgnotificadoCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT msg.id_msg, msg.id_informacion, msg.estado as estado_msg, informacion.nombre, informacion.telefono, informacion.correo,msg.msg, informacion.apellido FROM msg INNER JOIN informacion ON msg.id_informacion = informacion.id_informacion where msg.estado = $1 and msg.ciudad=$2', ['notificado','Cumanda']);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
 ///////////////////////////// ingresar
 
 router.post('/registmsg', function (req, res) {
@@ -128,9 +260,9 @@ ciudad:req.body.ciudad
 
   const results = [];
 
-  var query = client.query('INSERT INTO msg(id_informacion,msg,estado)' +
+  var query = client.query('INSERT INTO msg(id_informacion,msg,estado,ciudad)' +
       ' VALUES ($1,$2,$3) RETURNING *',
-      [p.id_informacion, p.msg, p.estado]);
+      [p.id_informacion, p.msg, p.estado,p.ciudad]);
 
 
   query.on('row', (row) => {
