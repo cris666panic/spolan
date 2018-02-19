@@ -23,14 +23,13 @@
                         <h3 class="box-title">Datos Informativos</h3>
                     </div>
                     <label for="name" class="cols-sm-2 control-label">Idioma </label>
-
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <select class=" form-control col-md-7 col-xs-12" ng-model="curso.idioma">
-                                <option value="Ingles">Ingles</option>
-                                <option value="Italiano">Italiano</option>
-                                <option value="Portugues">Portugues</option>
+                            <select class=" form-control select2 " ng-model="curso.idioma" ng-change="horario2(curso.idioma)">
+                                <option>Ingles</option>
+                                <option >Italiano</option>
+                                <option >Portugues</option>
                             </select>
 
                         </div>
@@ -40,13 +39,14 @@
                 </div>
 
 
+
                 <div class="form-group">
 
                     <label for="name" class="cols-sm-2 control-label">Nivel </label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-list-ol" aria-hidden="true"></i></span>
-                            <select class="form-control select2"   ng-model="curso.nombre"    ">
+                            <select class="form-control select2"   ng-model="curso.nombre">
                             <option selected="selected">Primer Nivel</option>
                             <option>Segundo Nivel</option>
                             <option selected="selected">Tercer Nivel</option>
@@ -80,15 +80,30 @@
 
 
 
+
                 <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Paralelo</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-th-large" aria-hidden="true"></i></span>
-                            <input ng-model="curso.paralelo" type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+
+                            <select class=" form-control col-md-7 col-xs-12" ng-model="curso.paralelo" ">
+                            <option >A</option>
+                            <option >B</option>
+                            <option >C</option>
+                            <option >D</option>
+                            <option >E</option>
+                            <option >F</option>
+                            <option >G</option>
+                            </select>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
 
                 <div class="form-group">
 
@@ -104,135 +119,189 @@
 
 
                 </div>
+                <label for="name" class="cols-sm-2 control-label">Horario del curso</label>
+                <br>
+                <label for="name" class="cols-sm-2 control-label">{{curso.horario}}</label>
+
 
 
             </div>
 
-            <div class="col-md-6">
+            <div ng-show="Ingles1" >
+
+                </br>
+
                 <div class="form-group">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Datos de Horario
-                        </h3>
-                    </div>
-                    <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Modalidad</label>
-                        <div class="cols-sm-10">
+                    <label for="name" class="cols-sm-2 control-label">Modalidad</label>
+                    <div class="cols-sm-10">
 
-                            <div class=" col-md-4">
-                                <label>
-                                    <input type="checkbox" ng-model="modalidad.presencial" ng-change="modalidadCkec()"> PRESENCIAL
-                                </label>
-                            </div>
-                            <div class=" col-md-4">
-                                <label>
-                                    <input type="checkbox" ng-model="modalidad.semipresencial" ng-change="modalidadCkec()"> SEMIPRESENCIAL
-                                </label>
-                            </div>
-                            <div class=" col-md-4">
-                                <label>
-                                    <input type="checkbox" ng-model="modalidad.avanzado" ng-change="modalidadCkec()"> AVANZADO
-                                </label>
-                            </div>
+                        <div class=" col-md-4">
+                            <label>
+                                <input type="checkbox" ng-model="modalidad.presencial" ng-change="modalidadCkec()"> Normal
+                            </label>
+                        </div>
+                        <div class=" col-md-4">
+                            <label>
+                                <input type="checkbox" ng-model="modalidad.semipresencial" ng-change="modalidadCkec()"> Curso Intensivo
+                            </label>
+                        </div>
+                        <div class=" col-md-4">
+                            <label>
+                                <input type="checkbox" ng-model="modalidad.avanzado" ng-change="modalidadCkec()"> Inglés Avanzado
+                            </label>
                         </div>
                     </div>
+                </div>
 
-                    <br>
-                    <div class="form-group col-md-12" ng-show="mPres">
+                <br>
+                <div class="form-group col-md-12" ng-show="mPres">
 
 
 
-                        <div class="col-md-6">
+                    <div class="col-md-6">
+                        <h2 style="color: #AD1F25">Normal</h2>
+                        <h3>Lunes a Jueves</h3>
 
-                            <h3>Lunes a Jueves</h3>
-
+                    </div>
+                    <div class="col-md-6">
+                        <br><br><br><br>
+                        <div class="radio" ng-click="selectHorario('Presencial 08H00 A 10H00 AM')">
+                            <label><input type="radio" name="optradio"  >08H00 A 10H00 AM</label>
                         </div>
-                        <div class="col-md-6">
-                            <br><br>
-                            <div class="radio" ng-click="selectHorario('Presencial 08H00 A 10H00 AM')">
-                                <label><input type="radio" name="optradio"  >08H00 A 10H00 AM</label>
-                            </div>
-
-                            <div class="radio" ng-click="selectHorario('Presencial 10H00 A 12H000 AM')">
-                                <label><input type="radio" name="optradio">10H00 A 12H00 AM</label>
-                            </div>
-
-                            <div class="radio" ng-click="selectHorario('Presencial 15H00 A 17H00 PM')">
-                                <label><input type="radio" name="optradio">15H00 A 17H00 PM</label>
-                            </div>
-
-                            <div class="radio" ng-click="selectHorario('Presencial 17H00 A 19H00 PM')">
-                                <label><input type="radio" name="optradio">17H00 A 19H00 PM</label>
-                            </div>
-
-                            <div class="radio" ng-click="selectHorario('Presencial 19H00 A 21H00 PM')">
-                                <label><input type="radio" name="optradio">19H00 A 21H00 PM</label>
-                            </div>
-
+                        <div class="radio" ng-click="selectHorario('Presencial 10H00 A 12H00 AM')">
+                            <label><input type="radio" name="optradio">10H00 A 12H00 AM</label>
+                        </div>
+                        <div class="radio" ng-click="selectHorario('Presencial 15H00 A 17H00 PM')">
+                            <label><input type="radio" name="optradio">15H00 A 17H00 PM</label>
+                        </div>
+                        <div class="radio" ng-click="selectHorario('Presencial 17H00 A 19H00 PM')">
+                            <label><input type="radio" name="optradio">17H00 A 19H00 PM</label>
+                        </div>
+                        <div class="radio" ng-click="selectHorario('Presencial 19H00 A 21H00 PM')">
+                            <label><input type="radio" name="optradio">19H00 A 21H00 PM</label>
                         </div>
 
-                    </div >
+                    </div>
 
-                     <div class="form-group col-md-12" ng-show="mSemi">
+                </div >
+
+                <div class="form-group col-md-12" ng-show="mSemi">
 
 
 
-                            <div class="col-md-6">
-                                <h3>SÁBADOS</h3>
+                    <div class="col-md-6">
+                        <h2 style="color: #AD1F25 ">Curso Intensivo</h2>
+                        <h3>SÁBADOS</h3>
 
-                            </div>
-                            <div class="col-md-6">
-                                <br><br>
-                                <div class="radio" ng-click="selectHorario('Semipresencial 08H00 A 12H00 AM y 13H00 A 17H00 PM')">
-                                    <label><input type="radio" name="optradio">08H00 A 12H00 AM y 13H00 A 17H00 PM</label>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <br><br> <br><br> <br>
+
+
+                        <div class="radio" ng-click="selectHorario('Semipresencial 09H00 AM a  6H00 PM')">
+                            <label><input type="radio" name="optradio">09H00 Am A 6H00 PM</label>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-12" ng-show="mAdvance">
+
+
+                    <div class="col-md-6">
+                        <h2 style="color: #AD1F25 ">Inglés Avanzado </h2>
+                        <h3>Lunes a Jueves</h3>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <br><br><br><br><br><br>
+                        <div class="radio" ng-click="selectHorario('Avanzado 3H00 A 5H00 PM')">
+                            <label><input type="radio" name="optradio"> 3H00 A 5H00 PM</label>
+
+                            <div class="radio" ng-click="selectHorario('Avanzado 5H00 A 7H00 PM')">
+                                <label><input type="radio" name="optradio">5H00 A 7H00 PM</label>
+
+                                <div class="radio" ng-click="selectHorario('Avanzado 7H00 A 9H00 PM')">
+                                    <label><input type="radio" name="optradio">7H00 A 9:00 PM</label>
+
+
+
                                 </div>
 
 
+
+
                             </div>
-
-                     </div>
-
-                    <div class="form-group col-md-12" ng-show="mAdvance">
-
-
-                        <div class="col-md-6">
-                            <h3>lunes a Jueves</h3>
-
-                            <h3>Sábado</h3>
-
-
 
                         </div>
-                        <div class="col-md-6">
-                            <br><br>
-                            <div class="radio" ng-click="selectHorario('Avanzado 17H00 A 19H00 PM')">
-                                <label><input type="radio" name="optradio">17H00 A 19H00 PM</label>
-                            </div>
-                            <br><br>
-                            <div class="radio" ng-click="selectHorario('Avanzado 09H00 AM A 13H00 PM y 14H00 A 18H00 PM')">
-                                <label><input type="radio" name="optradio">09H00 AM A 13H00 PM y 14H00 A 18H00 PM</label>
-                            </div>
+                    </div>
+                </div>
 
+            </div>
 
+            <div ng-show="Italiano2">
 
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Modalidad</label>
+                    <div class="cols-sm-10">
+
+                        <div class=" col-md-4">
+                            <label>
+                                <input type="checkbox" ng-model="modalidad.presencial" ng-change="modalidadCkec()"> Normal
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12" ng-show="mPres">
+                    <div class="col-md-6">
+                        <h2 style="color: #AD1F25">Normal</h2>
+                        <h3>Lunes a Jueves</h3>
+
+                    </div>
+                    <div class="col-md-6">
+                        <br><br><br><br><br>
+                        <div class="radio" ng-click="selectHorario('Presencial 5H00 A 9H00 PM')">
+                            <label><input type="radio" name="optradio"  >08H00 A 10H00 AM</label>
+                        </div>
+                        <div class="radio" ng-click="selectHorario('Presencial 7H00 A 9H00 PM')">
+                            <label><input type="radio" name="optradio"  >7H00 A 9H00 PM</label>
                         </div>
 
 
+                    </div>
 
-                </div>
+
+                </div >
 
 
-                </div>
             </div>
 
 
-            <div class="form-group " align="right">
-                <button  style="background-color: #AD1D24;border-color:#DBAC1F;"    class="btn btn-primary antosubmit2"  ng-click="actulizarCurso()">Actulizar</button>
+
+
+
+
             </div>
+
+        </br>
+        <div class="form-group " align="center">
+            <button  style="background-color: #AD1D24;border-color:#DBAC1F;"    class="btn btn-primary antosubmit2"  ng-click="actulizarCurso()">Actulizar</button>
+        </div>
+        </br>
 
 
         </div>
 
 
-    </div>
+
+
+</div>
 
 </div>

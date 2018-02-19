@@ -354,7 +354,44 @@ tareasModule.controller('ctrlRegistroCurso', function ($scope, $location, docent
 
 tareasModule.controller('ctrlEditarCurso', function ($scope, $location, curso,docente,periodo) {
 
+    $scope.Ingles1 = false;
+    $scope.Italiano2 = false;
+    $scope.Portugues3 = false;
 
+    $scope.horario2= function(a) {
+        console.log(a);
+
+
+        if ($scope.curso.idioma == "Italiano") {
+            $scope.Ingles1 = false;
+            $scope.Italiano2 = true;
+            $scope.Portugues3 = false
+        }
+
+        else{
+            if ($scope.curso.idioma == "Ingles") {
+                $scope.Ingles1 = true;
+                $scope.Italiano2 = false;
+                $scope.Portugues3 = false
+            }
+            else
+            {
+
+                $scope.Ingles1 = false;
+                $scope.Italiano2 = false;
+                $scope.Portugues3 = true
+
+            }
+
+
+
+
+        }
+
+
+
+
+    }
 
     docente.getAll().then(function (data) {
 
