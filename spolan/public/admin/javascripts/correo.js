@@ -40,6 +40,8 @@ citasModule.controller('ctrlCorreo', function ($scope, $location,$timeout,datosm
     $scope.enviar=function () {
 
 
+
+
         for (var i=0;i<$scope.listaCorreos.length;i++){
 
             console.log($scope.listaCorreos[i]);
@@ -105,10 +107,15 @@ citasModule.controller('ctrlCorreo1', function ($scope, $location,$timeout,datos
 
     $scope.enviar=function () {
 
+usuario.estado="notificado";
 
 
+        datosmsg.actualizarusuario(usuario ).then(function (data) {
 
 
+        }).catch(function (err) {
+            console.log("error");
+        });
 
 
 
@@ -132,6 +139,8 @@ citasModule.controller('ctrlCorreo1', function ($scope, $location,$timeout,datos
                 console.log(response.data);
 
                 $scope.notificacion="mensaje enviado";
+
+
             }, function errorCallback(response) {
 
                 alert('error al realizar Ingreso');

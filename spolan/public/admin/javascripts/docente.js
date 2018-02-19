@@ -45,6 +45,26 @@ tareasModule.factory('docente', function ($http,$q) {
     };
 
 
+
+    docente.addBlog = function (docente) {
+
+        var defered = $q.defer();
+        var promise = defered.promise;
+
+        $http.post('/web/addDocenteBlog',docente)
+            .success(function (data) {
+                defered.resolve(data);
+
+            })
+            .error(function (err) {
+                defered.reject(err)
+            });
+
+        return promise;
+
+    };
+
+
     docente.update = function (docente) {
 
         var defered = $q.defer();
@@ -158,7 +178,7 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
     $scope.guardardocente = function () {
         console.log( $scope.docente);
 
-        ///guar estudiante
+        //guar estudiante
         var usuario= {nombre:$scope.docente.cedula,
             contrasenia:$scope.docente.cedula,
             idtipo:5 };
@@ -172,7 +192,7 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
 
 
                 console.log(data);
-                $location.path('/docentes');
+
 
 
             }).catch(function (err) {
@@ -187,7 +207,49 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
         });
 
 
+
+        //registro del docente en el blog
+
+
+        var usuarioBlog= {nombre:$scope.docente.correo,
+            contrasenia:$scope.docente.cedula,
+            idtipo:3 };
+
+        estudiante.addusuario(usuarioBlog).then(function (data) {
+
+            var objDocenteBlog={
+
+                nombres: $scope.docente.nombres,
+                apellidos:$scope.docente.apellidos,
+                telefono:$scope.docente.telefono,
+                correo:$scope.docente.correo,
+                id_usuario:data[0].id_usuario
+
+            }
+
+
+            docente.addBlog(objDocenteBlog).then(function (data) {
+
+                $location.path('/docentes');
+
+            }).catch(function (err) {
+
+                console.log(err);
+            });
+
+
+        }).catch(function (err) {
+
+            console.log(err);
+        });
+
+
+
+
     };
+
+
+
 
 });
 

@@ -58,6 +58,50 @@ router.post('/addDocente', function (req, res) {
 });
 
 
+
+
+
+
+
+router.post('/addDocenteBlog', function (req, res) {
+
+    var data1 = {
+        nombre: req.body.nombres,
+        apellido:req.body.apellidos,
+        telefono:req.body.telefono,
+        correo:req.body.correo,
+        id_usuario:req.body.id_usuario,
+        estado:"pendiente"
+
+    };
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+
+//cambios
+
+    const results = [];
+
+    var query = client.query('INSERT INTO informacion(nombre, apellido, correo, telefono, id_usuario,\n' +
+        'estado) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *',
+        [data1.nombre, data1.apellido,data1.correo, data1.telefono,data1.id_usuario,data1.estado]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results[0]);
+});
+
+});
+
+
+
 router.get('/obtenerDocentes', function (req, res) {
 
   var client = new pg.Client(conString);
