@@ -46,7 +46,17 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-list-ol" aria-hidden="true"></i></span>
-                            <input ng-model="curso.nombre" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                            <select class="form-control select2"   ng-model="curso.nombre"    ">
+                            <option selected="selected">Primer Nivel</option>
+                            <option>Segundo Nivel</option>
+                            <option selected="selected">Tercer Nivel</option>
+                            <option>Cuarto Nivel</option>
+                            <option selected="selected">Quinto Nivel</option>
+                            <option>Sexto Nivel</option>
+                            <option selected="selected">Septimo Nivel</option>
+
+                            </select>
+
                         </div>
                     </div>
 

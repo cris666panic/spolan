@@ -944,8 +944,8 @@ table tr:nth-child(even) {
   padding: 14px 25px 16px;
 }
 .rd-mobilemenu_ul a.active {
-  background: #f5f5f5;
-  color: #2d2d2d;
+  background: #e4b23e;
+  color: #ffffff;
 }
 .rd-mobilemenu_ul a:hover {
   background: #E4B23E ;

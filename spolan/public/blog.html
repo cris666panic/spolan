@@ -45,7 +45,7 @@
       font-size: 18px;
     }
     .topbar {
-      background: #ad1d24;
+      background: #AD1F25;
       color: white;
       width: 100%;
       z-index: 9999;
@@ -79,10 +79,10 @@
       cursor: pointer;
       -webkit-transition: background linear 0.5s;
       transition: background linear 0.5s;
-      border-bottom: 1px solid #dbac1f;
+      border-bottom: 1px solid #f9f9f9 ;
     }
     ul.post-grid li:hover {
-      background: #dbac1f;
+      background: #AD1F25  ;
       color: white;
     }
     ul.post-grid li:hover h3 {
@@ -95,7 +95,7 @@
     }
     h2,
     h3,h4 {
-      color: #ad1d24;
+      color: #ad1f25;
     }
 
     .post {
@@ -115,7 +115,7 @@
     .comments ul li {
       list-style-type: none;
       padding: 20px 5px;
-      border-bottom: 1px #ad1d24 solid;
+      border-bottom: 1px #ad1f25 solid;
     }
     .post.ng-hide {
       opacity: 0;
@@ -135,10 +135,10 @@
       font-size: 1.1em;
     }
     .ng-invalid.ng-dirty {
-      border-color: #ad1d24;
+      border-color: #ad1f25;
     }
     .ng-valid.ng-dirty {
-      border-color: #dbac1f;
+      border-color: #e4b23e;
     }
     img {
       max-width: 100%;
@@ -158,16 +158,16 @@
     }
     .btn:hover,
     .btn2:hover {
-      background: #DBAC1F  ;
+      background: #e4b23e;
     }
     .btn:active,
     .btn2:active {
-      background: #DBAC1F;
+      background: #e4b23e;
     }
 
     .btn {
       color: #fff;
-      background: #AD1D24 ;
+      background: #ad1f25;
     }
 
     </style>
@@ -182,10 +182,9 @@
         <div class="row">
           <div class="col-s-4">
 
-            <IMG src="images/sin.png" WIDTH=130 HEIGHT=130 >
-              <a href="index.html"> <p class="brand_name">SPOLAN</p></a>
+            <IMG src="images/SPOLAN%20LOGO.png" WIDTH=100% HEIGHT=100% >
           </div>
-          <div class="offset-s-5 col-s-5">
+          <div class="offset-s-4 col-s-4">
             <nav role='navigation' class="push-right">
               <ul>
                 <li class="active"><a href="#" ng-click="blog.selectTab('blog')">Todos los Post</a></li> //
@@ -261,7 +260,7 @@
                   <input type="text" ng-model="commentCtrl.comment.author" required placeholder="Name" ng-show="false"/>
 </br>
                   <div align="right">
-                      <button  class="btn" type="submit" >Agregar </button> </div>
+                      <button  class="btn"  type="submit" >Agregar </button> </div>
 
                 </form>
               </div>
@@ -324,7 +323,7 @@
               <textarea ng-model="blog.post.contenido" data-ck-editor ng-list="/\n/" rows="10"></textarea>
 
 </br>
-              <input class="btn" type="submit" value="Crear Nuevo Post" />
+              <input class="btn" STYLE="background: #AD1F25;    color: #ffffff;" type="submit" value="Crear Nuevo Post" />
 
               </select></form>
 

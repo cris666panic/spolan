@@ -205,18 +205,27 @@ desired effect
                     <!-- Sidebar Menu -->                     
                     <ul class="sidebar-menu"> 
                         <li class="header">MENU</li>                         
-                        <!-- Optionally, you can add icons to the links -->                         
-
-
-
+                        <!-- Optionally, you can add icons to the links -->
                         <li>
-                            <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-university"></i><span>Cursos Activos</span></a>
+                            <a ><i class="fa fa-leanpub"></i> <span>Curos</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+
+
+
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="" ng-click="showCargarArchivos('/cursos')"><i class="fa fa-toggle-on"></i>Activos</a>
+
+
+                                </li>
+                                <li>
+                                    <a href="" ng-click="showCargarArchivos('/cursos1')"><i class="fa fa-toggle-off"></i>Inactivos</a>
+                                </li>
+                            </ul>
                         </li>
 
 
-                        <li>
-                            <a href="" ng-click="showCargarArchivos('/cursos1')"><i class="fa fa-university"></i><span>Cursos Inactivos</span></a>
-                        </li>
+
+
 
 
                     </ul>                     
