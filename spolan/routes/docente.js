@@ -31,8 +31,8 @@ router.post('/addDocente', function (req, res) {
         id_usuario:req.body.id_usuario,
         direccion: req.body.direccion,
         edad: req.body.edad,
-        unido:req.body.unido
-
+        unido:req.body.unido,
+        celular:req.body.celular
     };
 
     var client = new pg.Client(conString);
@@ -43,8 +43,8 @@ router.post('/addDocente', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad,unido) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *',
-        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad,data1.unido]);
+    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad,unido,celular) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *',
+        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad,data1.unido,data1.celular]);
 
     query.on('row', (row) => {
         results.push(row);

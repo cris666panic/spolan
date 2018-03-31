@@ -30,7 +30,8 @@ router.post('/regestudiante', function (req, res) {
         telefono: req.body.telefono,
         correo: req.body.correo,
         direccion: req.body.direccion,
-        edad: req.body.edad
+        edad: req.body.edad,
+        celular:req.body.celular
     };
 
 //insertar
@@ -39,9 +40,9 @@ router.post('/regestudiante', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO estudiante(cedula, nombres, apellidos, telefono, correo,direccion,edad, id_usuario)' +
-        ' VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *',
-        [p.cedula,p.nombres , p.apellidos, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario]);
+    var query = client.query('INSERT INTO estudiante(cedula, nombres, apellidos, telefono, correo,direccion,edad, id_usuario,celular)' +
+        ' VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *',
+        [p.cedula,p.nombres , p.apellidos, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario,p.celular]);
 
 
     query.on('row', (row) => {
