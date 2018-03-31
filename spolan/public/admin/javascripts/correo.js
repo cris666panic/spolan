@@ -73,6 +73,11 @@ citasModule.controller('ctrlCorreo', function ($scope, $location,$timeout,datosm
 
             });
 
+            if(i==($scope.listaCorreos.length-1)){
+
+                $location.path('/suscriptores');
+            }
+
         }
 
 
@@ -140,6 +145,7 @@ usuario.estado="notificado";
 
                 $scope.notificacion="mensaje enviado";
 
+                $location.path('/suscriptores');
 
             }, function errorCallback(response) {
 

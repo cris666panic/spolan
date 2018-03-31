@@ -21,7 +21,8 @@ router.post('/addPeriodo', function (req, res) {
         inicio: req.body.inicio,
         fin: req.body.fin,
         unido:req.body.unido,
-        activacion:req.body.activacion
+        activacion:req.body.activacion,
+        estado:req.body.estado
 
     };
 
@@ -31,9 +32,9 @@ router.post('/addPeriodo', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO periodo(inicio, fin,unido,activacion)' +
-        ' VALUES ($1,$2,$3,$4) RETURNING *',
-        [p.inicio, p.fin,p.unido,p.activacion]);
+    var query = client.query('INSERT INTO periodo(inicio, fin,unido,activacion,estado)' +
+        ' VALUES ($1,$2,$3,$4,$5) RETURNING *',
+        [p.inicio, p.fin,p.unido,p.activacion,p.estado]);
 
 
 
@@ -57,7 +58,7 @@ router.get('/allperiodo', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT * FROM periodo ');
+    var query = client.query('SELECT * FROM periodo where estado=$1 ',['activo']);
 
     query.on('row', (row) => {
         results.push(row);
@@ -82,7 +83,8 @@ router.put('/actulizarPeriodo/:id', function (req, res) {
 
         inicio: req.body.inicio,
         fin: req.body.fin,
-        unido:req.body.unido
+        unido:req.body.unido,
+        estado:req.body.estado
     };
 
 //conection
@@ -92,8 +94,8 @@ router.put('/actulizarPeriodo/:id', function (req, res) {
     const results = [];
 
 
-    var query = client.query('UPDATE periodo SET inicio=$1, fin=$2,unido=$3 where id=$4 RETURNING *',
-        [p.inicio, p.fin, p.unido, id]);
+    var query = client.query('UPDATE periodo SET inicio=$1, fin=$2,unido=$3 ,estado=$4 where id=$5 RETURNING *',
+        [p.inicio, p.fin, p.unido,p.estado, id]);
 
 
 

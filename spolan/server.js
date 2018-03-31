@@ -17,8 +17,8 @@ var io					= require('socket.io')(server);
 var massive				= require("massive");
 var pg					= require ("pg");
 
-
-var  cors = require('cors')
+//
+var  cors = require('cors');
 
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();

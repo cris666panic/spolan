@@ -14,6 +14,7 @@ tareasModule.factory('curso', function ($http,$q) {
         $http.get('/web/obtenerCursos')
             .success(function (data) {
                 defered.resolve(data);
+                console.log(data);
 
             })
             .error(function (err) {

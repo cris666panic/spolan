@@ -21,6 +21,7 @@
                 <th>Inicio</th>
                 <th>Fin</th>
                 <th>Descripción</th>
+                <th>Estado</th>
                 <th>Opciones</th>
 
 
@@ -32,12 +33,18 @@
                 <td>{{docente.inicio}}</td>
                 <td>{{docente.fin}}</td>
                 <td>{{docente.unido}}</td>
-
+                <td>{{docente.estado}}</td>
 
                 <td>
-                    <button  type="button" ng-click="editarPeriodo(docente)" class="glyphicon glyphicon-edit text-warning">
+                    <button ng-if="docente.estado != 'inactivo'" type="button" ng-click="editarPeriodo(docente)" class="glyphicon glyphicon-edit text-warning">
 
                     </button>
+
+                    <button ng-if="docente.estado != 'inactivo'" type="button" ng-click="archivo(docente)" class="glyphicon glyphicon-archive">
+                        Archivar
+                    </button>
+
+
                 </td>
 
 

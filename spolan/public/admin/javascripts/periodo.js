@@ -65,6 +65,9 @@ tareasModule.factory('periodo', function ($http,$q) {
 
     };
 
+
+
+
     periodo.delet = function (docente) {
 
 
@@ -147,6 +150,34 @@ tareasModule.controller('ctrlPeriodo', function ($scope, $location, periodo,$tim
     };
 
 
+    $scope.archivo=function (docente) {
+
+
+        docente.estado="inactivo";
+
+        periodo.update(docente).then(function (data) {
+
+            console.log(data);
+
+            periodo.getAll().then(function (data) {
+
+                console.log(data);
+                $scope.ldocentes = data;
+
+            }).catch(function (err) {
+                console.log("error");
+
+            });
+
+        }).catch(function (err) {
+            console.log("error");
+
+        });
+
+
+    }
+
+
 
 });
 
@@ -219,7 +250,8 @@ var activacion =year+"-"+month+"-"+day;
             inicio:aux,
             fin:fin,
                  unido:$scope.periodo.unido,
-            activacion:activacion
+            activacion:activacion,
+            estado:"activo"
         }
 
 

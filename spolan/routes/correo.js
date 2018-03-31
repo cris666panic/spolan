@@ -8,7 +8,7 @@ var nodemailer = require('nodemailer');
 
 
 var mail='spolaningles@gmail.com';
-var password='soycomprador2017';
+var password='spolanacademia2018';
 
 router.post('/sendMail',function(req,res) {
 
