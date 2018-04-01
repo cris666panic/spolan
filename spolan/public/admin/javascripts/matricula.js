@@ -108,13 +108,13 @@ tareasModule.factory('matricula', function ($http,$q) {
 
     };
 
-    matricula.delet = function (docente) {
+    matricula.delet = function (objeto) {
 
-
+        console.log(objeto);
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.delete('/web/eliminarMatricula',+ docente.id)
+        $http.delete('/web/eliminarMatricula',+ objeto.id)
             .success(function (data) {
                 defered.resolve(data);
 
@@ -191,6 +191,33 @@ tareasModule.controller('ctrlMatricula', function ($scope, $location, matricula,
     };
 
 
+
+    $scope.eliminarMatricula = function (objeto) {
+
+
+
+
+    matricula.delet(objeto)
+        .then(function (data) {
+
+
+            matricula.getAll().then(function (data) {
+
+
+                $scope.matriculas = data;
+
+            }).catch(function (err) {
+                console.log("error");
+
+            });
+
+        }).catch(function (err) {
+        console.log("error",err);
+    });
+
+
+
+};
 
 });
 

@@ -86,6 +86,32 @@ router.get('/obtenerMatriculas', function (req, res) {
 
 
 
+router.delete('/eliminarMatricula/:id', function (req, res) {
+
+    var id = req.params.id;
+    console.log(id);
+
+//conection
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+
+    var query = client.query('delete from matricula  where id=$1 RETURNING *',
+        [id]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+});
+
 
 
 
@@ -247,37 +273,6 @@ router.put('/actulizarMatricula/:id', function (req, res) {
 });
 
 });
-
-
-
-router.delete('/eliminarMatricula/:id', function (req, res) {
-  var id = req.params.id;
-
-  console.log(req.body);
-
-
-//conection
-  var client = new pg.Client(conString);
-  client.connect();
-
-  const results = [];
-
-
-  var query = client.query('delete from matricula  where id=$1 RETURNING *',
-      [id]);
-
-
-  query.on('row', (row) => {
-    results.push(row);
-});
-
-  query.on('end', () => {
-    client.end();
-  return res.json(results);
-});
-});
-
-
 
 
 
