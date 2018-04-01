@@ -238,7 +238,7 @@ tareasModule.controller('ctrlRegistroCurso', function ($scope, $location, docent
         }
 
         else{
-            if ($scope.curso.idioma == "Ingles") {
+            if ($scope.curso.idioma == "Inglés") {
                 $scope.Ingles1 = true;
                 $scope.Italiano2 = false;
                 $scope.Portugues3 = false
@@ -370,7 +370,7 @@ tareasModule.controller('ctrlEditarCurso', function ($scope, $location, curso,do
         }
 
         else{
-            if ($scope.curso.idioma == "Ingles") {
+            if ($scope.curso.idioma == "Inglés") {
                 $scope.Ingles1 = true;
                 $scope.Italiano2 = false;
                 $scope.Portugues3 = false
