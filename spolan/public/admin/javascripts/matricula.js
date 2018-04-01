@@ -114,7 +114,7 @@ tareasModule.factory('matricula', function ($http,$q) {
         var defered = $q.defer();
         var promise = defered.promise;
 
-        $http.delete('/web/eliminarMatricula',+ objeto.id)
+        $http.delete('/web/eliminarMatricula/'+ objeto.id)
             .success(function (data) {
                 defered.resolve(data);
 
