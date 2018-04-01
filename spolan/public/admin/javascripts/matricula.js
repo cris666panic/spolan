@@ -236,7 +236,7 @@ tareasModule.controller('ctrlRegistroMatricula', function ($scope, $location, ma
 
         for (var i = 0; i < data.length; i++) {
 
-            $scope.cursos.push({descripcion:data[i].idioma+" "+data[i].nombre + " " + data[i].paralelo+ " " + data[i].horario,data:data[i]});
+            $scope.cursos.push({descripcion:data[i].idioma+" "+data[i].nombre + " Room:" + data[i].paralelo+ " " + data[i].horario+" Periodo: "+data[i].periodo,data:data[i]});
 
 
         }

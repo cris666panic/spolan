@@ -142,11 +142,11 @@ tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante
 
     };
 
-    $scope.responder = function (usuario) {
-        correo.usuario = usuario;
-        console.log(usuario);
-        $location.path('/correo1');
+    $scope.responder = function (estudiante) {
+        window.localStorage["estudiante"]= JSON.stringify(estudiante);
+        $location.path('/correoEstudiante');
     }
+
 
 });
 
@@ -170,7 +170,10 @@ var usuario= {nombre:$scope.estudiante.cedula,
             //estudainte
             estudiante.add($scope.estudiante).then(function (data) {
 
-
+                new PNotify({
+                    title: 'Registro Estudiante Completado',
+                    styling: 'bootstrap3'
+                });
                 console.log(data);
                 $location.path('/estudiante');
             }).catch(function (err) {

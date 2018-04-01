@@ -113,6 +113,11 @@ app.config(function($routeProvider){
         .when('/asistencia', { templateUrl: 'paginas/asistencia.html',controller: ('ctrlAsistencia' )})
 
 
+        .when('/correoEstudiante', { templateUrl: 'paginas/correoEstudiante.html',controller: ('ctrlCorreoEstudiante' )})
+
+
+        .when('/correoEstudianteTodos', { templateUrl: 'paginas/correoEstudianteTodos.html',controller: ('ctrlCorreoEstudiante' )})
+
 
 		.otherwise({ redirectTo: '/' });
 

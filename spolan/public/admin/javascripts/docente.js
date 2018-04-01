@@ -193,7 +193,10 @@ tareasModule.controller('ctrlRegistroDocente', function ($scope, $location, doce
 
                 console.log(data);
 
-
+                new PNotify({
+                    title: 'Registro Docente Completado',
+                    styling: 'bootstrap3'
+                });
 
             }).catch(function (err) {
 

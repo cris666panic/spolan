@@ -133,9 +133,10 @@ router.get('/obtenerCursos', function (req, res) {
   const results = [];
 
   var query = client.query('SELECT curso.id,curso.idioma, curso.id_docente, curso.horario, curso.estado, curso.nombre, curso.paralelo, curso.id_periodo,docente.unido as docente,periodo.unido as periodo\n' +
-      '  FROM curso\n' +
-      'INNER JOIN docente ON docente.id = curso.id_docente\n' +
-      'INNER JOIN periodo ON periodo.id = curso.id_periodo ');
+      '        FROM curso\n' +
+      '      INNER JOIN docente ON docente.id = curso.id_docente\n' +
+      '      INNER JOIN periodo ON periodo.id = curso.id_periodo \n' +
+      '      where curso.estado =\'activo\'');
 
 
   query.on('row', (row) => {
