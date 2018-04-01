@@ -193,6 +193,24 @@ tareasModule.controller('ctrlRegistroPeriodo', function ($scope, $location, peri
         var aux=document.getElementById('datepicker').value.toString();
 
 
+      var   fecha1=new Date(aux);
+
+        dia=fecha1.getDate();
+        // el mes es devuelto entre 0 y 11
+        mes=fecha1.getMonth()+1;
+        anio=fecha1.getFullYear();
+
+        console.log("Fecha actual: "+dia+"/"+mes+"/"+anio);
+
+        if (mes<10){
+            mes="0"+mes;
+        }
+
+        if (dia<10){
+            dia="0"+dia;
+        }
+
+        var inicio =anio+"-"+mes+"-"+dia;
 
 
 
@@ -233,6 +251,10 @@ var days=-5;
                 month="0"+month;
             }
 
+        if (day<10){
+            day="0"+day;
+        }
+
         var vec1=aux1.split("T");
 
             console.log(vec1);
@@ -247,7 +269,7 @@ var fin =separadaos[2]+"-"+separadaos[0]+"-"+separadaos[1];
 var activacion =year+"-"+month+"-"+day;
 
         var perido={
-            inicio:aux,
+            inicio:inicio,
             fin:fin,
                  unido:$scope.periodo.unido,
             activacion:activacion,

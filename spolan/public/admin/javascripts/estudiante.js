@@ -91,7 +91,7 @@ tareasModule.factory('estudiante', function ($http,$q) {
 
 
 
-tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante,$timeout) {
+tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante,$timeout,correo) {
 
     $timeout(function(){
 
@@ -142,7 +142,11 @@ tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante
 
     };
 
-
+    $scope.responder = function (usuario) {
+        correo.usuario = usuario;
+        console.log(usuario);
+        $location.path('/correo1');
+    }
 
 });
 
