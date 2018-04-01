@@ -104,7 +104,7 @@ router.get('/allestudiantes', function (req, res) {
 
     const results = [];
 
-    var query = client.query('SELECT id, cedula, nombres, apellidos, telefono, correo,direccion,edad, id_usuario FROM estudiante  ');
+    var query = client.query('SELECT * FROM estudiante  ');
 
     query.on('row', (row) => {
         results.push(row);
