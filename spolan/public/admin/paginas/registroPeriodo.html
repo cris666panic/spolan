@@ -11,7 +11,7 @@
 
 
         <div class="box-body">
-
+            <form role="form" ng-submit="guardarPeriodo()">
 
             <div class="col-md-12">
                 <div class="form-group">
@@ -22,7 +22,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
-                         <input  class=" datepicker form-control" id="datepicker" value="{{ periodo.inicio}}"  placeholder="02/27/1999" >
+                         <input  required class=" datepicker form-control" id="datepicker" value="{{ periodo.inicio}}"  placeholder="02/27/1999" >
 
 
                         </div>
@@ -38,7 +38,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
-                          <input  class=" datepicker form-control" id="datepicker1" value="{{periodo.fin}}"  placeholder="02/27/1999" >
+                          <input required class=" datepicker form-control" id="datepicker1" value="{{periodo.fin}}"  placeholder="02/27/1999" >
 
 
                         </div>
@@ -53,7 +53,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-comment" aria-hidden="true"></i></span>
-                            <input ng-model="periodo.unido" type="text" class="form-control" name="name" id="name" />
+                            <input required ng-model="periodo.unido" type="text" class="form-control" name="name" id="name" placeholder="Mes de Inico - Mes de fin / Año" />
                         </div>
                     </div>
 
@@ -64,11 +64,11 @@
 
 
                     <div class="form-group " align="right">
-                        <button ng-click="guardarPeriodo()"  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary">Aceptar</button>
+                        <button type="submit"  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary">Aceptar</button>
                     </div>
 
             </div>
-
+                </form>
 
         </div>
             </div>

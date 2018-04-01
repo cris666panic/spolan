@@ -11,6 +11,9 @@
 
 
         <div class="box-body">
+
+            <form role="form" ng-submit="guardarCurso()">
+
             <div class="col-md-6">
                 <div class="form-group">
                     <div class="box-header with-border">
@@ -20,7 +23,8 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <select class=" form-control select2 " ng-model="curso.idioma" ng-change="horario2(curso.idioma)">
+                            <select  class=" form-control select2 " ng-model="curso.idioma" ng-change="horario2(curso.idioma)" required>
+                                <option disabled value="" selected hidden>Seleccione</option>
                                 <option>Inglés</option>
                                 <option >Italiano</option>
                                 <option >Portugués</option>
@@ -38,7 +42,8 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-list-ol" aria-hidden="true"></i></span>
-                            <select class="form-control select2"   ng-model="curso.nombre">
+                            <select required class="form-control select2"   ng-model="curso.nombre">
+                                <option disabled value="" selected hidden>Seleccione</option>
                                 <option >A1</option>
                                 <option>A2</option>
                                 <option>B1</option>
@@ -47,6 +52,9 @@
                                 <option>C1</option>
                                 <option >PREPARACIÒN PET-B1</option>
                                 <option >PRERACIÒN FCE-B2</option>
+                                <option >KIDS 3/4 </option>
+                                <option >KIDS 4/5 </option>
+
                             </select>
 
                         </div>
@@ -58,7 +66,11 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                           <select  class=" form-control col-md-7 col-xs-12"  ng-model="curso.id_docente" ng-options="item.id as item.unido for item in docentes" ></select>
+                           <select required class=" form-control col-md-7 col-xs-12"  ng-model="curso.id_docente" ng-options="item.id as item.unido for item in docentes"  >
+                               <option disabled value="" selected hidden>Seleccione</option>
+
+                           </select>
+
                         </div>
                     </div>
                 </div>
@@ -67,7 +79,8 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-th-large" aria-hidden="true"></i></span>
-                            <select class=" form-control col-md-7 col-xs-12" ng-model="curso.paralelo" ">
+                            <select required  class=" form-control col-md-7 col-xs-12" ng-model="curso.paralelo" >
+                                <option  disabled value="" selected hidden>Seleccione</option>
                                 <option >1</option>
                                 <option >2</option>
                                 <option >3</option>
@@ -82,14 +95,21 @@
 
                 <div class="form-group">
 
-                    <label for="name" class="cols-sm-2 control-label">Perido</label>
+                    <label for="name" class="cols-sm-2 control-label">Período</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
-                            <select  class=" form-control col-md-7 col-xs-12"  ng-model="curso.id_periodo" ng-options="item.id as item.unido for item in periodos" ></select>
-                       
+                            <select  required class=" form-control col-md-7 col-xs-12"  ng-model="curso.id_periodo" ng-options="item.id as item.unido for item in periodos" >
+                                <option  disabled value="" selected hidden>Seleccione</option>
+
+
+                            </select>
+
                             </div>
                     </div>
+
+
+
 
                 </div>
 
@@ -103,7 +123,7 @@
 
                             <div class=" col-md-4">
                                 <label>
-                                    <input type="checkbox" ng-model="modalidad.presencial" ng-change="modalidadCkec()"> Normal
+                                    <input  type="checkbox" ng-model="modalidad.presencial" ng-change="modalidadCkec()"> Normal
                                 </label>
                             </div>
                             <div class=" col-md-4">
@@ -131,19 +151,19 @@
                         </div>
                         <div class="col-md-6">
                             <br><br><br><br>
-                            <div class="radio" ng-click="selectHorario('Presencial 08H00 A 10H00 AM')">
+                            <div class="radio" ng-click="selectHorario('Normal 08H00 A 10H00 AM')">
                                 <label><input type="radio" name="optradio"  >08H00 A 10H00 AM</label>
                             </div>
-                            <div class="radio" ng-click="selectHorario('Presencial 10H00 A 12H00 AM')">
+                            <div class="radio" ng-click="selectHorario('Normal 10H00 A 12H00 AM')">
                                 <label><input type="radio" name="optradio">10H00 A 12H00 AM</label>
                             </div>
-                            <div class="radio" ng-click="selectHorario('Presencial 15H00 A 17H00 PM')">
+                            <div class="radio" ng-click="selectHorario('Normal 15H00 A 17H00 PM')">
                                 <label><input type="radio" name="optradio">15H00 A 17H00 PM</label>
                             </div>
-                            <div class="radio" ng-click="selectHorario('Presencial 17H00 A 19H00 PM')">
+                            <div class="radio" ng-click="selectHorario('Normal 17H00 A 19H00 PM')">
                                 <label><input type="radio" name="optradio">17H00 A 19H00 PM</label>
                             </div>
-                            <div class="radio" ng-click="selectHorario('Presencial 19H00 A 21H00 PM')">
+                            <div class="radio" ng-click="selectHorario('Normal 19H00 A 21H00 PM')">
                                 <label><input type="radio" name="optradio">19H00 A 21H00 PM</label>
                             </div>
 
@@ -166,7 +186,7 @@
                             <br><br> <br><br> <br>
 
 
-                            <div class="radio" ng-click="selectHorario('Semipresencial 09H00 AM a  6H00 PM')">
+                            <div class="radio" ng-click="selectHorario('Curso Intensivo 09H00 AM a  6H00 PM')">
                                 <label><input type="radio" name="optradio">09H00 Am A 6H00 PM</label>
                             </div>
 
@@ -253,26 +273,25 @@
 
                 <div ng-show="Portugues3">
                     <h1> Proximamente</h1>
+                    <h1> Proximamente</h1>
 
 
                 </div>
+                <div class="form-group "  align="center">
+                    <button  type="submit" style="background-color: #AD1D24;border-color:#DBAC1F;"    class="btn btn-primary antosubmit2" >Aceptar</button>
+                </div>
+
 
 
             </div>
 
 
+                </form>
 
-
-
-    </div>
-
-
-        <div class="form-group "  align="center">
-            <button ng-click="guardarCurso()" style="background-color: #AD1D24;border-color:#DBAC1F;"    class="btn btn-primary antosubmit2" >Aceptar</button>
         </div>
-
-        <br><br><br>
-
-
     </div>
 </div>
+
+
+
+

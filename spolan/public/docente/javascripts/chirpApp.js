@@ -36,7 +36,7 @@ app.config(function($routeProvider){
         .when('/asistencia', { templateUrl: 'paginas/asistencia.html',controller: ('ctrlAsistencia' )})
 
 
-		.otherwise({ redirectTo: '/' });
+		.otherwise({ redirectTo: '/cursos' });
             
 
 

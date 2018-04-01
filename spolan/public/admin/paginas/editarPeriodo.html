@@ -12,7 +12,7 @@
 
         <div class="box-body">
 
-
+            <form role="form" ng-submit="actulizarPeriodo()">
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="box-header with-border">
@@ -22,7 +22,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
-                         <input  class=" datepicker form-control" id="datepicker" value="{{ periodo.inicio}}"  placeholder="02/27/1999" >
+                         <input  required class=" datepicker form-control" id="datepicker" value="{{ periodo.inicio}}"  placeholder="02/27/1999" >
 
 
                         </div>
@@ -38,7 +38,8 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
-                          <input  class=" datepicker form-control" id="datepicker1" value="{{periodo.fin}}"  placeholder="02/27/1999" >
+                          <input  required class=" datepicker form-control" id="datepicker1" value="{{periodo.fin}}"  placeholder="02/27/1999" >
+
 
 
                         </div>
@@ -53,7 +54,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-comment" aria-hidden="true"></i></span>
-                            <input ng-model="periodo.unido" type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                            <input  required ng-model="periodo.unido" type="text" class="form-control" name="name" id="name"  placeholder="Mes de Inico - Mes de fin / Año"/>
                         </div>
                     </div>
 
@@ -64,12 +65,12 @@
 
 
                     <div class="form-group " align="right">
-                        <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary" ng-click="actulizarPeriodo()"  >Aceptar</button>
+                        <button  style="background-color: #AD1D24;border-color:#DBAC1F;" class="btn btn-primary" type="submit" >Aceptar</button>
                     </div>
 
             </div>
 
-
+                </form>
         </div>
             </div>
 
