@@ -493,7 +493,8 @@ console.log("dc");
                             correo: $scope.formulario.email,
                             telefono: $scope.formulario.telefono,
                             id_usuario: response.data[0].id_usuario,
-                            estado: "pendiente"
+                            estado: "pendiente",
+                            ciudad:$scope.formulario.ciudad
                         }
 
                     }).then(function successCallback(response) {

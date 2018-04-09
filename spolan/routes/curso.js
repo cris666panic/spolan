@@ -22,7 +22,8 @@ router.post('/addCurso', function (req, res) {
         nombre:req.body.nombre,
         paralelo:req.body.paralelo,
         id_periodo:req.body.id_periodo,
-        idioma:req.body.idioma
+        idioma:req.body.idioma,
+        idSecretaria:req.body.idSecretaria
 
 
     };
@@ -35,8 +36,8 @@ router.post('/addCurso', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO curso(id_docente, horario, estado, nombre, paralelo, id_periodo,idioma) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *',
-        [data1.id_docente, data1.horario,data1.estado, data1.nombre,data1.paralelo, data1.id_periodo,data1.idioma]);
+    var query = client.query('INSERT INTO curso(id_docente, horario, estado, nombre, paralelo, id_periodo,idioma,"idSecretaria") VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *',
+        [data1.id_docente, data1.horario,data1.estado, data1.nombre,data1.paralelo, data1.id_periodo,data1.idioma,data1.idSecretaria]);
 
     query.on('row', (row) => {
         results.push(row);
@@ -150,6 +151,32 @@ router.get('/obtenerCursos', function (req, res) {
 
 });
 
+
+
+router.post('/obtenerCursosSecretaria', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT curso.id,curso.idioma, curso.id_docente, curso.horario, curso.estado, curso.nombre, curso.paralelo, curso.id_periodo,docente.unido as docente,periodo.unido as periodo\n' +
+        '        FROM curso\n' +
+        '      INNER JOIN docente ON docente.id = curso.id_docente\n' +
+        '      INNER JOIN periodo ON periodo.id = curso.id_periodo \n' +
+        '      where curso.estado =\'activo\' and curso."idSecretaria"=$1',[req.body.id_usuario]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
 //////////////////////actulizar

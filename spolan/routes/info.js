@@ -38,6 +38,50 @@ router.get('/obtenerinformacion', function (req, res) {
 });
 
 });
+
+
+router.get('/obtenerinformacionRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.ciudad=\'RIOBAMBA\'');
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+router.get('/obtenerinformacionCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.ciudad=\'CUMANDÁ\'');
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 ///////////////////pendiente
 
 
@@ -58,6 +102,52 @@ router.get('/obtenerpendienteinfo', function (req, res) {
   query.on('end', () => {
     client.end();
   return res.json(results);
+});
+
+});
+
+
+
+router.get('/obtenerpendienteinfoRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 and informacion.ciudad=\'RIOBAMBA\' ', ['pendiente']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+
+
+router.get('/obtenerpendienteinfoCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 and informacion.ciudad=\'CUMANDÁ\'', ['pendiente']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
 });
 
 });
@@ -85,6 +175,48 @@ router.get('/obtenernotificadoinfo', function (req, res) {
 
 });
 
+router.get('/obtenernotificadoinfoRio', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 and informacion.ciudad=\'RIOBAMBA\'', ['notificado']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
+router.get('/obtenernotificadoinfoCu', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT informacion.* from informacion INNER JOIN usuario ON usuario.id_usuario = informacion.id_usuario where usuario.id_tipo=2 and informacion.estado=$1 and informacion.ciudad=\'CUMANDÁ\' ', ['notificado']);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 
 
 
@@ -101,7 +233,8 @@ router.post('/registrarinfo', function (req, res) {
     correo: req.body.correo,
     telefono: req.body.telefono,
     id_usuario: req.body.id_usuario,
-    estado: req.body.estado
+    estado: req.body.estado,
+      ciudad:req.body.ciudad
   };
 
 //conection
@@ -110,9 +243,9 @@ router.post('/registrarinfo', function (req, res) {
 
   const results = [];
 
-  var query = client.query('INSERT INTO informacion(nombre, apellido, correo, telefono, id_usuario,estado)' +
-      ' VALUES ($1,$2,$3,$4,$5,$6) RETURNING *',
-      [p.nombre, p.apellido, p.correo,p.telefono,p.id_usuario,p.estado]);
+  var query = client.query('INSERT INTO informacion(nombre, apellido, correo, telefono, id_usuario,estado,ciudad)' +
+      ' VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *',
+      [p.nombre, p.apellido, p.correo,p.telefono,p.id_usuario,p.estado,p.ciudad]);
 
 
   query.on('row', (row) => {

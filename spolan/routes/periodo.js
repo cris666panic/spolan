@@ -22,7 +22,8 @@ router.post('/addPeriodo', function (req, res) {
         fin: req.body.fin,
         unido:req.body.unido,
         activacion:req.body.activacion,
-        estado:req.body.estado
+        estado:req.body.estado,
+        idSecretaria:req.body.idSecretaria
 
     };
 
@@ -32,9 +33,9 @@ router.post('/addPeriodo', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO periodo(inicio, fin,unido,activacion,estado)' +
-        ' VALUES ($1,$2,$3,$4,$5) RETURNING *',
-        [p.inicio, p.fin,p.unido,p.activacion,p.estado]);
+    var query = client.query('INSERT INTO periodo(inicio, fin,unido,activacion,estado,"idSecretaria")' +
+        ' VALUES ($1,$2,$3,$4,$5,$6) RETURNING *',
+        [p.inicio, p.fin,p.unido,p.activacion,p.estado,p.idSecretaria]);
 
 
 
@@ -70,6 +71,28 @@ router.get('/allperiodo', function (req, res) {
 });
 
 });
+
+
+router.post('/allperiodoSecretaria', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * FROM periodo where estado=$1 and "idSecretaria"=$2 ',['activo',req.body.id_usuario]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
+
 
 
 

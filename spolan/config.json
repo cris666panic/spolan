@@ -7,6 +7,7 @@
 		"user"     : "postgres",
 		"password" : "spolan2018",
 		"host"     : "165.227.200.71"
+		
 	}
 
 }

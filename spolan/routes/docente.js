@@ -21,6 +21,7 @@ module.exports = router;
 
 router.post('/addDocente', function (req, res) {
 
+
     var data1 = {
         cedula: req.body.cedula,
         nombres: req.body.nombres,
@@ -32,8 +33,11 @@ router.post('/addDocente', function (req, res) {
         direccion: req.body.direccion,
         edad: req.body.edad,
         unido:req.body.unido,
-        celular:req.body.celular
+        celular:req.body.celular,
+        idSecretaria:req.body.idSecretaria
     };
+
+    console.log(data1);
 
     var client = new pg.Client(conString);
     client.connect();
@@ -43,8 +47,8 @@ router.post('/addDocente', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad,unido,celular) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *',
-        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad,data1.unido,data1.celular]);
+    var query = client.query('INSERT INTO docente(cedula, nombres, apellidos, telefono, correo, id_usuario,direccion,edad,unido,celular,"idSecretaria") VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) RETURNING *',
+        [data1.cedula, data1.nombres,data1.apellidos, data1.telefono,data1.correo, data1.id_usuario,data1.direccion,data1.edad,data1.unido,data1.celular,data1.idSecretaria]);
 
     query.on('row', (row) => {
         results.push(row);
@@ -123,6 +127,29 @@ router.get('/obtenerDocentes', function (req, res) {
 
 });
 
+
+
+router.post('/obtenerDocentesSecretaria', function (req, res) {
+
+    console.log(req.body.id_usuario);
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * from docente where "idSecretaria"=$1',[req.body.id_usuario]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 
 //////////////////////actulizar

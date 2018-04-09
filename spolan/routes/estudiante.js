@@ -31,7 +31,8 @@ router.post('/regestudiante', function (req, res) {
         correo: req.body.correo,
         direccion: req.body.direccion,
         edad: req.body.edad,
-        celular:req.body.celular
+        celular:req.body.celular,
+        idSecretaria:req.body.idSecretaria
     };
 
 //insertar
@@ -40,9 +41,9 @@ router.post('/regestudiante', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO estudiante(cedula, nombres, apellidos, telefono, correo,direccion,edad, id_usuario,celular)' +
-        ' VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *',
-        [p.cedula,p.nombres , p.apellidos, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario,p.celular]);
+    var query = client.query('INSERT INTO estudiante(cedula, nombres, apellidos, telefono, correo,direccion,edad, id_usuario,celular,"idSecretaria")' +
+        ' VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *',
+        [p.cedula,p.nombres , p.apellidos, p.telefono, p.correo,p.direccion,p.edad, p.id_usuario,p.celular,p.idSecretaria]);
 
 
     query.on('row', (row) => {
@@ -122,3 +123,22 @@ router.get('/allestudiantes', function (req, res) {
 
 
 
+router.post('/allestudiantesSecretaria', function (req, res) {
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT * FROM estudiante  where "idSecretaria"=$1',[req.body.id_usuario]);
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});

@@ -21,7 +21,8 @@ router.post('/addMatricula', function (req, res) {
     var data1 = {
         id_estudiante: req.body.id_estudiante,
         id_curso: req.body.id_curso,
-        estado:req.body.estado
+        estado:req.body.estado,
+        idSecretaria:req.body.idSecretaria
     };
 
     var client = new pg.Client(conString);
@@ -32,8 +33,8 @@ router.post('/addMatricula', function (req, res) {
 
     const results = [];
 
-    var query = client.query('INSERT INTO matricula( id_estudiante, id_curso, estado) VALUES ($1,$2,$3) RETURNING *',
-        [data1.id_estudiante, data1.id_curso,data1.estado]);
+    var query = client.query('INSERT INTO matricula( id_estudiante, id_curso, estado,"idSecretaria") VALUES ($1,$2,$3,$4) RETURNING *',
+        [data1.id_estudiante, data1.id_curso,data1.estado,data1.idSecretaria]);
 
     query.on('row', (row) => {
         results.push(row);
@@ -49,10 +50,7 @@ router.post('/addMatricula', function (req, res) {
 
 router.get('/obtenerMatriculas', function (req, res) {
 
-    var data1 = {
 
-        cedula: req.body.cedula
-    };
 
     var client = new pg.Client(conString);
     client.connect();
@@ -85,6 +83,42 @@ router.get('/obtenerMatriculas', function (req, res) {
 });
 
 
+
+
+
+router.post('/obtenerMatriculasSecretaria', function (req, res) {
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+
+
+    var client = new pg.Client(conString);
+    client.connect();
+
+    const results = [];
+
+    var query = client.query('SELECT M.id,M.estado, E.cedula, E.nombres, E.apellidos ,C.idioma,C.horario,C.nombre,C.paralelo,P.unido,D.unido as docente\n' +
+        '        FROM Matricula as M\n' +
+        '        INNER JOIN estudiante as E ON M.id_estudiante=E.id\n' +
+        '\tINNER JOIN curso as C ON M.id_curso=C.id\n' +
+        '\tINNER JOIN periodo as P ON C.id_periodo=P.id\n' +
+        '\tINNER JOIN docente as D ON C.id_docente=D.id\n' +
+        'where M."idSecretaria"=$1',[req.body.id_usuario]);
+
+
+    query.on('row', (row) => {
+        results.push(row);
+});
+
+    query.on('end', () => {
+        client.end();
+    return res.json(results);
+});
+
+});
 
 router.delete('/eliminarMatricula/:id', function (req, res) {
 
