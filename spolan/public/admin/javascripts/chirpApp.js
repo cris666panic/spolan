@@ -1,6 +1,8 @@
 var app = angular.module('chirpApp', ['justificaciones','matricula','ngCkeditor','correo','calendario','ngSanitize','ui.select','multipleSelect','allmsg','ngRoute', 'ngResource','ngStorage','docente','estudiante','curso','periodo']).run(function($http, $rootScope,$localStorage) {
   
    $rootScope.usuarioLog=  JSON.parse(localStorage.getItem("usuario"));
+
+    console.log($rootScope.usuarioLog);
    
   $rootScope.authenticated =  JSON.parse(localStorage.getItem("authenticated"));
   

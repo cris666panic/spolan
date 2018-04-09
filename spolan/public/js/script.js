@@ -257,6 +257,9 @@ var o = $('#camera');
             o.owlCarousel({
                 margin: 30,
                 smartSpeed: 450,
+                autoplayTimeout:3,
+                stagePadding:30,
+
                 loop: true,
                 dots: true,
                 dotsEach: 1,
