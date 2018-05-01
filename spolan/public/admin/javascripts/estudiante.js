@@ -104,7 +104,7 @@ tareasModule.controller('ctrlEstudiante', function ($scope, $location,estudiante
         );
 
 
-    }, 500, false);
+    }, 3000, false);
 
     estudiante.getAll().then(function (data) {
 

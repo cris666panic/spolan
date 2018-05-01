@@ -1,6 +1,4 @@
-/**
- * Created by xaipo on 8/21/2017.
- */
+
 
 var express= require('express');
 var router= express.Router();

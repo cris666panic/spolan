@@ -15,7 +15,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <table  id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 
         <thead>
             <tr>
@@ -27,7 +27,7 @@
                 <th>Celular</th>
                 <th>Edad</th>
                 <th>Dirección</th>
-                <th>Opciones</th>
+                <th class="all" >Opciones</th>
 
 
             </tr>
@@ -44,10 +44,13 @@
                 <td>{{docente.edad}}</td>
                 <td>{{docente.direccion}}</td>
 
-                <td>
-                    <button type="button" ng-click="editarDocente(docente)" class="glyphicon glyphicon-edit text-warning">
+                <td >
+                    <button ng-click="editarDocente(docente)" class="glyphicon glyphicon-edit text-warning">
 
                     </button>
+
+
+
                 </td>
 
 

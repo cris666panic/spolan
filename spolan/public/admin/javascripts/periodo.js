@@ -113,7 +113,7 @@ tareasModule.controller('ctrlPeriodo', function ($scope, $location, periodo,$tim
         );
 
 
-    }, 500, false);
+    }, 3000, false);
 
     periodo.getAll().then(function (data) {
 

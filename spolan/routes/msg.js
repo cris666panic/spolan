@@ -261,7 +261,7 @@ ciudad:req.body.ciudad
   const results = [];
 
   var query = client.query('INSERT INTO msg(id_informacion,msg,estado,ciudad)' +
-      ' VALUES ($1,$2,$3) RETURNING *',
+      ' VALUES ($1,$2,$3,$4) RETURNING *',
       [p.id_informacion, p.msg, p.estado,p.ciudad]);
 
 

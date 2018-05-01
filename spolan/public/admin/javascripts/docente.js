@@ -119,10 +119,14 @@ tareasModule.factory('docente', function ($http,$q) {
 
 tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$timeout) {
 
+
+
+
     $timeout(function(){
 
         $('#datatable-responsive').DataTable(
             {
+                responsive: true,
                 "language": {
                     "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                 }
@@ -130,7 +134,10 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
         );
 
 
-    }, 500, false);
+    }, 3000, false);
+
+
+
 
     docente.getAll().then(function (data) {
 
@@ -147,6 +154,7 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
     $timeout(function(){
         console.log( $scope.ldocentes);
         $('#example1').dataTable({
+            responsive: true,
             "language": {
                 "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
             }
@@ -165,6 +173,10 @@ tareasModule.controller('ctrlDocente', function ($scope, $location, docente,$tim
 
 
     };
+
+
+
+
 
 
 

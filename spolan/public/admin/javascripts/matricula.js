@@ -154,7 +154,7 @@ tareasModule.controller('ctrlMatricula', function ($scope, $location, matricula,
         );
 
 
-    }, 500, false);
+    }, 3000, false);
 
     matricula.getAll().then(function (data) {
 
