@@ -38,10 +38,12 @@
   font-size: 16px;
   padding: 14px 18px;
   line-height: 26px;
-  color: #878787;
+  color: #828387;
   background: #f5f5f5;
   border: none;
 }
+
+
 .mailform label input:-moz-placeholder, .mailform label select:-moz-placeholder, .mailform label textarea:-moz-placeholder {
   color: #888;
   opacity: 1;

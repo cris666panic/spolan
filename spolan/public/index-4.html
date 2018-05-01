@@ -109,32 +109,34 @@
         <section class="well1" id="suscribite" ng-app="myAppMsg">
           <div class="container"  >
             <h2 align="center" style="color: #AD1D24">Dejanos tu mensaje y nos comunicaremos de inmediato</h2>
-            <form  class="mailform off2" ng-controller="msg">
-              <input type="hidden" name="form-type" value="contact">
+
+
+            <form  class="mailform off2" ng-controller="msg"  ng-submit="enviarRiobamba()" >
+              <input required  type="hidden" name="form-type" value="contact">
               <fieldset class="row">
                 <label class="grid_4">
-                  <input type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
+                  <input required type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
                 </label>
                 <label class="grid_4">
-                  <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
-                </label>
-
-                <br>
-                <br>
-                <br>
-                <label class="grid_4">
-                <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
+                  <input required type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
                 </label>
 
+                <br>
+                <br>
+                <br>
                 <label class="grid_4">
-                  <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
+                <input required type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
+                </label>
+
+                <label class="grid_4">
+                  <input required type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone" ng-model="formulario.telefono">
                 </label>
 
                 <label class="grid_12">
-                  <textarea  placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
+                  <textarea required placeholder="Mensaje:" data-constraints="@NotEmpty" ng-model="formulario.msg"></textarea>
                 </label>
                 <div class="grid_12">
-                  <button  class="btn" ng-click="enviarRiobamba()">Enviar</button>
+                  <button  class="btn" type="submit">Enviar</button>
 
                   <label>{{mensaje}}</label>
                 </div>

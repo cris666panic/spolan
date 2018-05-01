@@ -116,81 +116,97 @@
             <div class="container"  >
               <h2>Agenda tu Examen</h2>
 
-              <div class="form-group col ">
-                <label>Elija la ciudad </label>
-                <select class="form-control select2"   ng-model="ciudad"  style="width: 100%; background-color: #f5f5f5;   ">
-                  <option selected="selected">RIOBAMBA</option>
-                  <option>CUMANDÁ</option>
-                </select>
-              </div>
+
+
+              <form   style=" text-align: center "  ng-submit="enviar()" >
+
+                <div class="form-group col "   >
+
+
+                  <label>Elija la ciudad </label>
+                  <select required class="form-control select2"   ng-model="ciudad"  style="width: 100%; background-color: #f5f5f5;   " required>
+                    <option disabled value="" selected hidden>Seleccione</option>
+                    <option selected="selected">RIOBAMBA</option>
+                    <option>CUMANDÁ</option>
+                  </select>
+                </div>
+
+
+                <div   class="mailform off2"    >
+
+                  <input  required type="hidden" name="form-type" value="contact">
+
+                  <fieldset class="row">
+                    <label class="grid_4">
+                      <input  required type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
+                    </label>
+                    <label class="grid_4">
+                      <input required type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
+                    </label>
+
+                    <label class="grid_4">
+                      <input required type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
+                    </label>
+
+
+                    <label class="grid_4">
+                      <input required type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone @NotEmpty " ng-model="formulario.telefono"  >
+
+                    </label>
 
 
 
-              <form  class="mailform off2"  style=" text-align: center " >
-                <input type="hidden" name="form-type" value="contact">
 
-                <fieldset class="row">
-                  <label class="grid_4">
-                    <input type="text"  placeholder="Nombre:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.nombre">
-                  </label>
-                  <label class="grid_4">
-                    <input type="text"  placeholder="Apellido:" data-constraints="@LettersOnly @NotEmpty" ng-model="formulario.apellido">
-                  </label>
-
-                  <label class="grid_4">
-                    <input type="text"  placeholder="Email:" data-constraints="@Email @NotEmpty" ng-model="formulario.email">
-                  </label>
-
-
-                  <label class="grid_4">
-                    <input type="text"  placeholder="Teléfono o Celular :" data-constraints="@Phone @NotEmpty " ng-model="formulario.telefono"  >
-
-                  </label>
-
-
-
-
-                  <label class="grid_4">
-                    <div class="form-group">
-<label>Fecha:</label>
-                      <div class="input-group date">
-                        <div class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                        </div>
-                        <input  style="height: 10%"  type="text" class="form-control pull-right" id="datepicker"  data-constraints="@DATE @NotEmpty" >
-                      </div>
-                      <!-- /.input group -->
-                    </div>
-                  </label>
-
-                  <label class="grid_4">
-                    <div class="bootstrap-timepicker">
+                    <label class="grid_4">
                       <div class="form-group">
-                        <label>Hora:</label>
-                                          <div class="input-group">
-                          <input style="height: 10%" type="text" class="form-control timepicker" id="timepicker">
-
+                        <label>Fecha:</label>
+                        <div class="input-group date">
                           <div class="input-group-addon">
-                            <i class="fa fa-clock-o"></i>
+                            <i class="fa fa-calendar"></i>
                           </div>
+                          <input required style="height: 10%"  type="text" class="form-control pull-right" id="datepicker"  data-constraints="@DATE @NotEmpty" >
                         </div>
                         <!-- /.input group -->
                       </div>
-                      <!-- /.form group -->
+                    </label>
+
+                    <label class="grid_4">
+                      <div class="bootstrap-timepicker">
+                        <div class="form-group">
+                          <label>Hora:</label>
+                          <div class="input-group">
+                            <input required  style="height: 10%" class="form-control timepicker" id="timepicker"   >
+
+                            <div class="input-group-addon">
+                              <i class="fa fa-clock-o"></i>
+                            </div>
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <!-- /.form group -->
+                      </div>
+
+
+
+                    </label>
+
+
+
+                    <div class="grid_12" align="center ">
+                      <button  type="submit" class="btn" >Enviar</button>
                     </div>
+                    <label>{{mensaje}}</label>
+
+                  </fieldset>
 
 
 
-                  </label>
+
+                </div>
 
 
 
-                  <div class="grid_12" align="center ">
-                    <button  class="btn" ng-click="enviar()">Enviar</button>
-                  </div>
-                  <label>{{mensaje}}</label>
 
-                </fieldset>
               </form>
 
 
